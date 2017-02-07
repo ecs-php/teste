@@ -2,7 +2,7 @@
 Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso.
 
 # Requisitos:
-A escolha da entidade deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
 
 1. Deverá conter um ID
 2. Deverá conter pelo menos cinco propriedades (exemplos: nome, documento, email, data de nascimento, etc.)
