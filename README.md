@@ -1,7 +1,7 @@
 # A tarefa
 Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso.
 
-# Requisitos:
+# Requisitos
 A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
 
 * Deverá conter um ID
