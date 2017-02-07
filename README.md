@@ -4,19 +4,19 @@ Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado
 # Requisitos:
 A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
 
-1. Deverá conter um ID
-2. Deverá conter pelo menos cinco propriedades (exemplos: nome, documento, email, data de nascimento, etc.)
-3. Deverá conter campos que armazenem as datas de criação e alteração do recurso
+* Deverá conter um ID
+* Deverá conter pelo menos cinco propriedades (exemplos: nome, documento, email, data de nascimento, etc.)
+* Deverá conter campos que armazenem as datas de criação e alteração do recurso
 
 A API deverá atender às seguintes exigências:
 
-1. Listagem de todos os recursos
-2. Busca de um recurso pelo ID
-3. Criação de um novo recurso
-4. Alteração de um recurso existente
-5. Exclusão de um recurso
-6. Aceitar e retornar apenas JSON
-7. Deverá possuir algum método de autenticação para utilização de seus endpoints
+* Listagem de todos os recursos
+* Busca de um recurso pelo ID
+* Criação de um novo recurso
+* Alteração de um recurso existente
+* Exclusão de um recurso
+* Aceitar e retornar apenas JSON
+* Deverá possuir algum método de autenticação para utilização de seus endpoints
 
 # Ferramentas
 * PHP
