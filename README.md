@@ -28,4 +28,7 @@ A API deverá atender às seguintes exigências:
 2. Crie uma nova branch e nomeie-a com seu usuário do Github
 3. Quando o desenvolvimento estiver concluído, faça um pull request
 
+# Padrões de desenvolvimento
+1. Código, nome do banco de dados, tabelas e campos devem estar em inglês
+
 **Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
