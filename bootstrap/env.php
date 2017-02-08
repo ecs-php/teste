@@ -1,0 +1,1 @@
+<?php Dotenv::load(__DIR__.'/../enviroments/prod/');
