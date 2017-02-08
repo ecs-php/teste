@@ -58,10 +58,8 @@ extension=php_sqlite.dll
 </VirtualHost>
 ```
 3 - redirecionar o hosts
-```
 * C:\Windows\System32\drivers\etc\hosts
 * 127.0.0.1	contato.local
-```
 	
 4 - testar URL
 * Validar se retorna o seguinte texto
