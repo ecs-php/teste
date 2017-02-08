@@ -43,12 +43,12 @@ O banco de dados SqLite já está configurado, porém o sistema aceita a utiliza
 ```
 
 ## Configurações
-1. habilitar a conexão PDO e o SQLITE
+1 - habilitar a conexão PDO e o SQLITE
 ```
 extension=php_pdo.dll
 extension=php_sqlite.dll
 ```
-2. criar um vhost
+2 - criar um vhost
 ```
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/contato.local"
@@ -57,15 +57,21 @@ extension=php_sqlite.dll
     CustomLog "logs/contato_local-access.log" common
 </VirtualHost>
 ```
-3. redirecionar o hosts
+3 - redirecionar o hosts
     * C:\Windows\System32\drivers\etc\hosts
     * 127.0.0.1	contato.local
-4. testar URL
+4 - testar URL
     * Validar se retorna o seguinte texto
 ```
-Contatos
-Autor: Caio Santos
+Contacts
+Developer: Caio Santos
 Email: santoscaio@gmail.com
+```
+
+5 - Efetuar as requisições com o seguinte usuário e senha
+```
+usuário: ecs-php
+senha: santoscaio
 ```
 
 ## Endpoints (*CRUD de contato*)
