@@ -7,5 +7,5 @@ $req = new Request();
 try {
   $req->handle();
 } catch(Exception $e) {
-  $req->sendResponse(500);
+  $req->sendResponse(500, $e->getMessage());
 }

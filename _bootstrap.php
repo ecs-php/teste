@@ -3,8 +3,11 @@
 if(!defined('ROOT_DIR'))
     define('ROOT_DIR', dirname(__FILE__));
 
-if(!defined('API_DIR'))
-    define('API_DIR', ROOT_DIR . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR);
+if(!defined('VENDOR_DIR'))
+    define('VENDOR_DIR', ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR);
+
+// Composer
+require VENDOR_DIR . 'autoload.php';
 
 function recursive_autoloader($class, $path=ROOT_DIR)
 {
@@ -24,5 +27,16 @@ function recursive_autoloader($class, $path=ROOT_DIR)
         require_once $class_file;
     }
 }
-
 spl_autoload_register('recursive_autoloader');
+
+// $teste = array(
+//     'id' => 1,
+//     'name' => 'Teste',
+//     'email' => 'teste@it.com'
+// );
+// $token = JWT::encode($teste, '12121980kcb');
+//
+// print_r($token);
+//
+// $teste = JWT::decode($token, '12121980kcb', array('HS256'));
+// print_r($teste); die;

@@ -1,74 +1,18 @@
 <?php
 
-class Resources
+class Resources extends Model
 {
-    private static $table = 'resources';
+    protected static $table = 'resources';
+    protected static $fields = array('*'); // visible_fields
 
-    private $id;
-    private $name;
-    private $age;
-    private $email;
-    private $department;
-    private $salary;
-    private $created_at;
-    private $updated_at;
-
-    public function __construct($Request)
-    {
-        switch($Request->getVerb()) {
-            case 'GET':
-                if($Request->getId()) {
-                    if(!is_numeric($Request->getId())) {
-                        $Request->sendResponse(400);
-                    }
-
-                    $resource = $this->getById($Request->getId());
-
-                    if(!$resource)
-                        $Request->sendResponse(404);
-
-                    $Request->sendResponse(200, $resource);
-                } else {
-                    $resources = $this->getAll();
-
-                    $Request->sendResponse(200, $resources);
-                }
-
-                break;
-
-            case 'POST':
-                if($Request->getId()) {
-                    $Request->sendResponse(400);
-                }
-                $resource = $this->createFrom($Request);
-
-                $Request->sendResponse(200, $resource);
-                break;
-
-            case 'PATCH':
-                if(!$Request->getId() || !is_numeric($Request->getId())) {
-                    $Request->sendResponse(400);
-                }
-
-                $resource = $this->updateFrom($Request);
-
-                $Request->sendResponse(200, $resource);
-                break;
-
-            case 'DELETE':
-                if(!$Request->getId() || !is_numeric($Request->getId())) {
-                    $Request->sendResponse(400);
-                }
-
-                $resource = $this->deleteFrom($Request);
-
-                $Request->sendResponse(200, $resource);
-                break;
-
-            default:
-                $Request->sendResponse(404);
-        }
-    }
+    protected $id;
+    protected $name;
+    protected $age;
+    protected $email;
+    protected $department;
+    protected $salary;
+    protected $created_at;
+    protected $updated_at;
 
     public function toArray()
     {
@@ -84,27 +28,12 @@ class Resources
         );
     }
 
-    private function getAll()
-    {
-        $rs = DB::getAllFrom(self::$table);
-
-        if(!$rs)
-            return array();
-
-        return $rs;
-    }
-
-    private function getById($id)
-    {
-        return DB::getOneByIdFrom(self::getTable(), $id);
-    }
-
-    private function createFrom($Request)
+    protected function createFrom($Request)
     {
         $input_data = json_decode(file_get_contents('php://input'), true);
 
         $required_keys = array('name', 'age', 'email', 'department', 'salary');
-        if(array_keys($input_data) !== $required_keys) {
+        if(!$input_data || array_keys($input_data) !== $required_keys) {
             $Request->sendResponse(400);
         }
 
@@ -121,7 +50,7 @@ class Resources
         return $this->save();
     }
 
-    private function updateFrom($Request)
+    protected function updateFrom($Request)
     {
         $input_data = json_decode(file_get_contents('php://input'), true);
 
@@ -163,7 +92,7 @@ class Resources
         return $this->save();
     }
 
-    private function deleteFrom($Request)
+    protected function deleteFrom($Request)
     {
         $resource = $this->getById($Request->getId());
         if(!$resource) {
@@ -173,7 +102,7 @@ class Resources
         return DB::removeFrom(self::getTable(), $resource);
     }
 
-    private function save()
+    protected function save()
     {
         return DB::saveAt(self::getTable(), $this->toArray());
     }

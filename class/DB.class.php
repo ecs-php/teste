@@ -15,9 +15,11 @@ class DB
         return self::$Conn;
     }
 
-    public static function getAllFrom($table)
+    public static function getAllFrom($table, array $fields)
     {
-        $sql = "SELECT * FROM {$table}";
+        $fields = implode(', ', $fields);
+
+        $sql = "SELECT {$fields} FROM {$table}";
 
         $rs = self::getInstance()->query($sql);
 
@@ -29,9 +31,11 @@ class DB
         return $output;
     }
 
-    public static function getOneByIdFrom($table, $id)
+    public static function getOneByIdFrom($table, array $fields, $id)
     {
-        $sql = "SELECT * FROM {$table} WHERE id = {$id}";
+        $fields = implode(', ', $fields);
+
+        $sql = "SELECT {$fields} FROM {$table} WHERE id = {$id}";
 
         $rs = self::getInstance()->query($sql);
         $item = $rs->fetch();
@@ -40,6 +44,18 @@ class DB
             return array();
 
         return $item;
+    }
+
+    public static function getOneByField($table, $field, $value)
+    {
+        $sql = "SELECT * FROM {$table} WHERE {$field} = ?";
+        $st = self::getInstance()->prepare($sql);
+        $st->execute(array($value));
+
+        if(!$st)
+            return false;
+
+        return $st->fetch();
     }
 
     public static function saveAt($table, array $data)

@@ -2,7 +2,7 @@
 
 class Request
 {
-    private static $valid_endpoints = array('resources');
+    private static $valid_endpoints = array('resources', 'users');
 
     private $endpoint;
     private $id;
