@@ -1,13 +1,28 @@
 <?php
 
-if(!defined('CLASS_PATH'))
-    define('CLASS_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR);
+if(!defined('ROOT_DIR'))
+    define('ROOT_DIR', dirname(__FILE__));
 
-function __autoload($class)
+if(!defined('API_DIR'))
+    define('API_DIR', ROOT_DIR . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR);
+
+function recursive_autoloader($class, $path=ROOT_DIR)
 {
-    $class_file = CLASS_PATH . "{$class}.class.php";
+    $di = new DirectoryIterator($path);
+
+    foreach($di as $item) {
+        if($item->isDot())
+            continue;
+
+        if($item->isDir())
+            recursive_autoloader($class, $item->getPathname() . DIRECTORY_SEPARATOR);
+    }
+
+    $class_file = $path . "{$class}.class.php";
 
     if(file_exists($class_file)) {
         require_once $class_file;
     }
 }
+
+spl_autoload_register('recursive_autoloader');
