@@ -30,9 +30,12 @@ class Request
         new $class($this);
     }
 
-    public function sendResponse($status_code, $response_body=null)
+    public function sendResponse($status_code, $response_body=null, $additional_headers=array())
     {
         header("HTTP/1.0 {$status_code}", true, $status_code);
+        foreach ($additional_headers as $header) {
+            header($header);
+        }
 
         if($response_body)
             echo json_encode($response_body);

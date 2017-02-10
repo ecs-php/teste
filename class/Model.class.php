@@ -32,9 +32,8 @@ abstract class Model
                 if($Request->getId()) {
                     $Request->sendResponse(400);
                 }
-                $resource = $this->createFrom($Request);
 
-                $Request->sendResponse(200, $resource);
+                $this->createFrom($Request);
                 break;
 
             case 'PATCH':
@@ -42,9 +41,7 @@ abstract class Model
                     $Request->sendResponse(400);
                 }
 
-                $resource = $this->updateFrom($Request);
-
-                $Request->sendResponse(200, $resource);
+                $this->updateFrom($Request);
                 break;
 
             case 'DELETE':
@@ -52,9 +49,7 @@ abstract class Model
                     $Request->sendResponse(400);
                 }
 
-                $resource = $this->deleteFrom($Request);
-
-                $Request->sendResponse(200, $resource);
+                $this->deleteFrom($Request);
                 break;
 
             default:

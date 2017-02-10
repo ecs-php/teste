@@ -46,7 +46,16 @@ class Users extends Model
         $this->setEmail($input_data['email']);
         $this->setPassword($input_data['password']);
 
-        return $this->save();
+        // Token data
+        $token_data = array(
+            'name' => $this->getName(),
+            'email' => $this->getEmail()
+        );
+        $this->setAuthToken(JWT::encode($token_data, '12b80k12c'));
+
+        $resource = $this->save();
+
+        $Request->sendResponse(200, $resource, array("x-auth: {$this->getAuthToken()}"));
     }
 
     protected function updateFrom($Request)
@@ -76,7 +85,9 @@ class Users extends Model
         $this->setPassword($resource['password']);
         $this->setAuthToken($resource['auth_token']);
 
-        return $this->save();
+        $resource = $this->save();
+
+        $Request->sendResponse(200, $resource);
     }
 
     protected function deleteFrom($Request)
@@ -86,7 +97,9 @@ class Users extends Model
             $Request->sendResponse(404);
         }
 
-        return DB::removeFrom(self::getTable(), $resource);
+        $resource = DB::removeFrom(self::getTable(), $resource);
+
+        $Request->sendResponse(200, $resource);
     }
 
     protected function save()
@@ -121,9 +134,9 @@ class Users extends Model
         $this->password = sha1($password);
     }
 
-    public function setAuthToken($token)
+    public function setAuthToken($auth_token)
     {
-        $this->tokens[] = $token;
+        $this->auth_token = $auth_token;
     }
 
     // GETTERS
