@@ -35,7 +35,7 @@ class Users extends Model
             echo "INVALID EMAIL";
             $Request->sendResponse(400);
         }
-        if(DB::getOneByField(self::getTable(), 'email', $input_data['email'])) {
+        if(DB::getOneByField(self::getTable(), array('email' => $input_data['email']))) {
             $Request->sendResponse(409);
         }
         if(strlen($input_data['password']) < 6) {
@@ -46,16 +46,11 @@ class Users extends Model
         $this->setEmail($input_data['email']);
         $this->setPassword($input_data['password']);
 
-        // Token data
-        $token_data = array(
-            'name' => $this->getName(),
-            'email' => $this->getEmail()
-        );
-        $this->setAuthToken(JWT::encode($token_data, '12b80k12c'));
-
         $resource = $this->save();
 
-        $Request->sendResponse(200, $resource, array("x-auth: {$this->getAuthToken()}"));
+        $auth_token = $this->generateAuthToken($resource['id'], $resource['name'], $resource['email']);
+
+        $Request->sendResponse(200, $resource, array("x-auth: {$auth_token}"));
     }
 
     protected function updateFrom($Request)

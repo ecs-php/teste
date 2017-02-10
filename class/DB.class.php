@@ -46,11 +46,19 @@ class DB
         return $item;
     }
 
-    public static function getOneByField($table, $field, $value)
+    public static function getOneByField($table, array $fields)
     {
-        $sql = "SELECT * FROM {$table} WHERE {$field} = ?";
+        $clauses = array();
+        $values = array();
+        foreach($fields as $field => $value) {
+            $clauses[] = "{$field} = ?";
+            $values[] = $value;
+        }
+        $clauses = implode(' AND ', $clauses);
+
+        $sql = "SELECT * FROM {$table} WHERE {$clauses}";
         $st = self::getInstance()->prepare($sql);
-        $st->execute(array($value));
+        $st->execute($values);
 
         if(!$st)
             return false;
@@ -123,5 +131,12 @@ class DB
         $st->execute($values);
 
         return $data;
+    }
+
+    public function saveAuthTokenFor($table, $id, $auth_token)
+    {
+        $sql = "UPDATE {$table} SET auth_token = ? WHERE id = ?";
+        $st = self::getInstance()->prepare($sql);
+        $st->execute(array($auth_token, $id));
     }
 }

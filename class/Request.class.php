@@ -2,7 +2,7 @@
 
 class Request
 {
-    private static $valid_endpoints = array('resources', 'users');
+    private static $valid_endpoints = array('resources', 'users', 'login');
 
     private $endpoint;
     private $id;
@@ -15,12 +15,14 @@ class Request
 
     public function handle()
     {
+
         // Receives only JSON content
         if(array_key_exists('CONTENT_TYPE', $_SERVER) && $_SERVER['CONTENT_TYPE'] !== 'application/json') {
             $this->sendResponse(400);
         }
 
         $this->resolveUrl();
+        $this->validateAuthToken();
 
         if(!in_array($this->getEndpoint(), self::$valid_endpoints))
             $this->sendResponse(400);
@@ -60,6 +62,35 @@ class Request
             $this->id = $pieces[1];
         }
     }
+
+    private function validateAuthToken()
+    {
+        // Set bypass authentication
+        if(($this->getEndpoint() === 'users' && !$this->getId()) || $this->getEndpoint() === 'login') {
+            return;
+        }
+
+        if(!array_key_exists('HTTP_X_AUTH', $_SERVER))
+            $this->sendResponse(401);
+
+        $auth_token = $_SERVER['HTTP_X_AUTH'];
+        try{
+            $token_data = JWT::decode($auth_token, API_JWT_SECRET, array('HS256'));
+        } catch(Exception $e) {
+            $this->sendResponse(401);
+        }
+
+        $fields = array(
+            'name' => $token_data->name,
+            'email' => $token_data->email,
+            'auth_token' => $auth_token,
+        );
+        $resource = DB::getOneByField(Users::getTable(), $fields);
+
+        if(!$resource)
+            $this->sendResponse(401);
+    }
+
 
     // GETTERS
     public function getEndpoint()

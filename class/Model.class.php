@@ -25,7 +25,6 @@ abstract class Model
 
                     $Request->sendResponse(200, $resources);
                 }
-
                 break;
 
             case 'POST':
@@ -72,15 +71,19 @@ abstract class Model
         return DB::getOneByIdFrom(static::getTable(), static::getFields(), $id);
     }
 
-    abstract public function toArray();
+    protected function generateAuthToken($id, $name, $email)
+    {
+        // Token data
+        $token_data = array(
+            'id' => $id,
+            'name' => $name,
+            'email' => $email
+        );
+        $auth_token = JWT::encode($token_data, API_JWT_SECRET);
+        DB::saveAuthTokenFor(Users::getTable(), $id, $auth_token);
 
-    abstract protected function createFrom($Request);
-
-    abstract protected function updateFrom($Request);
-
-    abstract protected function deleteFrom($Request);
-
-    abstract protected function save();
+        return $auth_token;
+    }
 
     // GETTERS
     public static function getTable()
