@@ -1,0 +1,12 @@
+{
+	"description": "Dog API",
+	"name": "Dog API",
+	"type": "project",
+	"homepage": "http://localhost/ecs-test",
+	"require": {
+		"php": ">=5.5"
+	},
+	"require-dev": {
+
+        }
+}
