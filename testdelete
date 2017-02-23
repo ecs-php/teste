@@ -1,0 +1,5 @@
+#!/bin/bash
+curl http://localhost/teste/person/ -d '{"action" : "delete"}' -H 'Content-Type: application/json'
+curl http://localhost/teste/person/ -d '{"action" : "delete", "id" : "6"}' -H 'Content-Type: application/json'
+curl http://localhost/teste/person/ -d '{"action" : "delete", "id" : "5"}' -H 'Content-Type: application/json'
+

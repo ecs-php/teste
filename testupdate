@@ -1,0 +1,4 @@
+#!/bin/bash
+curl http://localhost/teste/person/ -d '{"action" : "update"}' -H 'Content-Type: application/json'
+curl http://localhost/teste/person/ -d '{"action" : "update", "id":"2", "name": "Ercy Moreira Neto", "phone":"11996582660", "facebook":"ercy.neto"}' -H 'Content-Type: application/json'
+
