@@ -3,6 +3,7 @@
 namespace TESTE\Model;
 
 use TESTE\Entity\Person as PersonEntity;
+use \Exception;
 
 /**
  * Description of Pessoa

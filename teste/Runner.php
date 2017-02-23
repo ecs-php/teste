@@ -7,6 +7,7 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use TESTE\Controller\Person as PersonController;
+use TESTE\Controller\User as UserController;
 use \Dflydev\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 
 use \Exception;
@@ -27,7 +28,7 @@ class Runner {
                 $data = json_decode($request->getContent(), true);
                 $request->request->replace(is_array($data) ? $data : array());
             } else {
-                //throw new Exception("Accept json data only!");
+                throw new Exception("Accept json data only!");
             }
         });
         
@@ -35,7 +36,7 @@ class Runner {
         $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
             'db.options' => array(
                 'driver'   => 'pdo_sqlite',
-                'path'     => __DIR__.'/teste.db',
+                'path'     => __DIR__. DIRECTORY_SEPARATOR . 'teste.db',
             ),
         ));
         
@@ -61,6 +62,10 @@ class Runner {
             $action = $request->request->get('action') . 'Action';
             
             if (method_exists($person, $action)){
+                $user = new UserController($app);
+                $user->authenticate($request);
+
+
                 $response = call_user_func_array(array($person, $action), array($request));
             } else {
                 $response = array('message' => 'Route not found!');
@@ -69,7 +74,18 @@ class Runner {
             
             return $app->json($response, 201);
         });
-        
+
+        $app->post('/singup/', function(Request $request) use($app) {
+
+            $user = new UserController($app);
+
+
+            $response = $user->singupAction($request);
+
+
+            return $app->json($response, 201);
+        });
+
     
         
          $app->get('/setup/', function() use($app) {
@@ -82,7 +98,7 @@ class Runner {
             $response = array(
                 'message' => $e->getMessage()
             );
-            
+
             return $app->json($response, 500);
         });
         
