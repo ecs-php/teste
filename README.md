@@ -19,10 +19,10 @@ password: secret
 scope:
 
 endPoints:
-http://dominio/client    | GET    | Lista todos clientes
-http://dominio/client    | POST   | Criar novo cliente
-http://dominio/client/id | PUT    | Atualizar cliente
-http://dominio/client/id | DELETE | Excluir cliente
+http://dominio/api/client    | GET    | Lista todos clientes
+http://dominio/api/client    | POST   | Criar novo cliente
+http://dominio/api/client/id | PUT    | Atualizar cliente
+http://dominio/api/client/id | DELETE | Excluir cliente
 
 Estrutura da tabela de clientes:
 id
