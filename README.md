@@ -1,34 +1,34 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso.
+# Instalação do projeto
+Para criação do projeto foi usado framework Laravel 5.4
+Siga os passos abaixo para instalação do projeto local.
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+* Clonar projeto
+* Abra o terminal no projeto e digite os seguintes comandos
+* composer install
+* php artisan migrate
+* php artisan serve
 
-* Deverá conter um ID
-* Deverá conter pelo menos cinco propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+Para obter o token:
+* http://dominio/oauth/token | POST
+* As informações abaixo precisam ser passada no body | x-www-form-urlencoded
+* grant_type: password
+* client_id: 2
+* client_secret: JCCsAcdB6sgH3fsdlXFrS8p0rHf6JH0yseptwCiP
+* username: user1@teste.com.br
+* password: secret
+* scope:
 
-A API deverá atender às seguintes exigências:
+endPoints:
+* http://dominio/api/client    | GET    | Lista todos clientes
+* http://dominio/api/client    | POST   | Criar novo cliente
+* http://dominio/api/client/id | PUT    | Atualizar cliente
+* http://dominio/api/client/id | DELETE | Excluir cliente
 
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
-
-# Ferramentas
-* PHP
-* Banco de dados SQLite
-* Frameworks à escolha do desenvolvedor
-
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
-
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
-
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+Estrutura da tabela de clientes:
+* id
+* name
+* email
+* address
+* city
+* state
+* birth_date
