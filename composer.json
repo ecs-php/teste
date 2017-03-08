@@ -1,0 +1,30 @@
+{
+    "type": "library",
+    "authors": [
+        {
+            "name": "André Felipe de Souza",
+            "email": "andre.felipe3@gmail.com.br",
+            "role": "PHP Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "silex/silex": "2.0.*",
+        "doctrine/dbal": "2.*",
+        "doctrine/orm": "2.*",
+        "symfony/yaml": "^2.7",
+        "vlucas/phpdotenv": "2.*",
+        "zendframework/zend-hydrator": "^2.0",
+        "zendframework/zend-filter": "^2.6",
+        "zendframework/zend-servicemanager": "^2.5.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "psr-4": { "": "src/API/" }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
