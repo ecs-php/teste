@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="PSR2-Test">
+    <!-- Folders to verify -->
+    <file>src/</file>
+    <!-- Print only a summary of errors -->
+    <arg name="report" value="full"/>
+    <!-- Prevent warnings -->
+    <!-- Show progress -->
+    <arg value="p"/>
+    <!-- Colors -->
+    <arg name="colors"/>
+    <rule ref="PSR2">
+        <exclude name="PSR2.ControlStructures.SwitchDeclaration"/>
+        <!-- Allow blank line after open braces -->
+        <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+    </rule>
+</ruleset>

@@ -1,0 +1,15 @@
+Entity\Product:
+    type: entity
+    repositoryClass: \Service\Repository\Product
+    fields:
+        name:
+            type: string
+            length: 100
+        description:
+            type: string
+        price:
+            type: float
+        weight:
+            type: float
+        active:
+            type: boolean
