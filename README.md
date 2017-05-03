@@ -32,3 +32,72 @@ A API deverá atender às seguintes exigências:
 1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
 
 **Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+
+
+******************************************************************************************************************
+
+BRUNO CARAMELO SOUZA
+
+Passos para uso
+
+1 - baixar repositório
+
+2 - executar : composer install
+
+3 - executar : php artisan migrate --force
+
+4 - executar : php artisan db:seed
+
+5 - executar : phpunit na raiz do projeto caso o mesmo for instalado como global
+
+
+O projeto foi baseado em TDD , contendo teste de unidade para a entidade Employee como serviço e como modulo.
+com testes de HTTP, autenticação baseada em tokens.
+
+O sqlite será alimentado pelo migrate , e seus dados pelo seed, sendo usados para a bateria de testes e para a aplicação vistos em app/database/migrations e seeds
+
+---------------------------------------------------------------------------------------------------------
+
+ROTAS
+
+
+- Listar Todos os employees
+	http://host.desejado/api/v1/employees
+	- POST 
+	- parametros: 'api_token' = 8de70cb01900c98625fd6f484fc1468ba2fadb93
+
+- Recuperar employee
+	http://host.desejado/api/v1/employee/{id}
+	- POST 
+	- parametros: 'api_token' = 8de70cb01900c98625fd6f484fc1468ba2fadb93
+
+- Criar employee
+	http://host.desejado/api/v1/employee/create
+	- POST 
+	- parametros: 
+		'name' = String,
+        'email' = String,
+        'address' = String,
+        'number' = String,
+        'phone' = Number,
+        'cpf' = Number,
+		'api_token' = 8de70cb01900c98625fd6f484fc1468ba2fadb93
+
+
+- Editar employee
+	http://host.desejado/api/v1/employee/update/{id}
+	- POST 
+	- parametros: 
+		'id' = Number,
+		'name' = String,
+        'email' = String,
+        'address' = String,
+        'number' = String,
+        'phone' = Number,
+        'cpf' = Number,
+		'api_token' = 8de70cb01900c98625fd6f484fc1468ba2fadb93
+
+- Excluir employee
+	http://host.desejado/api/v1/employee/remove/{id}
+	- POST 
+	- parametros: 'api_token' = 8de70cb01900c98625fd6f484fc1468ba2fadb93
