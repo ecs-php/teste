@@ -1,0 +1,16 @@
+{
+    "name": "osmar/testeapi",
+    "require": {
+        "silex/silex": "^2.1",
+        "doctrine/orm": "^2.5"
+    },
+    "authors": [
+        {
+            "name": "Osmar Queiroz",
+            "email": "ramsosmar@gmail.com"
+        }
+    ],
+    "autoload" :{
+        "psr-4" :{"Base\\":"src"}
+    }
+}
