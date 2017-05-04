@@ -3,7 +3,7 @@
 namespace Entity;
 
 /**
- * @Entity @EntityListeners({"UserListener"})
+ * @Entity(repositoryClass="Repository\UserRepository") @EntityListeners({"UserListener"})
  * @Table(name="user")
  */
 class User {
@@ -23,12 +23,12 @@ class User {
      * @Column(type="datetime")
      */
     protected $createdAt;
-    
+
     /**
      * @Column(type="datetime")
      */
     protected $updatedAt;
-    
+
     public function getId() {
         return $this->id;
     }
@@ -69,15 +69,12 @@ class User {
         $this->updatedAt = $updatedAt;
     }
 
-    
-    public function updatedTimestamps()
-{
-    $this->setUpdatedAt(new \DateTime('now'));
+    public function updatedTimestamps() {
+        $this->setUpdatedAt(new \DateTime('now'));
 
-    if ($this->getCreatedAt() == null) {
-        $this->setCreatedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() == null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
     }
-}
-
 
 }

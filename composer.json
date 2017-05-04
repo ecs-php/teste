@@ -5,7 +5,8 @@
     },
     "require": {
         "silex/silex": "^2.1",
-        "doctrine/orm": "^2.5"
+        "doctrine/orm": "^2.5",
+        "symfony/serializer": "^3.2"
     },
     "authors": [
         {

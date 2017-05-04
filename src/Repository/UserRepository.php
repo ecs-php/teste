@@ -2,22 +2,19 @@
 
 namespace Repository;
 
-
 use Doctrine\ORM\EntityRepository;
-use \Entity\User;
+use Entity\User;
 
-/**
- * Description of UserRepository
- *
- * @author osmar
- */
 class UserRepository extends EntityRepository {
-    //put your code here
-    
-    public function findAllUsers(){
-        
-//        $user = User();        
-//        $user->
-        
+
+    public function findAllUsers() {
+        return $this->findAll();
     }
+
+    public function findUser($login) {
+        return $this->findOneBy(['login' => $login]);
+    }
+
+    
+
 }

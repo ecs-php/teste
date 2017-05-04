@@ -3,7 +3,7 @@
 namespace Entity;
 
 /**
- * @Entity
+ * @Entity(repositoryClass="Repository\ProductRepository") @EntityListeners({"ProductListener"})
  * @Table(name="product")
  */
 class Product {
@@ -92,6 +92,12 @@ class Product {
         $this->updatedAt = $updatedAt;
     }
 
+    public function updatedTimestamps() {
+        $this->setUpdatedAt(new \DateTime('now'));
 
+        if ($this->getCreatedAt() == null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
 
 }
