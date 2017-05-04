@@ -4,4 +4,4 @@ use Doctrine\ORM\Tools\Console\ConsoleRunner;
 
 require_once 'index.php';
 
-return ConsoleRunner::createHelperSet($entityManager);
+return ConsoleRunner::createHelperSet($em);

@@ -1,5 +1,8 @@
 {
     "name": "osmar/testeapi",
+    "require-dev":{
+        "symfony/var-dumper":"*"
+    },
     "require": {
         "silex/silex": "^2.1",
         "doctrine/orm": "^2.5"
@@ -11,6 +14,6 @@
         }
     ],
     "autoload" :{
-        "psr-4" :{"Base\\":"src"}
+        "psr-4" :{"":"src/"}
     }
 }

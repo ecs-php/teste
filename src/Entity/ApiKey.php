@@ -8,28 +8,34 @@ namespace Entity;
  * @Table(name="api_key")
  */
 class ApiKey {
-    
-     /**
+
+    /**
      * @GeneratedValue(strategy="IDENTITY")
-     * @Column(type="integer", unique=true,IDENTITY)
+     * @Id @Column(type="integer", unique=true)
      */
-    protected $id; 
+    protected $id;
+
     /**
      * @GeneratedValue(strategy="UUID")
      * @Column(type="string", unique=true)
      */
     protected $key;
-    
-     /**
+
+    /**
      * @Column(type="integer")
      * @ManyToOne(targetEntity="User")
      * @JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
-    
-    /** @Column(type="datetime") */
-    protected $create_at;
-    
-    /** @Column(type="datetime") */
-    protected $update_at;
+
+    /**
+     * @Column(type="datetime")
+     */
+    protected $createdAt;
+
+    /**
+     * @Column(type="datetime")
+     */
+    protected $updatedAt;
+
 }
