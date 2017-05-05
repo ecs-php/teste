@@ -4,12 +4,12 @@ namespace Entity;
 
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 
-class ProductListener  {
+class ProductListener {
 
     public function preFlush(Product $product) {
-       
-       $product->updatedTimestamps();
-       return $product;
+
+        $product->updatedTimestamps();
+        return $product;
     }
 
 }

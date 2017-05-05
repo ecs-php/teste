@@ -26,6 +26,9 @@ class Product {
     /** @Column(type="string") */
     protected $category;
 
+    /** @Column(type="decimal") */
+    protected $discount;
+
     /**
      * @Column(type="datetime")
      */
@@ -50,6 +53,10 @@ class Product {
 
     public function getPrice() {
         return $this->price;
+    }
+
+    public function getDiscount() {
+        return $this->discount;
     }
 
     public function getCategory() {
@@ -78,6 +85,10 @@ class Product {
 
     public function setPrice($price) {
         $this->price = $price;
+    }
+
+    public function setDiscount($discount) {
+        $this->discount = $discount;
     }
 
     public function setCategory($category) {

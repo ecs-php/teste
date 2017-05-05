@@ -23,7 +23,7 @@ $entityManager = EntityManager::create($dbParams, $config);
 $app = new Silex\Application();
 $app['debug'] = true;
 $app['db'] = $entityManager;
-//$app->register(new Silex\Provider\ValidatorServiceProvider());
+
 $app->register(new Silex\Provider\SerializerServiceProvider());
 
 $app->mount("/", include "src".DIRECTORY_SEPARATOR."Route".DIRECTORY_SEPARATOR."BaseController.php");

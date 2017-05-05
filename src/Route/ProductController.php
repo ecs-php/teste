@@ -2,22 +2,22 @@
 
 $productApp = $app['controllers_factory'];
 
-use Symfony\Component\Console\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Entity\Product;
 
-$beforeProductExist = function (Request $request) use ($app) {
+$checkProductExist = function (Request $request) use ($app) {
 
     $id = (int) $request->get("id");
 
     $product = $app['db']->getRepository("Entity\Product")->findById($id);
 
+
     if (empty($product)) {
         return new Response("Product not exists", 404);
     }
 };
+
 $productApp->before(function (Request $request) use ($app) {
     //check authorization
     $key = $request->headers->get('key');
@@ -26,6 +26,8 @@ $productApp->before(function (Request $request) use ($app) {
     if (empty($keyDb)) {
         return new Response("User Unauthorized", 401);
     }
+    $app['db']->merge($keyDb);
+    $app['db']->flush();
 });
 
 $productApp->match('/', function (Request $request) use($app) {
@@ -35,6 +37,7 @@ $productApp->match('/', function (Request $request) use($app) {
 
     $product->setName($dataJson['name']);
     $product->setPrice($dataJson['price']);
+    $product->setDiscount($dataJson['discount']);
     $product->setDescription($dataJson['description']);
     $product->setCategory($dataJson['category']);
 
@@ -59,14 +62,14 @@ $productApp->match('/', function (Request $request) use($app) {
 $productApp->get('/', function (Request $request) use ($app) {
 
     $products = $app['db']->getRepository("Entity\Product")->findAllProductsToArray();
-    return $app->json($app['serializer']->serialize($products, 'json'), 200);
+    return $app->json($app['serializer']->normalize($products, 'json'), 200);
 });
 
 $productApp->get('/{id}', function ($id) use ($app) {
 
     $products = $app['db']->getRepository("Entity\Product")->findById($id);
-    return $app->json($app['serializer']->serialize($products, 'json'), 200);
-})->assert('id', '\d+')->before($beforeProductExist);
+    return $app->json($app['serializer']->normalize($products, 'json'), 200);
+})->assert('id', '\d+')->before($checkProductExist);
 
 
 $productApp->put('/{id}', function (Request $request, $id) use($app) {
@@ -80,6 +83,9 @@ $productApp->put('/{id}', function (Request $request, $id) use($app) {
     }
     if (isset($dataJson['description'])) {
         $product->setDescription($dataJson['description']);
+    }
+    if (isset($dataJson['discount'])) {
+        $product->setDiscount($dataJson['discount']);
     }
     if (isset($dataJson['price'])) {
         $product->setPrice($dataJson['price']);
@@ -95,23 +101,16 @@ $productApp->put('/{id}', function (Request $request, $id) use($app) {
         return new Response("Product updated", 200);
     }
     return new Response("Product invalid", 403);
-})->assert('id', '\d+')->before($beforeProductExist);
+})->assert('id', '\d+')->before($checkProductExist);
 
 $productApp->delete('/{id}', function (Request $request, $id) use($app) {
 
     $product = $app['db']->getRepository("Entity\Product")->findById($id);
-    $app['db']->detach($product);
+    $app['db']->remove($product);
     $app['db']->flush();
-})->assert('id', '\d+')->before($beforeProductExist)->after(function(Request $request) use ($app) {
+    ;
+    return new Response("Product removed", 200);
+})->assert('id', '\d+')->before($checkProductExist);
 
-    $id = (int) $request->get("id");
-
-    $product = $app['db']->getRepository("Entity\Product")->findById($id);
-
-    if (empty($product)) {
-        return new Response("Product removed", 200);
-    }
-     return new Response("Product not removed", 304);
-});
 
 return $productApp;
