@@ -1,0 +1,66 @@
+[16-May-2017 23:20:51 America/Sao_Paulo] PHP Fatal error:  Call to a member function getId() on null in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 17
+[16-May-2017 23:45:01 America/Sao_Paulo] PHP Fatal error:  Call to undefined function assertNotEquals() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 68
+[16-May-2017 23:45:11 America/Sao_Paulo] PHP Fatal error:  Call to undefined function assertNotEquals() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 68
+[16-May-2017 23:45:21 America/Sao_Paulo] PHP Fatal error:  Call to undefined function assertNotEquals() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 68
+[16-May-2017 23:46:04 America/Sao_Paulo] PHP Fatal error:  Call to undefined function assertNotEquals() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 68
+[16-May-2017 23:47:19 America/Sao_Paulo] PHP Fatal error:  Call to undefined function assertNotEquals() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 68
+[16-May-2017 23:47:46 America/Sao_Paulo] PHP Fatal error:  Call to undefined function assertNotEquals() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 67
+[17-May-2017 01:26:22 America/Sao_Paulo] PHP Fatal error:  Call to undefined method App\Service\BookService::delete() in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Service/BookServiceTest.php on line 182
+[17-May-2017 06:11:18 America/Sao_Paulo] PHP Fatal error:  Class 'MonologServiceProvider' not found in /home/edipo/projects/ecs-php/teste/config/prod.php on line 14
+[17-May-2017 06:11:27 America/Sao_Paulo] PHP Fatal error:  Class 'MonologServiceProvider' not found in /home/edipo/projects/ecs-php/teste/config/prod.php on line 14
+[17-May-2017 06:14:49 America/Sao_Paulo] PHP Notice:  Indirect modification of overloaded element of Silex\Application has no effect in /home/edipo/projects/ecs-php/teste/config/dev.php on line 11
+[17-May-2017 06:29:00 America/Sao_Paulo] PHP Fatal error:  Class 'MonologServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 28
+[17-May-2017 06:30:46 America/Sao_Paulo] PHP Fatal error:  Call to a member function extend() on array in /home/edipo/projects/ecs-php/teste/src/app.php on line 27
+[17-May-2017 06:30:55 America/Sao_Paulo] PHP Fatal error:  Call to a member function extend() on array in /home/edipo/projects/ecs-php/teste/src/app.php on line 27
+[17-May-2017 06:33:41 America/Sao_Paulo] PHP Fatal error:  Class 'MonologServiceProvider' not found in /home/edipo/projects/ecs-php/teste/config/dev.php on line 11
+[17-May-2017 06:38:48 America/Sao_Paulo] PHP Fatal error:  Class 'DateTimeNormalizer' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 28
+[17-May-2017 07:36:44 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 38
+[17-May-2017 07:36:46 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 38
+[17-May-2017 07:36:59 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 38
+[17-May-2017 07:37:33 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 38
+[17-May-2017 07:37:35 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 38
+[17-May-2017 07:37:36 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected end of file in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 38
+[17-May-2017 08:08:44 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected ';' in /home/edipo/projects/ecs-php/teste/tests/controllersTest.php on line 21
+[17-May-2017 08:08:45 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected ';' in /home/edipo/projects/ecs-php/teste/tests/controllersTest.php on line 21
+[17-May-2017 08:10:54 America/Sao_Paulo] PHP Warning:  Uncaught Object of class DateTime could not be converted to string
+
+/home/edipo/projects/ecs-php/teste/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:91
+/home/edipo/projects/ecs-php/teste/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:1008
+/home/edipo/projects/ecs-php/teste/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php:715
+/home/edipo/projects/ecs-php/teste/tests/controllersTest.php:21
+
+  thrown in /home/edipo/projects/ecs-php/teste/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 91
+[17-May-2017 09:03:00 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare class App\Exception\BookServiceException in /home/edipo/projects/ecs-php/teste/src/App/Exception/BookNotFoundException.php on line 12
+[17-May-2017 09:12:28 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:12:31 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:12:54 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:13:05 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:13:07 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:13:08 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:13:14 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:13:16 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:16:09 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:17:55 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:18:33 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:19:54 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:20:29 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:21:03 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:21:20 America/Sao_Paulo] PHP Fatal error:  Class 'App\Exception\BookConverterAppException' not found in /home/edipo/projects/ecs-php/teste/src/App/Converter/BookConverter.php on line 35
+[17-May-2017 09:32:42 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare class XXX in /home/edipo/projects/ecs-php/teste/src/app.php on line 20
+[17-May-2017 09:32:46 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare class XXX in /home/edipo/projects/ecs-php/teste/src/app.php on line 20
+[17-May-2017 09:32:49 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare class XXX in /home/edipo/projects/ecs-php/teste/src/app.php on line 20
+[17-May-2017 10:51:01 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected ')' in /home/edipo/projects/ecs-php/teste/src/app.php on line 66
+[17-May-2017 10:51:56 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected ')' in /home/edipo/projects/ecs-php/teste/src/app.php on line 66
+[17-May-2017 10:52:03 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected ')' in /home/edipo/projects/ecs-php/teste/src/app.php on line 66
+[17-May-2017 10:52:11 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected ')' in /home/edipo/projects/ecs-php/teste/src/app.php on line 66
+[17-May-2017 10:52:38 America/Sao_Paulo] PHP Fatal error:  Class 'Authentication' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 58
+[17-May-2017 11:28:47 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 65
+[17-May-2017 11:28:48 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 65
+[17-May-2017 11:29:08 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 60
+[17-May-2017 11:29:10 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 60
+[17-May-2017 11:29:11 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 60
+[17-May-2017 11:29:46 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 61
+[17-May-2017 11:29:47 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 61
+[17-May-2017 11:29:53 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 62
+[17-May-2017 11:30:01 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 62
+[17-May-2017 11:30:09 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected '}' in /home/edipo/projects/ecs-php/teste/tests/Tests/App/Middleware/ContentTypeValidatorTest.php on line 62

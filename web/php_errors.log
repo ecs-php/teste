@@ -1,0 +1,285 @@
+[16-May-2017 18:34:25 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:34:27 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:34:45 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:34:46 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:34:49 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:00 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:02 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:09 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:19 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:43 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:53 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:54 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:55 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:35:58 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 18:36:08 America/Sao_Paulo] PHP Fatal error:  Class 'SerializerServiceProvider' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 16
+[16-May-2017 19:17:37 America/Sao_Paulo] PHP Fatal error:  Call to undefined method App\Entity\Book::setCreateadAt() in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 35
+[16-May-2017 19:17:45 America/Sao_Paulo] PHP Fatal error:  Call to undefined method App\Entity\Book::setCreateadAt() in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 35
+[16-May-2017 19:17:52 America/Sao_Paulo] PHP Fatal error:  Call to undefined method App\Entity\Book::setCreateadAt() in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 35
+[16-May-2017 20:28:27 America/Sao_Paulo] PHP Warning:  get_class() expects parameter 1 to be object, string given in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 50
+[16-May-2017 20:41:35 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to JMS\Serializer\Construction\DoctrineObjectConstructor::__construct() must be an instance of Doctrine\Common\Persistence\ManagerRegistry, none given, called in /home/edipo/projects/ecs-php/teste/src/app.php on line 40 and defined in /home/edipo/projects/ecs-php/teste/vendor/jms/serializer/src/JMS/Serializer/Construction/DoctrineObjectConstructor.php on line 51
+[16-May-2017 20:41:40 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to JMS\Serializer\Construction\DoctrineObjectConstructor::__construct() must be an instance of Doctrine\Common\Persistence\ManagerRegistry, none given, called in /home/edipo/projects/ecs-php/teste/src/app.php on line 40 and defined in /home/edipo/projects/ecs-php/teste/vendor/jms/serializer/src/JMS/Serializer/Construction/DoctrineObjectConstructor.php on line 51
+[16-May-2017 20:41:46 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to JMS\Serializer\Construction\DoctrineObjectConstructor::__construct() must be an instance of Doctrine\Common\Persistence\ManagerRegistry, none given, called in /home/edipo/projects/ecs-php/teste/src/app.php on line 40 and defined in /home/edipo/projects/ecs-php/teste/vendor/jms/serializer/src/JMS/Serializer/Construction/DoctrineObjectConstructor.php on line 51
+[16-May-2017 20:42:00 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to JMS\Serializer\Construction\DoctrineObjectConstructor::__construct() must be an instance of Doctrine\Common\Persistence\ManagerRegistry, none given, called in /home/edipo/projects/ecs-php/teste/src/app.php on line 40 and defined in /home/edipo/projects/ecs-php/teste/vendor/jms/serializer/src/JMS/Serializer/Construction/DoctrineObjectConstructor.php on line 51
+[16-May-2017 20:42:05 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to JMS\Serializer\Construction\DoctrineObjectConstructor::__construct() must be an instance of Doctrine\Common\Persistence\ManagerRegistry, none given, called in /home/edipo/projects/ecs-php/teste/src/app.php on line 40 and defined in /home/edipo/projects/ecs-php/teste/vendor/jms/serializer/src/JMS/Serializer/Construction/DoctrineObjectConstructor.php on line 51
+[16-May-2017 20:58:29 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/edipo/projects/ecs-php/teste/src/app.php on line 43
+[16-May-2017 21:00:03 America/Sao_Paulo] PHP Fatal error:  Class 'DateTimeNormalizer' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 21
+[16-May-2017 21:00:09 America/Sao_Paulo] PHP Fatal error:  Class 'DateTimeNormalizer' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 21
+[16-May-2017 21:00:11 America/Sao_Paulo] PHP Fatal error:  Class 'DateTimeNormalizer' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 21
+[16-May-2017 21:02:09 America/Sao_Paulo] PHP Fatal error:  Class 'DateTimeNormalizer' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 22
+[16-May-2017 21:02:14 America/Sao_Paulo] PHP Fatal error:  Class 'DateTimeNormalizer' not found in /home/edipo/projects/ecs-php/teste/src/app.php on line 22
+[16-May-2017 22:02:36 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to App\Entity\Book::setCreatedAt() must be an instance of DateTime, string given, called in /home/edipo/projects/ecs-php/teste/vendor/symfony/serializer/Normalizer/GetSetMethodNormalizer.php on line 151 and defined in /home/edipo/projects/ecs-php/teste/src/App/Entity/Book.php on line 139
+[16-May-2017 22:02:43 America/Sao_Paulo] PHP Catchable fatal error:  Argument 1 passed to App\Entity\Book::setCreatedAt() must be an instance of DateTime, string given, called in /home/edipo/projects/ecs-php/teste/vendor/symfony/serializer/Normalizer/GetSetMethodNormalizer.php on line 151 and defined in /home/edipo/projects/ecs-php/teste/src/App/Entity/Book.php on line 139
+[16-May-2017 22:34:44 America/Sao_Paulo] PHP Warning:  Missing argument 1 for Doctrine\ORM\EntityManager::getClassMetadata(), called in /home/edipo/projects/ecs-php/teste/src/app.php on line 62 and defined in /home/edipo/projects/ecs-php/teste/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php on line 279
+[16-May-2017 22:34:44 America/Sao_Paulo] PHP Notice:  Undefined variable: className in /home/edipo/projects/ecs-php/teste/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php on line 281
+[16-May-2017 22:34:44 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Persistence\Mapping\MappingException' with message 'Class '' does not exist' in /home/edipo/projects/ecs-php/teste/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php:96
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php(41): Doctrine\Common\Persistence\Mapping\MappingException::nonExistingClass(NULL)
+#1 /home/edipo/projects/ecs-php/teste/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(281): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getParentClasses(NULL)
+#2 /home/edipo/projects/ecs-php/teste/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php(311): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getParentClasses(NULL)
+#3 /home/edipo/projects/ecs-php/teste/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataFactory.php in /home/edipo/projects/ecs-php/teste/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php on line 96
+[16-May-2017 22:54:57 America/Sao_Paulo] PHP Fatal error:  Class 'MonologServiceProvider' not found in /home/edipo/projects/ecs-php/teste/config/prod.php on line 10
+[16-May-2017 22:54:58 America/Sao_Paulo] PHP Fatal error:  Class 'MonologServiceProvider' not found in /home/edipo/projects/ecs-php/teste/config/prod.php on line 10
+[17-May-2017 02:24:51 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'No encoder has been configured for account "admin".' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php:51
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/src/app.php(69): Symfony\Component\Security\Core\Encoder\EncoderFactory->getEncoder('admin')
+#1 /home/edipo/projects/ecs-php/teste/web/index.php(7): require('/home/edipo/pro...')
+#2 {main}
+  thrown in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php on line 51
+[17-May-2017 02:24:57 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'No encoder has been configured for account "admin".' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php:51
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/src/app.php(69): Symfony\Component\Security\Core\Encoder\EncoderFactory->getEncoder('admin')
+#1 /home/edipo/projects/ecs-php/teste/web/index.php(7): require('/home/edipo/pro...')
+#2 {main}
+  thrown in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php on line 51
+[17-May-2017 02:25:07 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'No encoder has been configured for account "admin".' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php:51
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/src/app.php(69): Symfony\Component\Security\Core\Encoder\EncoderFactory->getEncoder('admin')
+#1 /home/edipo/projects/ecs-php/teste/web/index.php(7): require('/home/edipo/pro...')
+#2 {main}
+  thrown in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php on line 51
+[17-May-2017 02:25:09 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'No encoder has been configured for account "admin".' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php:51
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/src/app.php(69): Symfony\Component\Security\Core\Encoder\EncoderFactory->getEncoder('admin')
+#1 /home/edipo/projects/ecs-php/teste/web/index.php(7): require('/home/edipo/pro...')
+#2 {main}
+  thrown in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Encoder/EncoderFactory.php on line 51
+[17-May-2017 02:25:45 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:25:45 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:02 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:02 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:17 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:17 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:40 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:40 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:26:47 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:27:11 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Identifier "security.firewalls" is not defined.' in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php:96
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(211): Pimple\Container->offsetGet('security.firewa...')
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(154): Pimple\Container->offsetGet('security.firewa...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(672): Pimple\Container->off in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php on line 96
+[17-May-2017 02:27:14 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Identifier "security.firewalls" is not defined.' in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php:96
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(211): Pimple\Container->offsetGet('security.firewa...')
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(154): Pimple\Container->offsetGet('security.firewa...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(672): Pimple\Container->off in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php on line 96
+[17-May-2017 02:27:38 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Identifier "security.firewalls" is not defined.' in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php:96
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(211): Pimple\Container->offsetGet('security.firewa...')
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(154): Pimple\Container->offsetGet('security.firewa...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(672): Pimple\Container->off in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php on line 96
+[17-May-2017 02:27:39 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Identifier "security.firewalls" is not defined.' in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php:96
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(211): Pimple\Container->offsetGet('security.firewa...')
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(154): Pimple\Container->offsetGet('security.firewa...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(672): Pimple\Container->off in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php on line 96
+[17-May-2017 02:28:00 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Identifier "security.firewalls" is not defined.' in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php:96
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(211): Pimple\Container->offsetGet('security.firewa...')
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(154): Pimple\Container->offsetGet('security.firewa...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(672): Pimple\Container->off in /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php on line 96
+[17-May-2017 02:31:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:34 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:36 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:36 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:41 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:41 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:58 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:31:58 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:12 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:12 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:18 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:18 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:24 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:24 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:29 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:32:29 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:02 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:02 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:06 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:06 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:21 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:21 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:22 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:22 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:33 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:41 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:41 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:34:41 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:34:44 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:44 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:34:44 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:34:48 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:48 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:34:48 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:34:50 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:34:50 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:34:50 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:35:07 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:07 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:35:07 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:35:29 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:29 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:29 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:35:29 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:35:37 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:37 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:37 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:35:37 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:35:54 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:54 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:35:54 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:35:54 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:36:00 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:00 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:00 America/Sao_Paulo] PHP Warning:  array_map(): An error occurred while invoking the map callback in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 334
+[17-May-2017 02:36:00 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'You must at least add one authentication provider.' in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php:48
+Stack trace:
+#0 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(108): Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager->__construct(Array)
+#1 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#2 /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php(347): Pimple\Container->offsetGet('security.authen...')
+#3 /home/edipo/projects/ecs-php/teste/vendor/pimple/pimple/src/Pimple/Container.php(113): Silex\Provider\SecurityServiceProvider->Silex\Provider\{closure}(Object(Silex\Application))
+#4 /home/edipo/projects/ecs-php/teste/vendor/sile in /home/edipo/projects/ecs-php/teste/vendor/symfony/security/Core/Authentication/AuthenticationProviderManager.php on line 48
+[17-May-2017 02:36:04 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:04 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:16 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:16 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:30 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:30 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:41 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:41 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:36:51 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:37:01 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:37:01 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:08 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:08 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:12 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:12 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:13 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:13 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:14 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:14 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:17 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:17 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:20 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:20 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:29 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:29 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:31 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 02:48:31 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /home/edipo/projects/ecs-php/teste/vendor/silex/silex/src/Silex/Provider/SecurityServiceProvider.php on line 242
+[17-May-2017 04:23:28 America/Sao_Paulo] PHP Notice:  Undefined variable: id in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 19
+[17-May-2017 04:25:46 America/Sao_Paulo] PHP Notice:  Undefined variable: id in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 19
+[17-May-2017 04:25:51 America/Sao_Paulo] PHP Notice:  Undefined variable: id in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 19
+[17-May-2017 04:27:40 America/Sao_Paulo] PHP Fatal error:  Using $this when not in object context in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 21
+[17-May-2017 04:27:42 America/Sao_Paulo] PHP Fatal error:  Using $this when not in object context in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 21
+[17-May-2017 04:33:05 America/Sao_Paulo] PHP Fatal error:  Using $this when not in object context in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 21
+[17-May-2017 04:33:08 America/Sao_Paulo] PHP Fatal error:  Using $this when not in object context in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 21
+[17-May-2017 04:36:34 America/Sao_Paulo] PHP Fatal error:  Using $this when not in object context in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 21
+[17-May-2017 04:36:35 America/Sao_Paulo] PHP Fatal error:  Using $this when not in object context in /home/edipo/projects/ecs-php/teste/src/controllers.php on line 21
+[17-May-2017 04:45:29 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier '*' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:45:39 America/Sao_Paulo] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 0 in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:45:49 America/Sao_Paulo] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 0 in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:46:27 America/Sao_Paulo] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 1 in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:46:34 America/Sao_Paulo] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 1 in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:46:40 America/Sao_Paulo] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 1 in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:47:14 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier ']' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:47:53 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier ']' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:47:57 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier '/' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:48:00 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier ']' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:48:15 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier ']' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:48:21 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier ']' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:48:44 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier 'j' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:48:51 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier 'j' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:49:14 America/Sao_Paulo] PHP Warning:  preg_match(): Compilation failed: nothing to repeat at offset 1 in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:49:44 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier '[' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:49:49 America/Sao_Paulo] PHP Warning:  preg_match(): Unknown modifier '[' in /home/edipo/projects/ecs-php/teste/vendor/symfony/expression-language/Node/BinaryNode.php on line 154
+[17-May-2017 04:56:33 America/Sao_Paulo] PHP Catchable fatal error:  Argument 2 passed to {closure}() must be an instance of Request, instance of Symfony\Component\HttpFoundation\Request given in /home/edipo/projects/ecs-php/teste/config/prod.php on line 11
+[17-May-2017 04:56:41 America/Sao_Paulo] PHP Catchable fatal error:  Argument 2 passed to {closure}() must be an instance of Request, instance of Symfony\Component\HttpFoundation\Request given in /home/edipo/projects/ecs-php/teste/config/prod.php on line 11
+[17-May-2017 04:56:55 America/Sao_Paulo] PHP Catchable fatal error:  Argument 2 passed to {closure}() must be an instance of Request, instance of Symfony\Component\HttpFoundation\Request given in /home/edipo/projects/ecs-php/teste/config/prod.php on line 11
+[17-May-2017 04:57:29 America/Sao_Paulo] PHP Catchable fatal error:  Argument 2 passed to {closure}() must be an instance of Request, instance of Symfony\Component\HttpFoundation\Request given in /home/edipo/projects/ecs-php/teste/config/prod.php on line 11
+[17-May-2017 04:57:36 America/Sao_Paulo] PHP Catchable fatal error:  Argument 2 passed to {closure}() must be an instance of Request, instance of Symfony\Component\HttpFoundation\Request given in /home/edipo/projects/ecs-php/teste/config/prod.php on line 11
