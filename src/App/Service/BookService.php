@@ -33,7 +33,7 @@ class BookService
             $this->entityManager->persist($book);
             $this->entityManager->flush();
         } catch (\Exception $e) {
-            throw new BookServiceException('Some inconsistence on create', null, $e);
+            throw new BookServiceException('Some inconsistency on create', 500, $e);
         }
 
         return $book;
@@ -65,7 +65,7 @@ class BookService
         } catch (BookNotFoundException $e) {
             throw $e;
         } catch (\Exception $e) {
-            throw new BookServiceException('Some inconsistence on create', null, $e);
+            throw new BookServiceException('Some inconsistency on update', 500, $e);
         }
 
         return $book;
@@ -91,7 +91,7 @@ class BookService
         } catch (BookNotFoundException $e) {
             throw $e;
         } catch (\Exception $e) {
-            throw new BookServiceException('Some inconsistence on create', null, $e);
+            throw new BookServiceException('Some inconsistency on delete', 500, $e);
         }
 
         return $book;
