@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,39 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        Model::unguard();
+
+        $this->call(UsersTableSeeder::class);
+        $this->call(GamesTableSeeder::class);
+
+        Model::reguard();
+    }
+}
+
+/**
+ * Populate table Games
+ */
+ class GamesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        App\Game::create([
+            'title' => str_random(30),
+            'description' => str_random(100),
+            'release_date' => date('Y-m-d'),
+            'price' => 49.90
+        ]);
+        
+        App\Game::create([
+            'title' => str_random(30),
+            'description' => str_random(100),
+            'release_date' => date('Y-m-d'),
+            'price' => 19.90
+        ]);
     }
 }
