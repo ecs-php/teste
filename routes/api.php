@@ -21,4 +21,4 @@ Route::get('/', function () {
 	return response()->json(['message' => 'Games API', 'status' => 'Connected']);
 });
 
-Route::resource('games', GamesController::class);
+Route::resource('games', GamesController::class)->middleware('auth:api');;
