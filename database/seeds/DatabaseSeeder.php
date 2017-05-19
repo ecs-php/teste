@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
 /**
  * Populate table Games
  */
- class GamesTableSeeder extends Seeder
+class GamesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -34,17 +34,34 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         App\Game::create([
-            'title' => str_random(30),
+            'title' => 'Battlefield Bad Company 2',
             'description' => str_random(100),
             'release_date' => date('Y-m-d'),
             'price' => 49.90
         ]);
         
         App\Game::create([
-            'title' => str_random(30),
+            'title' => 'Call of Duty WWII',
             'description' => str_random(100),
             'release_date' => date('Y-m-d'),
             'price' => 19.90
+        ]);
+    }
+}
+
+class UsersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        App\User::create([
+            'name'=>'APIUser', 
+            'email'=>'thiagohenrique@protonmail.com', 
+            'password'=>bcrypt('123456')
         ]);
     }
 }

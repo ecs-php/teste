@@ -1,0 +1,183 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GamesAPI",
+		"_postman_id": "8128bc93-b83d-dc8e-0c24-53e56be84111",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list-all-games",
+			"request": {
+				"url": "http://my.api/api/games",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "return games collection"
+			},
+			"response": []
+		},
+		{
+			"name": "insert-new-game",
+			"request": {
+				"url": "http://my.api/api/games",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImEzMmQ3NGJlNWFhNTc4NDY4Yjg4MWQyNGU3ODI4YWFmZTExZDdlMjlkNjdiOGVhZGU1NDkwOTRhYzRlNGZkZTg5MmYyY2M0ZmJlOWUyN2M4In0.eyJhdWQiOiIxIiwianRpIjoiYTMyZDc0YmU1YWE1Nzg0NjhiODgxZDI0ZTc4MjhhYWZlMTFkN2UyOWQ2N2I4ZWFkZTU0OTA5NGFjNGU0ZmRlODkyZjJjYzRmYmU5ZTI3YzgiLCJpYXQiOjE0OTUyMTUyMzMsIm5iZiI6MTQ5NTIxNTIzMywiZXhwIjoxNTI2NzUxMjMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.a9bRjPOt_sFBjg0Yf6ep8LGOaHfhvexEM4iBM7R35C2ia3CULCA5mJcvPraRsWDNP7t_B7A3-X7M6kUDa9kMr6i1CFf58PzrKVsOCTPIgzuNPT3RMHpOlILz6tyDl8dJhA9iKbGHbFuSdlDbzd8DEV8hcCMQ3eXvW10zrn2RR-gjCBdlP72eAmDOEVFuSDlWyN7sbC12jitJdbapzLk1JLCLmH_JiFFFtYso6wI-9ywaKIXp3KWORqzRZdhM4pcs9vi9QBuCajtQu6HWdxborDjJwi4bWQ9GvBH1wvWNZZvBMBEvifhbchJSCti3E4w0DVfD-gjldCVc9zVMuIgZxtMXdcHbNNlFHIiwe60vj02exCmBb8rXAOLammBt6uISYJGs1xwp1YwJSiXJRCpbBiKAK-U-P3l-j_47sCdS5xPcB4EHNKWOF4TE1hb-g9B-h-EepQVPODk45-yP4xD9G28qnemwokpGa3d_QD_SvnRX9nwAy1Bw6BsbnK1v1MmqDMAccUm76-b4XbIC_ZDjL1USOuqv36w9gVKusuHhbJ1QPWsmyo1cjWc7soEEizfovERTs-6ivQUShgXOlyHQd5U-K-NkatZoommw951LewTlOgoeXKzh9F12MO6i_NqrRHf2NNcrG3b31nzF2NHSUg8s2Q4nHE7lhPQ48tmwMqk",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Forza Horizon 5\",\n\t\"description\":\"cN13TXnql4DpL4EGrgg5iWQ3lDHkjNwXS9wuxBjVD907BQo6TtQxR9XEg\",\n\t\"release_date\":\"2017-05-19\",\n\t\"price\":44.83\n}"
+				},
+				"description": "insert new game"
+			},
+			"response": []
+		},
+		{
+			"name": "show-game-by-id",
+			"request": {
+				"url": "http://my.api/api/games/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Forza Horizon 3\",\n\t\"description\":\"cN13TXnql4DpL4EGrgg5iWQ3lDHkjNwXS9wuxBjVD907BQo6TtQxR9XEg\",\n\t\"release_date\":\"2017-05-19\",\n\t\"price\":44.81\n}"
+				},
+				"description": "search game by id"
+			},
+			"response": []
+		},
+		{
+			"name": "update-game",
+			"request": {
+				"url": "http://my.api/api/games/3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImEzMmQ3NGJlNWFhNTc4NDY4Yjg4MWQyNGU3ODI4YWFmZTExZDdlMjlkNjdiOGVhZGU1NDkwOTRhYzRlNGZkZTg5MmYyY2M0ZmJlOWUyN2M4In0.eyJhdWQiOiIxIiwianRpIjoiYTMyZDc0YmU1YWE1Nzg0NjhiODgxZDI0ZTc4MjhhYWZlMTFkN2UyOWQ2N2I4ZWFkZTU0OTA5NGFjNGU0ZmRlODkyZjJjYzRmYmU5ZTI3YzgiLCJpYXQiOjE0OTUyMTUyMzMsIm5iZiI6MTQ5NTIxNTIzMywiZXhwIjoxNTI2NzUxMjMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.a9bRjPOt_sFBjg0Yf6ep8LGOaHfhvexEM4iBM7R35C2ia3CULCA5mJcvPraRsWDNP7t_B7A3-X7M6kUDa9kMr6i1CFf58PzrKVsOCTPIgzuNPT3RMHpOlILz6tyDl8dJhA9iKbGHbFuSdlDbzd8DEV8hcCMQ3eXvW10zrn2RR-gjCBdlP72eAmDOEVFuSDlWyN7sbC12jitJdbapzLk1JLCLmH_JiFFFtYso6wI-9ywaKIXp3KWORqzRZdhM4pcs9vi9QBuCajtQu6HWdxborDjJwi4bWQ9GvBH1wvWNZZvBMBEvifhbchJSCti3E4w0DVfD-gjldCVc9zVMuIgZxtMXdcHbNNlFHIiwe60vj02exCmBb8rXAOLammBt6uISYJGs1xwp1YwJSiXJRCpbBiKAK-U-P3l-j_47sCdS5xPcB4EHNKWOF4TE1hb-g9B-h-EepQVPODk45-yP4xD9G28qnemwokpGa3d_QD_SvnRX9nwAy1Bw6BsbnK1v1MmqDMAccUm76-b4XbIC_ZDjL1USOuqv36w9gVKusuHhbJ1QPWsmyo1cjWc7soEEizfovERTs-6ivQUShgXOlyHQd5U-K-NkatZoommw951LewTlOgoeXKzh9F12MO6i_NqrRHf2NNcrG3b31nzF2NHSUg8s2Q4nHE7lhPQ48tmwMqk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Forza Horizon\",\n\t\"description\":\"cN13TXnql4DpL4EGrgg5iWQ3lDHkjNwXS9wuxBjVD907BQo6TtQxR9XEg\",\n\t\"release_date\":\"2017-05-10\",\n\t\"price\":46.81\n}"
+				},
+				"description": "update a game"
+			},
+			"response": []
+		},
+		{
+			"name": "generate-token",
+			"request": {
+				"url": "http://my.api/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "Vcn41e9I8MI5IPSFcHkMVOKC5bqu1P8B09GSPxwI",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "thiagohenrique@protonmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "generate a token"
+			},
+			"response": []
+		},
+		{
+			"name": "destroy-game",
+			"request": {
+				"url": "http://my.api/api/games/7",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImEzMmQ3NGJlNWFhNTc4NDY4Yjg4MWQyNGU3ODI4YWFmZTExZDdlMjlkNjdiOGVhZGU1NDkwOTRhYzRlNGZkZTg5MmYyY2M0ZmJlOWUyN2M4In0.eyJhdWQiOiIxIiwianRpIjoiYTMyZDc0YmU1YWE1Nzg0NjhiODgxZDI0ZTc4MjhhYWZlMTFkN2UyOWQ2N2I4ZWFkZTU0OTA5NGFjNGU0ZmRlODkyZjJjYzRmYmU5ZTI3YzgiLCJpYXQiOjE0OTUyMTUyMzMsIm5iZiI6MTQ5NTIxNTIzMywiZXhwIjoxNTI2NzUxMjMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.a9bRjPOt_sFBjg0Yf6ep8LGOaHfhvexEM4iBM7R35C2ia3CULCA5mJcvPraRsWDNP7t_B7A3-X7M6kUDa9kMr6i1CFf58PzrKVsOCTPIgzuNPT3RMHpOlILz6tyDl8dJhA9iKbGHbFuSdlDbzd8DEV8hcCMQ3eXvW10zrn2RR-gjCBdlP72eAmDOEVFuSDlWyN7sbC12jitJdbapzLk1JLCLmH_JiFFFtYso6wI-9ywaKIXp3KWORqzRZdhM4pcs9vi9QBuCajtQu6HWdxborDjJwi4bWQ9GvBH1wvWNZZvBMBEvifhbchJSCti3E4w0DVfD-gjldCVc9zVMuIgZxtMXdcHbNNlFHIiwe60vj02exCmBb8rXAOLammBt6uISYJGs1xwp1YwJSiXJRCpbBiKAK-U-P3l-j_47sCdS5xPcB4EHNKWOF4TE1hb-g9B-h-EepQVPODk45-yP4xD9G28qnemwokpGa3d_QD_SvnRX9nwAy1Bw6BsbnK1v1MmqDMAccUm76-b4XbIC_ZDjL1USOuqv36w9gVKusuHhbJ1QPWsmyo1cjWc7soEEizfovERTs-6ivQUShgXOlyHQd5U-K-NkatZoommw951LewTlOgoeXKzh9F12MO6i_NqrRHf2NNcrG3b31nzF2NHSUg8s2Q4nHE7lhPQ48tmwMqk",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "destroy a game"
+			},
+			"response": []
+		}
+	]
+}
