@@ -11,7 +11,9 @@ Setup
 	1. composer install
 	2. mv database/database.sqlite.example database/database.sqlite
 	3. cp .env.example .env
-- Abrir o arquivo .env (localizado na raiz do projeto) e ajustar a variável "DB_DATABASE" informando o path absoluto para o arquivo database.sqlite
+- Abrir o arquivo .env (localizado na raiz do projeto) e ajustar as variaveis abaixo: 
+	"DB_DATABASE" -> path absoluto para o arquivo database.sqlite
+	"APP_URL" -> vhost do projeto
 - Novamente no terminal, executar os comandos abaixo:
 	4. php artisan migrate
 	5. php artisan passport:install
