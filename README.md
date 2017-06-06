@@ -1,11 +1,11 @@
 # A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso.
+Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
 
 # Requisitos
 A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
 
 * Deverá conter um ID
-* Deverá conter pelo menos cinco propriedades (exemplos: nome, email, etc.)
+* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
 * Deverá conter campos que armazenem as datas de criação e alteração do recurso
 
 A API deverá atender às seguintes exigências:
@@ -20,8 +20,8 @@ A API deverá atender às seguintes exigências:
 
 # Ferramentas
 * PHP
-* Banco de dados SQLite
-* Frameworks à escolha do desenvolvedor
+* Banco de dados MySQL
+* Framework Silex
 
 # Fluxo de desenvolvimento
 1. Faça um fork deste repositório
