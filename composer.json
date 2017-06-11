@@ -1,0 +1,19 @@
+{
+  "name": "Teste",
+  "type": "teste",
+  "descripton": "A PHP teste",
+  "autoload": {
+    "psr-4": {
+      "TESTE\\": "teste/"
+    }
+  },
+  "require": {
+      "silex/silex": "~2.0",
+      "doctrine/orm": "*",
+      "doctrine/dbal": "*",
+      "dflydev/doctrine-orm-service-provider": "*"
+  },
+  "config": {
+    "vendor-dir": "lib"
+  }
+}

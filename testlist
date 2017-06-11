@@ -1,0 +1,3 @@
+#!/bin/bash
+curl http://localhost/person/ -d '{"action" : "list", "token":"cc1ffe86abf3fb5f", "username":"fireball.vb"}' -H 'Content-Type: application/json'
+

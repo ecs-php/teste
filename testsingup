@@ -1,0 +1,3 @@
+#!/bin/bash
+curl http://localhost/singup/ -d '{"username" : "fireball.vb", "email":"fireball.vb@gmail.com"}' -H 'Content-Type: application/json'
+
