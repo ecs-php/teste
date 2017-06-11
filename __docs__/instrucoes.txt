@@ -1,0 +1,63 @@
+#################################
+Pré Requisitos
+#################################
+- LAMP / Composer
+
+#################################
+Setup
+#################################
+- Clonar o projeto e configurar um vhost apontando para a pasta /public
+- Acessar (via terminal) a pasta do projeto e executar os comandos abaixo:
+	1. composer install
+	2. mv database/database.sqlite.example database/database.sqlite
+	3. cp .env.example .env
+- Abrir o arquivo .env (localizado na raiz do projeto) e ajustar as variaveis abaixo: 
+	"DB_DATABASE" -> path absoluto para o arquivo database.sqlite
+	"APP_URL" -> vhost do projeto
+- Novamente no terminal, executar os comandos abaixo:
+	4. php artisan migrate
+	5. php artisan passport:install
+	6. php artisan passport:client --password
+		=====================
+		|Exemplo de retorno:|
+		=====================
+		Password grant client created successfully.
+		Client ID: 1
+		Client Secret: Vcn41e9I8MI5IPSFcHkMVOKC5bqu1P8B09GSPxwI
+
+		::Opcional::
+		Guardar estas credenciais, caso queira gerar um token próprio. 
+		A nível de testes, já configurei um token válido nas requisições do Postman.
+		
+
+#################################
+Utilização
+#################################
+- Importar collection para o Postman (https://goo.gl/CoIuZx)
+	Os arquivos:
+		GamesAPI.postman_collection_v1.json
+		GamesAPI.postman_collection_v2.json
+	estão dentro do diretório: __docs__/postman/
+	Ambos tem o mesmo conteúdo, muda apenas a compatibilidade, caso a v1 não funcione utilize a v2
+		
+- No Postman executar a requisição 'generate-token' para gerar um token.
+	=====================
+	|Exemplo de retorno:|
+	=====================
+	{
+	  "token_type": "Bearer",
+	  "expires_in": 31536000,
+	  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImEzMmQ3NGJlNWFhNTc4NDY4Yjg4MWQyNGU3ODI4YWFmZTExZDdlMjlkNjdiOGVhZGU1NDkwOTRhYzRlNGZkZTg5MmYyY2M0ZmJlOWUyN2M4In0.eyJhdWQiOiIxIiwianRpIjoiYTMyZDc0YmU1YWE1Nzg0NjhiODgxZDI0ZTc4MjhhYWZlMTFkN2UyOWQ2N2I4ZWFkZTU0OTA5NGFjNGU0ZmRlODkyZjJjYzRmYmU5ZTI3YzgiLCJpYXQiOjE0OTUyMTUyMzMsIm5iZiI6MTQ5NTIxNTIzMywiZXhwIjoxNTI2NzUxMjMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.a9bRjPOt_sFBjg0Yf6ep8LGOaHfhvexEM4iBM7R35C2ia3CULCA5mJcvPraRsWDNP7t_B7A3-X7M6kUDa9kMr6i1CFf58PzrKVsOCTPIgzuNPT3RMHpOlILz6tyDl8dJhA9iKbGHbFuSdlDbzd8DEV8hcCMQ3eXvW10zrn2RR-gjCBdlP72eAmDOEVFuSDlWyN7sbC12jitJdbapzLk1JLCLmH_JiFFFtYso6wI-9ywaKIXp3KWORqzRZdhM4pcs9vi9QBuCajtQu6HWdxborDjJwi4bWQ9GvBH1wvWNZZvBMBEvifhbchJSCti3E4w0DVfD-gjldCVc9zVMuIgZxtMXdcHbNNlFHIiwe60vj02exCmBb8rXAOLammBt6uISYJGs1xwp1YwJSiXJRCpbBiKAK-U-P3l-j_47sCdS5xPcB4EHNKWOF4TE1hb-g9B-h-EepQVPODk45-yP4xD9G28qnemwokpGa3d_QD_SvnRX9nwAy1Bw6BsbnK1v1MmqDMAccUm76-b4XbIC_ZDjL1USOuqv36w9gVKusuHhbJ1QPWsmyo1cjWc7soEEizfovERTs-6ivQUShgXOlyHQd5U-K-NkatZoommw951LewTlOgoeXKzh9F12MO6i_NqrRHf2NNcrG3b31nzF2NHSUg8s2Q4nHE7lhPQ48tmwMqk",
+	  "refresh_token": "nyTcuh6AIQye1g86y//bnv7o1fSLRqMR9e/g1hG8BWAF3jMk560gH69oRyKnfHDSWFD5pNiQqdoOH3J9H29Bb/cjoseEs0s9GauqBfwNQDwMGxSbgXYrSMVxDSyTUKJrkDzvYgW8jAbxEDkWb71K/cHAoLZI8+Ox3xkWzfHggGlpnpA4jA3IkGVaPEH/Ii7bzkPHbnvWWl8Y89vODrekfegKSMWbMbbnRWS7Imh21mFoXq+njbaY0gthlxB2sqQ3fol8XBWLkc7YMbtHBDfXiEyp7DeQg5VTpsHF0M9+paKNU7IpXpt4x9TAyHL7vAxdXPUA3LZIN/1xDbofvYPDhFuIGBfdy67zXSg0fF3qbWhxVLhY70LXq2TThyMajWKy4ZXqgDyeqhBgMoptaw+5pWZptCMXad0dtxtkRoE2GrEQBGuhKG8ETkG1vNayDWu2mDQC/vDqNvz6uzIiTWrtyQ9AG3eLPb8erZTW2zOuUn1TXAwn2FEBMazsV/9k5efK+dlLgTPjmJCTzhtHyG0s3LPiBt2iH7+c1M3+TInXaL7w8YAshHbsg9nC2OO+B4plytLntbS0VWpuje5akUXxnDwi/k3ygBSPjTNrE8uymr6FLzvOaBLZu/zy6QVVxKlKvr7Qh3VJeI2v1z2jRH2ZchPKFvLwbs/9C8vreHZuThc="
+	}
+10. Para as requisições de insert/update/delete será necessário informar o cabeçado de autenticação utilizando o Access Token.
+	=======================
+	|Exemplo de cabeçalho:|
+	=======================
+	'headers' => [
+		'Accept' => 'application/json',
+		'Authorization' => 'Bearer '.$accessToken,
+	]
+	
+	Isto já está configurado nos exemplos do Postman.
+
