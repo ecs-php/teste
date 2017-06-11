@@ -1,0 +1,20 @@
+{
+    "name": "osmar/testeapi",
+    "require-dev":{
+        "symfony/var-dumper":"*"
+    },
+    "require": {
+        "silex/silex": "^2.1",
+        "doctrine/orm": "^2.5",
+        "symfony/serializer": "^3.2"
+    },
+    "authors": [
+        {
+            "name": "Osmar Queiroz",
+            "email": "ramsosmar@gmail.com"
+        }
+    ],
+    "autoload" :{
+        "psr-4" :{"":"src/"}
+    }
+}
