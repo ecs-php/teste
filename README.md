@@ -1,34 +1,13 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+# Sobre o projeto
+Eu escolhi algumas publicações do site da GFT Brasil como o recurso da minha API. De acordo com os requisitos, é possível inserir/alterar/remover as publicações.
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+# Deploy
+* Configurar as credenciais do banco de dados em src/app.php
+* Importar o arquivo database.sql que está na raíz
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
-
-A API deverá atender às seguintes exigências:
-
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
-
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
-
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
-
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
-
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+# Instruções de uso
+* Nome do recurso com as publicações: releases
+* Obter token com PUT /tokens e JSON body {"username": "gft", "password": "1234"}
+* Repassar o token em todos os endpoints como parâmetro GET _token. Exemplo: /releases?_token=e3b50681ffdf0fbe7dfb25acbb809ed0 (o token não possui expiração)
+* Os usuários podem ser incluídos somente diretamente no banco de dados
+* No endpoint GET /releases, é possível enviar um parâmetro "query" para efetuar uma busca fulltext
