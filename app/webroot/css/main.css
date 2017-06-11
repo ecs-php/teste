@@ -1,0 +1,23 @@
+
+.logo{
+	max-width: 220px;
+	margin-top: 12px;
+}
+.bg-gray{
+	background: #344454;
+}
+.mt-35{
+	margin-top: 35px;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+.mt-30{
+	margin-top: 30px;
+}
+.pt-7{
+	padding-top: 7px;
+}
