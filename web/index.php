@@ -53,19 +53,44 @@
 		
 	});
 	
+	/**
+	 * Criando um vídeo
+	 *
+	 */
 	$app->post('/videos', function(Request $request) use ($app, $dbh) {
 		$insertData = json_decode($request->getContent(), true);
 		
-		$sth = $dbh->prepare('INSERT INTO video ( title,category_id,description,filename,duration,active,creation_date)
-		VALUES(:title, :category_id, :description,:filename,:duration,:active,NOW())');
-
-		$sth->execute($insertData);
+		
+		$accessToken = $request->query->get("access_token");
+		
+		if( $accessToken ) {
+			$userData = getUserData( $accessToken , $app , $dbh );
+			if ( $userData ) {
+				$sth = $dbh->prepare(
+					'INSERT INTO video ( title,category_id,description,filename,duration,active,creation_date)
+		VALUES(:title, :category_id, :description,:filename,:duration,:active,NOW())'
+				);
+				$sth->execute( $insertData );
+				$response = new Response( 'Ok' , 201 );
+				
+				return $response;
+			}
+			
+		}
+		
+		return new Response("Access Token inválido: ", 404);
+		
 	
-		$response = new Response('Ok', 201);
-		return $response;
 	});
 	
-	
+	/**
+	 * User info
+	 *
+	 * @param $accessToken
+	 * @param $app
+	 * @param $dbh
+	 * @return bool
+	 */
 	function getUserData ( $accessToken, $app,$dbh ) {
 		$sql = "SELECT user.* FROM user
 			LEFT JOIN user_access_token ON ( user_access_token.user_id =user.id )
@@ -90,28 +115,34 @@
 		return false;
 	}
 	
+	/**
+	 * User Edit
+	 */
 	$app->put('/videos/{title}', function(Request $request, $title) use ($app, $dbh) {
-	$videoData = json_decode($request->getContent(), true);
-		$dados['title'] = #title;
-	
-	$sth = $dbh->prepare('UPDATE video
-	SET title=:title, description=:description, duration=:duration
-	WHERE id=:id');
-	
-	$sth->execute($videoData);
-	return $app->json($videoData, 200);
+		$videoData = json_decode($request->getContent(), true);
+		
+		
+		
+		$accessToken = $request->query->get("access_token");
+		
+		if( $accessToken ) {
+			$userData = getUserData( $accessToken , $app , $dbh );
+			if ( $userData ) {
+				$sth = $dbh->prepare(
+					'UPDATE video
+		SET title=:title, description=:description, duration=:duration
+		WHERE id=:id'
+				);
+				$sth->execute( $videoData );
+				
+				return $app->json( $videoData , 200 );
+			}
+		}
+		
+		
+		return new Response("Access Token inválido: ", 404);
+		
 	})->assert('title', '\w+');
-	
-	// DELETE - excluir
-	$app->delete('/video/{title}', function($title) use ($app, $dbh) {
-	$sth = $dbh->prepare('DELETE FROM video WHERE title = ?');
-	$sth->execute([ $title ]);
-	
-	if($sth->rowCount() ==0) {
-	return new Response("Vídeo nçao encontrado", 404);
-	}
-	
-	return new Response(null, 204);
-	})->assert('title', '\w+');
+
 	
 	$app->run();
