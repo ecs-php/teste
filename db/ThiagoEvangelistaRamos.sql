@@ -44,3 +44,8 @@ CREATE  TABLE user_access_token (
   `modification_date` datetime NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
+
+insert into user( name , email , active , creation_date ) values ( 'thiago', 'thiagoevangelista.contato@gmail.com' , 'yes', NOW());
+
+INSERT INTO user_access_token ( user_id , access_token , active, creation_date )
+VALUES (1, 'abcdefg' , 'yes' , NOW());

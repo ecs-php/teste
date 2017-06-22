@@ -11,9 +11,9 @@
 	$app = new Silex\Application();
 	$dsn = "mysql:dbname=video_repository_db;host=LOCALHOST;charset=utf8";
 	try {
-	$dbh = new PDO($dsn, 'root', '123qwe');
+		$dbh = new PDO($dsn, 'root', '123qwe');
 	} catch (PDOException $e) {
-	echo 'Error DB: ' . $e->getMessage();
+		echo 'Error DB: ' . $e->getMessage();
 	}
 	
 	/**
@@ -59,8 +59,7 @@
 	 */
 	$app->post('/videos', function(Request $request) use ($app, $dbh) {
 		$insertData = json_decode($request->getContent(), true);
-		
-		
+				
 		$accessToken = $request->query->get("access_token");
 		
 		if( $accessToken ) {
@@ -79,7 +78,6 @@
 		}
 		
 		return new Response("Access Token inválido: ", 404);
-		
 	
 	});
 	
