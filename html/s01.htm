@@ -1,0 +1,92 @@
+<div ng-controller="s01Ctrl">
+    <button type="button" class="btn btn-primary btn-new" ng-click="newConsumer()">
+      <span class="glyphicon glyphicon-plus"></span> Novo
+    </button>
+
+    <div class="row header_grid">
+        <div class="linha_grid col-md-4">Nome</div>
+        <div class="linha_grid col-md-3">CPF</div>
+        <div class="linha_grid col-md-2">Dt. Nasc.</div>
+        <div class="linha_grid col-md-2">Celular</div>
+        <div class="linha_grid col-md-1">Ações</div>
+    </div>
+    <div class="row body_grid" ng-repeat="list in consumers">
+        <div class="linha_grid col-md-4">{{list.c_name}}</div>
+        <div class="linha_grid col-md-3">{{list.c_cpf}}</div>
+        <div class="linha_grid col-md-2">{{list.c_birth_f}}</div>
+        <div class="linha_grid col-md-2">{{list.c_cphone}}</div>
+        <div class="linha_grid td_buttons col-md-1">
+            <img src="./images/ico_edit.png" ng-show="list.c_id != ''" class="btn_grid"  ng-click="editConsumer(list.c_id)">
+            <img src="./images/ico_delete.png" ng-show="list.c_id != ''" class="btn_grid" ng-click="deleteConsumer(list.c_id)">
+        </div>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="modal_register">
+        <div class="modal-header modal-header-blue">
+            <h4 class="modal-title" id="modal-title">Novo Consumidor</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <form name="form_cad">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for=""> Nome: </label>
+                        <input type="text" name="reg_name" id="reg_name" ng-model="reg_name" class="form-control" placeholder="Informe o Nome" required/>
+                        <span class="span_critica" ng-show="form_cad.reg_name.$touched && form_cad.reg_name.$error.required">Campo Nome é obrigatório</span>
+                    </div>
+                </div>
+                
+                <div class="row">                    
+                        <div class="col-md-6">
+                            <label for=""> CPF: </label>
+                            <input type="text" name="reg_cpf" id="reg_cpf" ng-model="reg_cpf" class="form-control" placeholder="Informe o CPF" required valida-cpf/>
+                            <span class="span_critica" ng-show="form_cad.reg_cpf.$touched && form_cad.reg_cpf.$error.required">Campo CPF é obrigatório</span>
+                            <span class="span_critica" ng-show="form_cad.reg_cpf.$touched && form_cad.reg_cpf.$error.validaCpf">CPF inválido</span>
+                        </div>
+                        <div class="col-md-6">
+                            <label for=""> Data Nascimento: </label>
+                            <div class="form-group">
+                                <div class="col-md-10 reg_birth">
+                                    <input type="text" class="form-control" name="reg_birth" id="reg_birth"  ng-model="reg_birth" uib-datepicker-popup="{{format}}" ng-model="reg_birth" is-open="popup1.opened" datepicker-options="dateOptions" placeholder="Informe a Data de Nascimento"  close-text="Fechar" clear-text="Limpar" current-text="Hoje"  pattern="\d{1,2}/\d{1,2}/\d{4}"/ ng-required="exibe_rg()">
+                                    <span class="span_critica" ng-show="form_cad.reg_birth.$touched && form_cad.reg_birth.$error.required">Campo Data Nascimento é obrigatório</span>
+                                    <span class="span_critica" ng-show="form_cad.reg_birth.$touched && !form_cad.reg_birth.$error.required && form_cad.reg_birth.$invalid">Data Nascimento inválida</span>
+                                </div>
+                                <div class="col-md-2 reg_birth">
+                                    <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </div>                                
+                            </div>
+                        </div>                    
+                </div>    
+                       
+                
+                <div class="row">
+                    <div class="col-md-11">   
+                         <label for=""> Celular: </label>                    
+                         <input type="text" name="reg_cphone" id="reg_cphone" ng-model="reg_cphone"  placeholder="Informe o Celular"  class="form-control"/>                        
+                    </div>
+                </div>  
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-info btn-new" type="button" ng-click="$ctrl.save()">Salvar</button>
+            <button class="btn" type="button" ng-click="$ctrl.cancel()">Cancelar</button>
+        </div>
+    </script>
+
+     <script type="text/ng-template" id="modal_delete">
+          <div class="modal-header modal-header-red">
+              <h4 class="modal-title" id="modal-title">Confirmação de Exclusão</h4>
+          </div>
+          <div class="modal-body" id="modal-body">
+              <form name="form_rd02">
+                 <div class="div_msg_excl">
+                    Deseja realmente excluir {{modal_excluir_complemento}}?
+                  </div>
+             </form>
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-primary" type="button" ng-click="$ctrl_delete.delete()">Excluir</button>
+              <button class="btn" type="button"  ng-click="$ctrl_delete.cancel()">Cancelar</button>
+          </div>
+      </script> 

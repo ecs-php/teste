@@ -1,0 +1,120 @@
+.navbar-default .navbar-brand {
+    color: #484443;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #484443;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #26478d;
+    font-weight: 600;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #26478d;
+    font-weight: 600;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #26478d;
+}
+
+.btn-new {
+    background-color: rgba(38, 71, 141, 0.77);
+    border-color: #26478d;
+}
+
+.btn-new:hover {
+    background-color: #26478d;
+    border-color: #26478d;
+}
+
+.btn-new.focus, .btn-new:focus {
+    background-color: #26478d;
+    border-color: #26478d;
+}
+
+.btn-new.active, .btn-new:active {
+    background-color: #26478d;
+    border-color: #26478d;
+}
+
+.ng-scope{
+    margin: 3px;
+}
+
+.navbar{
+    margin-bottom: 5px;
+}
+
+.modal-header-blue {
+    background-color: rgba(38, 71, 141, 0.77);
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+}
+
+.header_grid{
+    font-weight: bold;
+    border: 1px solid #ddd;
+    margin: 5px 2px 0px 2px;
+    background-color: #e7e7e7;
+}
+
+.body_grid{
+    border: 1px solid #ddd;
+    margin: 0px 2px 0px 2px;
+    background-color: #f8f8f8;
+}
+
+.header_grid > div{
+        border: 1px solid #ddd;
+}
+
+.body_grid > div{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+}
+
+.reg_birth{
+    padding-left: 0px;
+}
+
+.span_critica{
+    color:red;
+}
+
+.linha_grid  {
+    height: 30px;
+    line-height: 30px;
+}
+
+.td_buttons{
+    text-align: center;
+}
+
+.btn_grid{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    alignment-adjust:  middle;    
+}
+
+footer {
+    width: 99%;
+    bottom: 0;
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid;
+    border-color: #e7e7e7;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    color: #484443;
+}
