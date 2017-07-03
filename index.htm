@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+     <script src="./angular.min.js"></script>
+    <script src="./angular-route.js"></script>
+    <script src="./ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <body ng-app="myApp">
+        
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">SerasaConsumidor</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#consumer">Cadastro</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <div ng-view></div>
+        
+        <footer>
+          &copy; Teste para contratação | Serasa Experian
+        </footer>
+        <script>
+        var app = angular.module("myApp", ["ngRoute", "ui.bootstrap"]);
+        
+        app.config(function($routeProvider) {
+            $routeProvider
+            .when("/consumer", {
+                templateUrl : "./html/s01.htm"
+            })
+            ;
+        });
+
+        app.directive('validaCpf', function () {
+            return {
+              restrict: 'A',
+              require: 'ngModel',
+              link: function (scope, elem, attrs, ctrl) {                
+                elem.bind('focus', function () {
+                    ctrl.$setValidity('validaCpf', validar_cpf(ctrl.$modelValue));
+                });
+                elem.bind('blur', function () {
+                    ctrl.$setValidity('validaCpf', validar_cpf(ctrl.$modelValue));
+                });
+                 function validar_cpf(str) {
+                    if (str) {
+                      str = str.replace('.', '');
+                      str = str.replace('.', '');
+                      str = str.replace('-', '');
+
+                      var cpf = str;
+
+                      var reg = new RegExp('^\\d+$');
+                      if(!reg.test(cpf)){
+                        return false;
+                      }
+
+                      var numeros, digitos, soma, i, resultado, digitos_iguais;
+                      digitos_iguais = 1;
+                      if (cpf.length < 11)
+                        return false;
+                      for (i = 0; i < cpf.length - 1; i++)
+                        if (cpf.charAt(i) != cpf.charAt(i + 1)) {
+                          digitos_iguais = 0;
+                          break;
+                        }
+                      if (!digitos_iguais) {
+                        numeros = cpf.substring(0, 9);
+                        digitos = cpf.substring(9);
+                        soma = 0;
+                        for (i = 10; i > 1; i--)
+                          soma += numeros.charAt(10 - i) * i;
+                        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+                        if (resultado != digitos.charAt(0))
+                          return false;
+                        numeros = cpf.substring(0, 10);
+                        soma = 0;
+                        for (i = 11; i > 1; i--)
+                          soma += numeros.charAt(11 - i) * i;
+                        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+                        if (resultado != digitos.charAt(1))
+                          return false;
+                        return true;
+                      }
+                      else
+                        return false;
+                    }
+                  } 
+          }
+        };
+        });
+        </script>
+    
+   
+    <script src="./js/s01.js"></script>
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./myStyle.css" rel="stylesheet"/>
+    </body>
+</html>
