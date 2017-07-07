@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="mauricio.schmitz" id="1">
+        <modifyDataType columnName="locked"
+                        newDataType="TINYINT(1) UNSIGNED"
+                        tableName="DATABASECHANGELOGLOCK"/>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="2">
+        <addPrimaryKey columnNames="ORDEREXECUTED"
+                       constraintName="PRIMARY"
+                       tableName="DATABASECHANGELOG"/>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="3">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="INT UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="apikey" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="1" name="active" type="TINYINT(1) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP">
+                <constraints nullable="true"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="4">
+        <addUniqueConstraint columnNames="email" constraintName="users_email_unique" tableName="users"/>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="5">
+        <createTable tableName="messages">
+            <column autoIncrement="true" name="id" type="INT UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user_id" type="INT UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="body" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="image_url" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="source" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column defaultValueNumeric="1" name="active" type="TINYINT(1) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP">
+                <constraints nullable="true"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="6">
+        <createIndex indexName="fk_message$use$user_id_idx" tableName="messages">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="7">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="messages" constraintName="fk_message$use$user_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="8">
+        <insert tableName="users">
+            <column name="name" value="User 1"/>
+            <column name="email" value="user1@user.com.br"/>
+            <column name="password" value="$2y$10$81JksrkLkrRSTEDoGlM.9uMrXgQT4eKmLdtytnUlJphqKfG6WZGOW"/>
+            <column name="apikey" value="356a192b7913b04c54574d18c28d46e6395428ab"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="9">
+        <insert tableName="users">
+            <column name="name" value="User 2"/>
+            <column name="email" value="user2@user.com.br"/>
+            <column name="password" value="$2y$10$81JksrkLkrRSTEDoGlM.9uMrXgQT4eKmLdtytnUlJphqKfG6WZGOW"/>
+            <column name="apikey" value="da4b9237bacccdf19c0760cab7aec4a8359010b0"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="10">
+        <insert tableName="users">
+            <column name="name" value="User 3"/>
+            <column name="email" value="user3@user.com.br"/>
+            <column name="password" value="$2y$10$81JksrkLkrRSTEDoGlM.9uMrXgQT4eKmLdtytnUlJphqKfG6WZGOW"/>
+            <column name="apikey" value="77de68daecd823babbb58edb1c8e14d7106e83bb"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="mauricio.schmitz" id="11">
+        <insert tableName="users">
+            <column name="name" value="User 4"/>
+            <column name="email" value="user4@user.com.br"/>
+            <column name="password" value="$2y$10$81JksrkLkrRSTEDoGlM.9uMrXgQT4eKmLdtytnUlJphqKfG6WZGOW"/>
+            <column name="apikey" value="1b6453892473a467d07372d45eb05abc2031647a"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
