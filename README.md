@@ -22,7 +22,22 @@ Retorno:
 ```
 [
     {
-
+        "id": 1,
+        "name": "Sra. Mariana Tessália Rocha",
+        "email": "inacio69@dominato.org",
+        "date_birth": "1993-04-24",
+        "address": "R. Antônio, 938",
+        "created_at": "2017-07-12 21:34:28",
+        "updated_at": "2017-07-12 21:34:28"
+    },
+    {
+        "id": 2,
+        "name": "Sra. Natália Ferraz",
+        "email": "laura06@terra.com.br",
+        "date_birth": "1928-09-20",
+        "address": "Travessa Hernani Martines, 123. Apto 90",
+        "created_at": "2017-07-12 21:34:28",
+        "updated_at": "2017-07-12 21:34:28"
     }
 ]
 ```
@@ -32,35 +47,63 @@ GET /api/v1/person/{id}
 ```
 Retorno:
 ```
-[
-    {
-
-    }
-]
+{
+    "id": 1,
+    "name": "Sra. Mariana Tessália Rocha",
+    "email": "inacio69@dominato.org",
+    "date_birth": "1993-04-24",
+    "address": "R. Antônio, 938",
+    "created_at": "2017-07-12 21:34:28",
+    "updated_at": "2017-07-12 21:34:28"
+}
 ```
 ### Criação de um novo recurso
 ```
 PUT /api/v1/person/
 ```
+Body:
+```
+{
+    "name": "Antônio Marco da Silva",
+    "email": "antomarsi@hotmail.com",
+    "date_birth": "1993-03-25",
+    "address": "R. Antônio, 123"
+}
+```
 Retorno:
 ```
-[
-    {
-
-    }
-]
+{
+    "name": "Antônio Marco da Silva",
+    "email": "antomarsi@hotmail.com",
+    "date_birth": "1993-03-25",
+    "address": "R. Antônio, 123",
+    "updated_at": "2017-07-12 22:06:14",
+    "created_at": "2017-07-12 22:06:14",
+    "id": 11
+}
 ```
 ### Alteração de um recurso existente
 ```
 PUT /api/v1/person/{id}
+Body:
+```
+{
+    "address": "R. Antônio Marco da Silva, 123"
+}
+```
+
 ```
 Retorno:
 ```
-[
-    {
-
-    }
-]
+{
+    "id": 11,
+    "name": "Antônio Marco da Silva",
+    "email": "antomarsi@hotmail.com",
+    "date_birth": "1993-03-25",
+    "address": "R. Antônio Marco da Silva, 123",
+    "created_at": "2017-07-12 22:06:14",
+    "updated_at": "2017-07-12 22:07:26"
+}
 ```
 ### Exclusão de um recurso
 ```
@@ -68,11 +111,9 @@ DELETE /api/v1/person/{id}
 ```
 Retorno:
 ```
-[
-    {
-
-    }
-]
+{
+    "message": "Person was deleted successfully"
+}
 ```
 
 # A tarefa

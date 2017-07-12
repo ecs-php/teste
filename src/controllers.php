@@ -18,19 +18,19 @@ $app->before(function(Request $request, $app) use ($app){
     }
 });
 
-$app->mount('/api', function ($app) use ($app){
+$app->mount('/api', function ($mount) use ($app){
 
-	$app->get('/person', function () use ($app) {
+	$mount->get('/person', function () use ($app) {
 		$person = Person::all();
 		return $app->json($person, 201);
 	});
 	
-	$app->get('/person/{id}', function ($id) use ($app) {
+	$mount->get('/person/{id}', function ($id) use ($app) {
 		$person = Person::find($id);
 		return $app->json($person, 201);
 	});
 
-	$app->put('/person', function (Request $request) use ($app) {
+	$mount->put('/person', function (Request $request) use ($app) {
 		try{
 			$person = new Person($request->request->all());
 			$person ->save();
@@ -40,7 +40,7 @@ $app->mount('/api', function ($app) use ($app){
 		return $app->json($person ,201);
 	});
 
-	$app->put('/person/{id}', function (Request $request, $id) use ($app) {
+	$mount->put('/person/{id}', function (Request $request, $id) use ($app) {
 		$person = Person::find($id);
 		if($person != null){
 			try{
@@ -54,18 +54,18 @@ $app->mount('/api', function ($app) use ($app){
 		return $app->json($person, 201);
 	});
 
-	$app->delete('/person/{id}', function ($id) use ($app) {
+	$mount->delete('/person/{id}', function ($id) use ($app) {
 		$person = Person::find($id);
 		if($person != null){
 			try{
-				$person->delete());
+				$person->delete();
 			}catch (Exception $e){
 				return $app->json(array('message' => 'Invalid data'), 401);
 			}
 		}else{
 			return $app->json(array('message' => 'Person not found'), 401);
 		}
-		return $app->json($person, 201);
+		return $app->json(array('message' => 'Person was deleted successfully'), 201);
 	});
 });
 
