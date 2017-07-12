@@ -8,16 +8,22 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-$app->get('/user', function () use ($app) {
+$app->before(function(Request $request, $app) use ($app){
+    if (strpos($request->headers->get('Content-Type'), 'application/json')!==0) {
+        return $app->json(array('error' => 'Invalid Header Content-Type'), 403);
+    }
+});
+
+$app->get('/person', function () use ($app) {
     $users = $app['db']->fetchAll('SELECT * FROM users');
     return $app->json($users);
 });
-$app->get('/user/{id}', function ($id) use ($app) {
+$app->get('/person/{id}', function ($id) use ($app) {
     $users = $app['db']->fetchAll('SELECT * FROM users WHERE id = '.$id);
     return $app->json($users);
 });
 
-$app->put('/user', function (Request $request) use ($app) {
+$app->put('/person', function (Request $request) use ($app) {
     $dados = json_decode($request->getContent(), true);
 
     $app['db']->insert('users', array(
@@ -32,14 +38,14 @@ $app->put('/user', function (Request $request) use ($app) {
     return $app->json($user);
 });
 
-$app->put('/user/{id}', function (Request $request, $id) use ($app) {
+$app->put('/person/{id}', function (Request $request, $id) use ($app) {
     $dados = json_decode($request->getContent(), true);
     $app['db']->update('users', $dados, array('id' => $id));
 
     return $app->json($app['db']->fetchAll('SELECT * FROM users WHERE id = '.$id));
 });
 
-$app->delete('/user/{id}', function ($id) use ($app) {
+$app->delete('/person/{id}', function ($id) use ($app) {
     $user = $app['db']->fetchAll('SELECT * FROM users WHERE id = '.$id);
     $app['db']->delete('users', array('id' => $id));
     return $app->json($user);

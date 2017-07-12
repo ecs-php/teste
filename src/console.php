@@ -5,7 +5,11 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use Doctrine\DBAL\Schema\Table;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Schema\Blueprint;
+
+use Faker\Factory as FakerFactory;
+use App\Model\Person;
 
 $console = new Application('My Silex Application', 'n/a');
 $console->getDefinition()->addOption(new InputOption('--env', '-e', InputOption::VALUE_REQUIRED, 'The Environment name.', 'dev'));
@@ -17,21 +21,16 @@ $console
     ))
     ->setDescription('Create the tables')
     ->setCode(function (InputInterface $input, OutputInterface $output) use ($app) {
-		$schema = $app['db']->getSchemaManager();
-		if ($schema->tablesExist('users')){
-			$schema->dropTable('users');
-		}
 
-			$users = new Table('users');
-			$users->addColumn('id', 'integer', array('unsigned' => true, 'autoincrement' => true));
-			$users->setPrimaryKey(array('id'));
-			$users->addColumn('name', 'string', array('length' => 255));
-			$users->addColumn('email', 'string', array('length' => 255));
-			$users->addColumn('date_birth', 'date');
-			$users->addColumn('address', 'text');
-			$users->addColumn('created_at', 'datetime');
-			$users->addColumn('updated_at', 'datetime');
-			$schema->createTable($users);
+		Capsule::schema()->dropIfExists('person');
+        Capsule::schema()->create('person', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email');
+            $table->date('date_birth');
+			$table->longText('address')->nullable();
+            $table->timestamps();
+        });
     });
 
 $console
@@ -41,19 +40,17 @@ $console
     ))
     ->setDescription('Seed the tables')
     ->setCode(function (InputInterface $input, OutputInterface $output) use ($app) {
-		$faker = \Faker\Factory::create('pt_BR');
-		$schema = $app['db']->getSchemaManager();
-		if ($schema->tablesExist('users')){
+		$faker = FakerFactory::create('pt_BR');
+		if(Capsule::schema()->hasTable('person')){
 			for ($i=0; $i < 10; $i++) { 
-				$app['db']->insert('users', array(
-					'name' => $faker->name,
-					'email' => $faker->email,
-					'date_birth' => $faker->dateTimeThisCentury->format('Y-m-d'),
-					'address' => $faker->streetAddress,
-					'created_at' => date("Y-m-d H:i:s"),
-					'updated_at' => date("Y-m-d H:i:s"),
-					));
+				$person = new Person();
+				$person->name = $faker->name;
+				$person->email = $faker->email;
+				$person->date_birth = $faker->dateTimeThisCentury->format('Y-m-d');
+				$person->address = $faker->streetAddress;
+				$person->save();
 			}
-		}   });
+		}
+	});
 
 return $console;
