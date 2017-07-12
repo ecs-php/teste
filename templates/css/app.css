@@ -89,6 +89,13 @@ a.banner-link{
 	font-size: 14px;
 	border-radius: 2px;
 }
+.winner-city{
+	font-weight: 900;
+	display:block;
+	color: #25488e;
+}
+.winner-number{
+}
 .btn-purple:hover{
 	background-color: #825193;
 	color: #f3f3f3;
