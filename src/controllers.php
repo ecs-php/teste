@@ -8,24 +8,39 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-$app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html.twig', array());
-})
-->bind('homepage')
-;
+$app->get('/user', function () use ($app) {
+    $users = $app['db']->fetchAll('SELECT * FROM users');
+    return $app->json($users);
+});
+$app->get('/user/{id}', function ($id) use ($app) {
+    $users = $app['db']->fetchAll('SELECT * FROM users WHERE id = '.$id);
+    return $app->json($users);
+});
 
-$app->error(function (\Exception $e, Request $request, $code) use ($app) {
-    if ($app['debug']) {
-        return;
-    }
+$app->put('/user', function (Request $request) use ($app) {
+    $dados = json_decode($request->getContent(), true);
 
-    // 404.html, or 40x.html, or 4xx.html, or error.html
-    $templates = array(
-        'errors/'.$code.'.html.twig',
-        'errors/'.substr($code, 0, 2).'x.html.twig',
-        'errors/'.substr($code, 0, 1).'xx.html.twig',
-        'errors/default.html.twig',
-    );
+    $app['db']->insert('users', array(
+        'name' => $dados['name'],
+        'email' => $dados['email'],
+        'date_birth' => $dados['date_birth'],
+        'address' => $dados['address'],
+        'created_at' => date("Y-m-d H:i:s"),
+        'updated_at' => date("Y-m-d H:i:s"),
+    ));
+    $user = $app['db']->fetchAll('SELECT * FROM users WHERE id = '.$app['db']->lastInsertId());
+    return $app->json($user);
+});
 
-    return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
+$app->put('/user/{id}', function (Request $request, $id) use ($app) {
+    $dados = json_decode($request->getContent(), true);
+    $app['db']->update('users', $dados, array('id' => $id));
+
+    return $app->json($app['db']->fetchAll('SELECT * FROM users WHERE id = '.$id));
+});
+
+$app->delete('/user/{id}', function ($id) use ($app) {
+    $user = $app['db']->fetchAll('SELECT * FROM users WHERE id = '.$id);
+    $app['db']->delete('users', array('id' => $id));
+    return $app->json($user);
 });
