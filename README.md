@@ -1,34 +1,63 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+#Prova Técnica - Alexandre Feustel Baehr
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+#Requisitos:
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+1) Composer;
 
-A API deverá atender às seguintes exigências:
+2) PHP >=5.6.4;
 
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
+3) MySQL 5.5.
 
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
+#Ferramentas/frameworks utilizados:
 
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
+1) Laravel 5.3;
 
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
+2) MySQL 5.5;
 
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+3) Postman;
+
+#Instruções:
+
+1) Clonar o projeto
+
+2) Navegar até a pasta criada (exemplo)
+
+ ```$ cd teste```
+
+3) Executar o Composer 
+
+```$ composer install```
+
+4) Crie um banco de dados 
+
+```CREATE DATABASE `alebae-backend` /*!40100 COLLATE 'utf8_general_ci' */;```
+
+5) Rodar as migrations para gerar as tabelas do banco de dados
+
+```$ php artisan migrate```
+
+6) Habilitar o servidor embutido no PHP.
+
+```$ php artisan serve```
+
+7) Utilizar algum plugin REST Client como o Postman ou RESTClient
+   a) Para a listagem dos usuários, escolha o método GET para a URL http://localhost:8000/teste (Sendo 8000 a porta que for indicada no Console, no momento da habilitação do servidor PHP);
+   ![alt tag](http://i.imgur.com/4jZ8pjz.png)
+
+   b) Para a listagem de um registro específico, escolha o método GET para a URL http://localhost:8000/teste/1 (onde o número 1 será o ID do registro);
+   ![alt tag](http://i.imgur.com/r6xkeqv.png)
+
+   c) Para a inserção de um novo usuário, escolha o método POST para a URL http://localhost:8000/teste/, informando os Headers com a key "Content-Type" e o value "application/x-www-form-urlencoded"...
+   ![alt tag](http://i.imgur.com/BQzOQYg.png)
+
+   ...insira para "Body" as keys "name", "phone", "cpf", "email" com seus respectivos valores...
+   ![alt tag](http://i.imgur.com/TbBrDuL.png)
+
+   ...após isto, clique em "Send" para cadastrar os valores;
+   ![alt tag](http://i.imgur.com/SKEqX2m.png)
+   
+   d) Para alterar valores, basta alterar para o método PUT e informar o ID desejado para a URL http://localhost:8000/teste/1 (exemplo), alterando os valores no campo "Body"
+   ![alt tag](http://i.imgur.com/ksB4uxF.png)
+
+   e) Para excluir um registro, basta alterar para o método DELETE e informar o ID desejado para a URL http://localhost:8000/teste/1 (exemplo) 
+   ![alt tag](http://i.imgur.com/a8FfJil.png)
