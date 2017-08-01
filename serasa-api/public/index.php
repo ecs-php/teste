@@ -63,6 +63,48 @@ $app->get('/winner/{winner_id}', function($winner_id) use ($app) {
 
 });
 
+// ALTER WINNER BY ID
+
+$app->post('/winner/alter/{winner_id}', function(Request $request, $winner_id) use ($app) {
+
+  // Load data POST form
+  $_winnerName            = $request->get('winnerName');
+  $_winnerEmail           = $request->get('winnerEmail');
+  $_winnerCpf             = $request->get('winnerCpf');
+  $_winnerCity            = $request->get('winnerCity');
+  $_winnerState           = $request->get('winnerState');
+
+  $winner = new Winner();
+  $winner = Winner::find($winner_id);
+
+  $winner->userId         = 1; // only usér apikey fixed in code
+  $winner->winnerName     = $_winnerName;
+  $winner->winnerEmail    = $_winnerEmail;
+  $winner->winnerCpf      = $_winnerCpf;
+  $winner->winnerCity     = $_winnerCity;
+  $winner->winnerState    = $_winnerState;
+  $winner->save();
+
+  //return JSON update WINNER
+
+  if ($winner->id) {
+    $payload = [
+      'winnerName' => $winner->winnerName,
+      'winnerEmail' => $winner->winnerEmail,
+      'winnerCpf' => $winner->winnerCpf,
+      'winnerCity' => $winner->winnerCity,
+      'winnerState' => $winner->winnerState,
+    ];
+    $code = 201;
+  } else {
+    $code = 400;
+    $payload = [];
+  }
+
+  return $app->json($payload, $code);
+
+});
+
 // CREATE NEW WINNER
 
 $app->post('/winner/create', function(Request $request) use ($app) {
