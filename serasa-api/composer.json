@@ -1,0 +1,22 @@
+{
+    "name": "Anderson Martins",
+    "description": "Teste linkTalentos: PHP + Silex microframework",
+    "require": {
+        "silex/silex": "~2.0",
+        "illuminate/database": "~5.2"
+    },
+    "autoload": {
+        "psr-4": { "API\\": "src/API" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "scripts": {
+        "run": [
+            "echo 'Started web server on http://localhost'",
+            "php -S localhost -t web"
+        ]
+    }
+}
