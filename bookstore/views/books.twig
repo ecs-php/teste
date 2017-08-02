@@ -1,0 +1,37 @@
+{% extends "template/page.twig" %}
+
+{%block content %}
+    <div class="page-header">
+        <h3>Livros</h3>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Livros cadastrados</div>
+        <table class="table table-condensed table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Autor</th>
+                    <th>Dt Alteração</th>
+                    <th>Dt Inclusão</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for book in books %}
+            <tr>
+                <th>{{ book.id }}</th>
+                <th>{{ book.title }}</th>
+                <th>{{ book.description }}</th>
+                <th>R${{ book.plain|number_format(2, ',', '.') }}</th>
+                <th>{{ book.author }}</th>
+                <th>{{ book.dt_update|date('d/m/Y H:i:s') }}</th>
+                <th>{{ book.dt_register|date('d/m/Y H:i:s') }}</th>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+{%endblock%}

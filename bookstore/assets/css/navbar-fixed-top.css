@@ -1,0 +1,12 @@
+body {
+  min-height: 800px;
+  padding-top: 70px;
+}
+
+table {
+    font-size: 13px;
+}
+
+.navbar-logo img{
+    margin: 7px 6px 0 0;
+}
