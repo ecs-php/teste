@@ -1,0 +1,14 @@
+{
+    "name": "BookStore",
+    "autoload": {
+        "psr-4": {
+            "BookStore\\": "src/"
+        }
+    },
+    "require": {
+        "silex/silex": "~1.3",
+        "doctrine/dbal": "^2.5",
+        "twig/twig": "^1.24.0"
+    }
+}
+
