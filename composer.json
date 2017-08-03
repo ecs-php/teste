@@ -1,0 +1,17 @@
+{
+  "name": "root/teste",
+  "require": {
+    "silex/silex": "^2.2"
+  },
+  "authors": [
+    {
+      "name": "VagnerPaes",
+      "email": "vagner_fpaes@hotmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "TestRest\\": "src/"
+    }
+  }
+}

@@ -4,18 +4,18 @@ Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado
 # Requisitos
 A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+* OK - Deverá conter um ID
+* OK - Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
+* OK - Deverá conter campos que armazenem as datas de criação e alteração do recurso
 
 A API deverá atender às seguintes exigências:
 
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
+* OK - Listagem de todos os recursos
+* OK - Busca de um recurso pelo ID
+* OK - Criação de um novo recurso
+* OK - Alteração de um recurso existente
+* OK - Exclusão de um recurso
+* OK - Aceitar e retornar apenas JSON
 * Deverá possuir algum método de autenticação para utilização de seus endpoints
 
 # Ferramentas
