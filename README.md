@@ -16,7 +16,7 @@ A API deverá atender às seguintes exigências:
 * OK - Alteração de um recurso existente
 * OK - Exclusão de um recurso
 * OK - Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
+* OK - Deverá possuir algum método de autenticação para utilização de seus endpoints
 
 # Ferramentas
 * PHP
