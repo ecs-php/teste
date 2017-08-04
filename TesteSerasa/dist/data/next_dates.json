@@ -1,0 +1,84 @@
+{
+  "nextDates": [
+    {
+      "date": "17/08",
+      "status": "Y"
+    },
+    {
+      "date": "24/08",
+      "status": "Y"
+    },
+    {
+      "date": "31/08",
+      "status": "Y"
+    },
+    {
+      "date": "7/09",
+      "status": "Y"
+    },
+    {
+      "date": "7/09",
+      "status": "Y"
+    },
+    {
+      "date": "17/08",
+      "status": "Y"
+    },
+    {
+      "date": "24/08",
+      "status": "Y"
+    },
+    {
+      "date": "31/08",
+      "status": "N"
+    },
+    {
+      "date": "7/09",
+      "status": "N"
+    },
+    {
+      "date": "7/09",
+      "status": "N"
+    },
+    {
+      "date": "17/08",
+      "status": "N"
+    },
+    {
+      "date": "24/08",
+      "status": "B"
+    },
+    {
+      "date": "31/08",
+      "status": "N"
+    },
+    {
+      "date": "7/09",
+      "status": "N"
+    },
+    {
+      "date": "7/09",
+      "status": "N"
+    },
+    {
+      "date": "17/08",
+      "status": "N"
+    },
+    {
+      "date": "24/08",
+      "status": "B"
+    },
+    {
+      "date": "31/08",
+      "status": "N"
+    },
+    {
+      "date": "7/09",
+      "status": "N"
+    },
+    {
+      "date": "7/09",
+      "status": "N"
+    }
+  ]
+}

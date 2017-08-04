@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html ng-app="appSerasa">
+  <head>
+    <title>SerasaConsumidor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/app.css" rel="stylesheet">
+
+    <script src="dist/js/jquery-3.2.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/angular.min.js"></script>
+    <script src="dist/js/app.js"></script>
+  </head>
+  <body>
+
+    <div class="modal fade" id="myVideoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <iframe width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="icon-bar-serasa"></span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="pull-right">
+            <a class="navbar-brand" href="#">COMO PARTICIPAR</a>
+            <a class="navbar-brand" href="#">PRÊMIOS E SORTEIOS</a>
+            <a class="navbar-brand" href="#">GANHADORES</a>
+            <a class="navbar-brand" href="#">REGULAMENTO</a>
+            <a class="btn btn-sm btn-default navbar-brand-btn" href="#">PARTICIPE JÁ, É GRÁTIS</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="info-banner">
+          <p>O SerasaConsumidor <br> ajuda a <strong class="font-banner-1">pagar sua dívida!</strong></p>
+          <p>Abra seu Cadastro Positivo e concorra a</p>
+          <p class="font-banner-2">R$ 5.000,00</p>
+          <p><a class="btn btn-primary btn-focus-primary btn-theme-size" href="#" role="button">PARTICIPE JÁ, É GRÁTIS</a></p>
+          <p class="font-banner-3 font-small-11">saiba o que é o <strong class="text-underline"><a href="#" data-videos data-toggle="modal" data-target="#myVideoModal">Cadastro Positivo</a></strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 div-info">
+          Quer saber como abrir seu Cadastro Positivo e ainda concorrer a prêmios?
+        </div>
+      </div>
+      <div class="row text-center-wk text-center padding-top-20">
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-top-20">
+          <div>
+            <span class="icon-step-1"></span>
+          </div>
+          <div class="padding-top-20">
+            <p><strong class="font-color-theme">1.</strong> Cadastre-se no</p>
+            <p><strong class="font-color-theme">SERASACONSUMIDOR</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-top-20">
+          <div>
+            <span class="icon-step-2"></span>
+          </div>
+          <div class="padding-top-20">
+            <p><strong class="font-color-theme">2.</strong> Cadastre-se no</p>
+            <p><strong class="font-color-theme">CADASTRO POSITIVO</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-top-20">
+          <div>
+            <span class="icon-step-3"></span>
+          </div>
+          <div class="padding-top-20">
+            <p><strong class="font-color-theme">3.</strong> Receba seu <strong class="font-color-theme">número e data do sorteio</strong> no seu e-mail</p>
+            <p class="font-small-11">(Cada CPF participa de apenas um sorteio)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row padding-top-20">
+        <div class="col-xs-12 div-info">
+          <p><a class="btn btn-primary bg-color-theme btn-theme-size" href="#" role="button">PARTICIPE JÁ, É GRÁTIS</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="margin-top-20 bg-gray-detail-light-gdr">
+      <div class="container margin-l-r--15">
+        <div class="col-xs-12 col-sm-7 col-md-7 padding-top-20 bg-gray-detail-light">
+          <div class="margin-l-r-15">
+            <p class="font-size-25">Abrindo seu <strong>Cadastro Positivo</strong> você pode ganhar até <strong class="font-color-theme font-size-30">R$ 5.000!</strong></p>
+            <p class="font-small-11">Cada CPF participa de apenas um sorteio. Assim que seu <strong>Cadastro Positivo</strong> for concluído, você vai receber por e-mail o seu número da sorte e a data do sorteio que você vai participar. Depois, é só torcer para ser o ganhador.</p>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-12 padding-top-20 padding-bottom-20 bg-gray-detail-dark">
+          <div class="margin-l-r-15">
+            <div class="fix-height-80">
+              <span class="icon-next-date"></span>
+              <span class="next-date-value font-color-theme">{{next_date}}</span>
+              <span class="next-date-label font-color-theme">Próximo sorteio</span>
+            </div>
+            <p><a class="btn btn-primary bg-color-theme btn-theme-size" href="#" role="button">PARTICIPE JÁ, É GRÁTIS</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container padding-top-20">
+      <div class="col-xs-12 col-sm-7 col-md-7 no-padding padding-top-20">
+        <span class="font-size-25">Ganhadores</span>
+        <div class="padding-top-20">
+          <div class="col-sm-6 col-md-6 col-xs-12 no-padding" ng-repeat="w in winners">
+            <span class="icon-winner"></span>
+            <span class="winner-value-date font-color-theme">{{w.date}}</span>
+            <div class="winner-value">
+              <p class="font-blue-theme">{{w.city}}</p>
+              <p class="">{{w.info}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-5 col-xs-12 padding-top-20 padding-bottom-20">
+        <span class="font-size-25">Datas dos sorteios</span>
+        <div class="padding-top-20">
+          <div class="col-20p next-date-size" ng-repeat="d in nextDates" ng-switch="d.status">
+            <span class="icon-next-date-n" ng-switch-when="N"></span>
+            <span class="next-date-calendar-value-n font-color-theme" ng-switch-when="N">{{d.date}}</span>
+            <span class="icon-next-date-y" ng-switch-when="Y"></span>
+            <span class="next-date-calendar-value-y" ng-switch-when="Y">{{d.date}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="margin-top-20">
+      <div class="bg-color-theme">
+        <div class="container">
+          <div class="col-sm-6 col-xs-12 text-left font-small-8 padding-10 text-white">
+            <p>2015 Serasa Experian. Todos os direitos reservados.</p>
+            <p>SERASA S.A. Com sede na Alameda dos Quinimuras, 187, Planalto Paulista, CEP 04068-900, São Paulo, SP</p>
+            <p>Inscrita no CNPJ/MF nº 62.173.620/0001-80, IE Isenta. <strong class="text-underline"><a href="https://www.serasaexperian.com.br">www.serasaexperian.com.br</a></strong></p>
+          </div>
+          <div class="col-sm-6 col-xs-12 text-right-rdp font-small-8 padding-10 text-white">
+            O SerasaConsumidor se comunica diretamente com os ganhadores da promoção e nunca solicita nenhum pagamento para resgate de prêmio. Em caso de dúvida, entre em contato com nossa Central de Atendimento Cadastro Positivo 0800 776 6606
+          </div>
+        </div>
+      </div>
+      <div class="padding-10 bg-color-theme-light">
+        <div class="container">
+          <div class="col-xs-12 text-white font-small-8 text-center">
+            Certificado de autorização da Caixa 4-2936/2016. Promoção válida 08/11/16 à 27/03/17. Cada CPF concorrerá somente a um sorteio no valor de R$5.000 durante a promoção. Participação vinculada a abertura do Cadastro Positivo nos sites e agências Serasa. Sorteios via extração da Loteria Federal. onsulte as datas de sorteios, as condições de participação e regulamento completo no site www.serasaconsumidor.com.br/sorteiocadastropositivo
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

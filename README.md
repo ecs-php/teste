@@ -36,6 +36,10 @@ A API deverá atender às seguintes exigências:
 
 # Implementação
 
+# Teste Serasa
+
+* Executar o index.html da pasta TesteSerasa.
+
 
 # Endpoints públicos
 * GET api/v1/users
