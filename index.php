@@ -62,7 +62,6 @@ $app['currentDate'] = function(Application $app) {
 };
 
 // -------------------------------User--------------------------------------
-// Listagem de todos os recursos
 $app->get('api/v1/users', function (Application $app) {
   $return = [
       'data' => [],
@@ -81,7 +80,6 @@ $app->get('api/v1/users', function (Application $app) {
   }
 });
 
-// Busca de um recurso pelo ID
 $app->get('api/v1/users/{id}', function (Application $app, $id) {
           $return = [
               'data' => [],
@@ -103,7 +101,6 @@ $app->get('api/v1/users/{id}', function (Application $app, $id) {
           return (int) $id;
         });
 
-// Criação de um novo recurso
 $app->post('api/v1/users', function (Application $app, Request $request) {
   $return = [
       'data' => [],
@@ -136,7 +133,6 @@ $app->post('api/v1/users', function (Application $app, Request $request) {
   }
 });
 
-// Alteração de um recurso existente
 $app->put('api/v1/users', function (Application $app, Request $request) {
   $return = [
       'data' => [],
@@ -170,7 +166,6 @@ $app->put('api/v1/users', function (Application $app, Request $request) {
   }
 });
 
-// Exclusão de um recurso
 $app->delete('api/v1/users/{id}', function (Application $app, $id) {
           $return = [
               'data' => [],

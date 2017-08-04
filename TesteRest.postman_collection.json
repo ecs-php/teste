@@ -1,0 +1,205 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TesteRest",
+		"_postman_id": "2c160734-40d1-2c8c-82f6-23da762a1fea",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postUsers",
+			"request": {
+				"url": "http://localhost:8000/api/v1/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Teste cadastro\",\n\t\"email\": \"meu@email.com\",\n\t\"password\": \"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers_id",
+			"request": {
+				"url": "http://localhost:8000/api/v1/users/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "putUsers",
+			"request": {
+				"url": "http://localhost:8000/api/v1/users",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_user\": \"1\",\n\t\"name\": \"Meu Cadastro\",\n\t\"email\": \"meu@email.com\",\n\t\"password\": \"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsers_id",
+			"request": {
+				"url": "http://localhost:8000/api/v1/users/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"request": {
+				"url": "http://localhost:8000/api/v1/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postAuth",
+			"request": {
+				"url": "http://localhost:8000/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"meu@email.com\",\n\t\"password\": \"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postContacts",
+			"request": {
+				"url": "http://localhost:8000/api/v1/contacts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-Token",
+						"value": "eyJlIjoibWV1QGVtYWlsLmNvbSIsInAiOiI4MWRjOWJkYjUyZDA0ZGMyMDAzNmRiZDgzMTNlZDA1NSJ9",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Cadastro 1\",\n\t\"email\": \"cadastro_um@email.com\",\n\t\"phone\": \"(47)91234-5678\",\n\t\"address\": \"Avenida Brasil\",\n\t\"info\": \"Apto 7514\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "putContacts",
+			"request": {
+				"url": "http://localhost:8000/api/v1/contacts",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-Token",
+						"value": "eyJlIjoibWV1QGVtYWlsLmNvbSIsInAiOiI4MWRjOWJkYjUyZDA0ZGMyMDAzNmRiZDgzMTNlZDA1NSJ9",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_contact\": \"14\",\n    \"name\": \"Cadastro Um\",\n    \"email\": \"cadastro_um@email.com\",\n    \"phone\": \"(47)91234-5678\",\n    \"address\": \"Avenida Brasil\",\n    \"info\": \"Apto 7514\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getContacts_id",
+			"request": {
+				"url": "http://localhost:8000/api/v1/contacts/14",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJlIjoibWV1QGVtYWlsLmNvbSIsInAiOiI4MWRjOWJkYjUyZDA0ZGMyMDAzNmRiZDgzMTNlZDA1NSJ9",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteContacts_id",
+			"request": {
+				"url": "http://localhost:8000/api/v1/contacts/15",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJlIjoibWV1QGVtYWlsLmNvbSIsInAiOiI4MWRjOWJkYjUyZDA0ZGMyMDAzNmRiZDgzMTNlZDA1NSJ9",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Excluir contato"
+			},
+			"response": []
+		},
+		{
+			"name": "getContacts",
+			"request": {
+				"url": "http://localhost:8000/api/v1/contacts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJlIjoibWV1QGVtYWlsLmNvbSIsInAiOiI4MWRjOWJkYjUyZDA0ZGMyMDAzNmRiZDgzMTNlZDA1NSJ9",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
