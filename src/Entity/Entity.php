@@ -128,6 +128,7 @@ class Entity {
    * 
    */
   public function where($where, $fields = '*', $more = 'AND') {
+    $whereSql = '';
     foreach ($where as $key => $w) {
       $whereSql .= (empty($whereSql) ? '' : ' ' . $more . ' ' ) . $key . ' = :' . $key;
     }
