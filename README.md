@@ -53,7 +53,7 @@ A API deverá atender às seguintes exigências:
 * DELETE api/v1/users/{id}
 ** Excluir usuário
 * POST auth
-** Obter token de acesso
+** Obter token de acesso. Token deverá ser enviado no header da requisição (parâmetro "X-Token").
 
 # Endpoints privados
 * GET api/v1/contacts
