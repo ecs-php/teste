@@ -1,0 +1,21 @@
+{
+  "name": "andre/teste",
+  "type": "project",
+  "require": {
+    "silex/silex": "^2.2",
+    "illuminate/database": "^5.4",
+    "illuminate/events": "^5.4"
+  },
+  "authors": [
+    {
+      "name": "Andre Luis Zipf",
+      "email": "andrezipf94@github.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Symfony\\Component\\Routing\\": ""
+    },
+    "classmap": ["model/"]
+  }
+}
