@@ -26,7 +26,7 @@ Para a criação da base de dados, há um script na pasta `database` do projeto.
 Para a obtenção do *token* JWT, acessar o endpoint `POST /api/v1/login`, fornecendo (via JSON), os dados `username` (com valor `experian`) e `password` (com valor `serasa`). Estas credenciais de usuário estão fixas no *controller* de autenticação (não foi criada tabela de usuários devido a limitação de tempo para a implementação).
 O *token* deve ser fornecido no *header* `Authorization` de cada requisição efetuada, precedido do prefixo `Bearer ` (importante deixar 1 espaço em branco entre o prefixo e o *token*).
  
-# ENDPOINTS da API
+## ENDPOINTS da API
 
 ### Lista todos os recursos
 
@@ -39,7 +39,7 @@ GET /api/v1/wines
 ```
 POST /api/v1/wines
 ```
-Body
+Body (modelo)
 ```
 {
     "name":"", 
@@ -61,7 +61,7 @@ GET /api/v1/wines/{id}
 ```
 PUT /api/v1/wines/{id}
 ```
-Body
+Body (modelo)
 ```
 {
     "name":"", 
@@ -84,6 +84,8 @@ DELETE /api/v1/wines/{id}
 
 **A pasta `cadastro-positivo`, dentro da pasta `public` do projeto contém da implementação da tarefa de construção da *landing page* (teste *frontend*).
 O index.html tem que ser lido a partir de um webserver, pois os dados dos sorteados e dos próximos sorteios, conforme solicitado, são lidos a partir de arquivos JSON.**
+
+
 
 # A tarefa
 Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
