@@ -17,24 +17,24 @@ Incluí os seguintes campos, além do `id` e das datas de criação e atualizaç
 * `harvest` (ano da colheita)
 * `region` (região da produção - acrescida do país)
 
-##Banco de dados
+## Banco de dados
 
 Para a criação da base de dados, há um script na pasta `database` do projeto. As configurações de usuário para conexão, caso haja necessidade de alteração, encontram-se do arquivo `production.php`, da pasta `config` do projeto.
 
-##Autenticação
+## Autenticação
 
 Para a obtenção do *token* JWT, acessar o endpoint `POST /api/v1/login`, fornecendo (via JSON), os dados `username` (com valor `experian`) e `password` (com valor `serasa`). Estas credenciais de usuário estão fixas no *controller* de autenticação (não foi criada tabela de usuários devido a limitação de tempo para a implementação).
 O *token* deve ser fornecido no *header* `Authorization` de cada requisição efetuada, precedido do prefixo `Bearer ` (importante deixar 1 espaço em branco entre o prefixo e o *token*).
  
-#ENDPOINTS da API
+# ENDPOINTS da API
 
-###Lista todos os recursos
+### Lista todos os recursos
 
 ```
 GET /api/v1/wines
 ```
  
-###Criar recurso
+### Criar recurso
 
 ```
 POST /api/v1/wines
@@ -48,14 +48,15 @@ Body
     "harvest": "", 
     "region": ""
 }
- 
-###Recuperar recurso por id
+```
+
+### Recuperar recurso por id
 
 ```
 GET /api/v1/wines/{id}
 ```
    
-###Editar um recurso por id
+### Editar um recurso por id
 
 ```
 PUT /api/v1/wines/{id}
@@ -71,7 +72,7 @@ Body
 }
 ```
   
-###Excluir um recurso por id
+### Excluir um recurso por id
 
 ```
 DELETE /api/v1/wines/{id}
