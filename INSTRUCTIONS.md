@@ -87,7 +87,7 @@ Headers [
 Cria um novo recurso
 
 Headers [
- Token:csazevedo
+ Token:csazevedo,
  Content-Type:application/x-www-form-urlencoded
 ]
 
@@ -104,7 +104,7 @@ FormData [
 Atualiza um recurso
 
 Headers [
- Token:csazevedo
+ Token:csazevedo,
  Content-Type:application/x-www-form-urlencoded
 ]
 
