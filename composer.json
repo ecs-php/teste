@@ -1,0 +1,13 @@
+{
+    "require": {
+        "silex/silex": "~2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Api\\": "api"
+        }
+    }
+}
