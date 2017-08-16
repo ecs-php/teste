@@ -1,0 +1,45 @@
+{
+    "dates" : [
+        {
+            "date" : "17/08",
+            "status" : 1
+        }, 
+        {"date" : "17/08"}, 
+        {"date" : "17/08"}, 
+        {"date" : "17/08"}, 
+        {"date" : "17/08"}, 
+        {"date" : "17/08"} 
+    ],
+    "winners" : [
+        {
+            "date" : "17/08",
+            "city" : "São Paulo - SP",
+            "number" : "053484058978-9"
+        },
+        {
+            "date" : "17/08",
+            "city" : "São Paulo - SP",
+            "number" : "053484058978-9"
+        },
+        {
+            "date" : "17/08",
+            "city" : "São Paulo - SP",
+            "number" : "053484058978-9"
+        },
+        {
+            "date" : "17/08",
+            "city" : "São Paulo - SP",
+            "number" : "053484058978-9"
+        },
+        {
+            "date" : "17/08",
+            "city" : "São Paulo - SP",
+            "number" : "053484058978-9"
+        },
+        {
+            "date" : "17/08",
+            "city" : "São Paulo - SP",
+            "number" : "053484058978-9"
+        }
+    ]
+}
