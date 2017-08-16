@@ -1,0 +1,607 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif, arial;
+    font-weight: 500;
+}
+hr {
+    height: 1px;
+    margin: 0;
+}
+input {
+    font-family: 'Roboto', sans-serif, arial;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+    display: block;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    border:none;
+    outline : none;
+    text-decoration: none;
+    color: #015cae;
+    -webkit-transition: background-color .3s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+    -moz-transition: background-color .3s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+    -ms-transition: background-color .3s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+    -o-transition: background-color .3s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+    transition: background-color .3s ease, border .2s ease, color .2s ease,    opacity .2s ease-in-out;
+}
+
+a:hover {
+    color: #095295;
+}
+a:hover{ text-decoration: none; }
+
+ul, ol { margin: 0; padding: 0; }
+ul li { list-style: none outside none; }
+
+.col-lg-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5 {
+    width: 20%;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    .col-sm-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.image {
+    background: url(../images/sprite.jpg);
+    display: inline-block;
+}
+
+.image-first-step {
+    width: 71px;
+    height: 71px;
+}
+
+.image-second-step {
+    width: 71px;
+    height: 71px;
+    background-position: 0 -71px;
+}
+
+.image-third-step {
+    width: 58px;
+    height: 71px;
+    background-position: 0 -142px;
+}
+
+.image-logo {
+    margin-top: 30px;
+    height: 24px;
+    width: 237px;
+    background-position: 0 -403px;
+}
+
+.image-logo h1 {
+    display: none;
+}
+
+.calendar { 
+    background-position: 0 -214px;
+    width: 88px;
+    height: 68px;
+    padding: 25px 0 0 15px;
+}
+
+.winner-date {
+    background-position: 0 -325px;
+    width: 54px;
+    height: 42px;
+}
+
+.date {
+    background-position: 0 -367px;
+    width: 51px;
+    height: 38px;
+}
+
+.done {
+    background-position: 0 -282px;
+    width: 51px;
+    height: 38px;
+}
+
+@media (max-width: 768px) {
+    .image-logo {
+        height: 17px;
+        width: 165px;
+        background-position: 0 -428px;
+        margin-top: 0px;
+    }
+}
+
+.btn { 
+    font-size: 14px;
+    padding: 15px 50px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .btn { 
+        padding: 15px 55px;
+    }
+}
+
+/*** MENU ***/
+
+.nav { 
+    margin-bottom: 10px;
+}
+
+.nav ul { 
+    margin: 30px auto;
+}
+
+.nav ul li { 
+    float: left;
+    margin-left: 25px;
+}
+
+.nav ul li a { 
+    color: #632678;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.nav ul li a.btn { 
+    margin-top: -10px;
+    padding: 10px 20px;
+    border: 1px solid #632678;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav-mobile #menu-dropdown:checked + ul.menu-items {
+    display: block;
+}
+
+.nav-mobile {
+    padding: 15px;
+}
+
+.nav-mobile ul li a.btn {
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.nav-mobile ul li {
+    margin-top: 10px;
+}
+
+.nav-mobile ul li a {
+    color: #632678;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.nav-mobile label {
+    width: 23px;
+    height: 14px;
+    background: url(../images/burguer.png);
+}
+
+.nav-mobile #menu-dropdown, .nav-mobile ul.menu-items {
+    display: none;
+}
+
+
+/*** MENU ***/
+/*** BANNER ***/
+
+.banner .banner-image {
+    width: 100%;
+    height: auto;
+    background-size: cover; 
+    background-position: top center;
+}
+
+.banner .banner-info {
+    padding-top: 60px; 
+    text-align: center;
+}
+
+.banner .banner-info p {
+    color: #f4f1f5;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 10px;
+} 
+
+.banner .banner-info p:first-child {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.banner .banner-info p:first-child span {
+    font-size: 27px;
+    color: #e2a235;
+    font-weight: bold;
+}
+
+.banner .banner-info p.signup {
+    font-size: 14px;
+}
+
+.banner .banner-info p.prize {
+    font-size: 36px;
+    color: #e2a235;
+    margin-bottom: 10px;
+}
+
+.banner .banner-info p.prize span {
+    font-size: 20px;
+}
+
+.banner .banner-info p.know-more {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.banner .banner-info p.know-more a {
+    color: #dcd4dc;
+    text-decoration: underline;
+}
+
+.banner .banner-image {
+    background-position: top right; 
+    height: 420px;
+}
+
+@media (max-width: 768px) {
+
+    .banner .banner-image {
+        background-position: top left; 
+        height: 320px;
+    }
+
+    .banner .banner-info {
+        padding-top: 40px; 
+        text-align: center;
+    }
+    
+    .banner .banner-info p {
+        font-size: 12px;
+    }
+
+    .banner .banner-info p:first-child {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .banner .banner-info p:first-child span {
+        font-size: 27px;
+        color: #e2a235;
+    }
+
+    .banner .banner-info p.know-more {
+        font-size: 10px;
+    }
+
+}
+
+
+/*** BANNER ***/
+/*** SIGN UP ***/
+
+.signup {
+    margin: 30px 0 40px 0;
+}
+
+.signup p {
+    font-size: 24px;
+    color: #5b5b5f;
+    text-align: center;
+    line-height: 28px;
+}
+
+.signup .btn {
+    margin-top: 50px;
+    background-color: #632678;
+    padding: 20px 25px;
+}
+
+.signup .signup-list ul li p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #632678;
+}
+
+.signup .signup-list ul li {
+    margin-top: 50px;
+}
+
+.signup .signup-list ul li p span {
+    font-size: 12px;
+    color: #5b5b5f;
+}
+
+.signup .signup-list .footnote {
+    font-size: 12px;
+    color: #5b5b5f;
+}
+
+/*** SIGN UP ***/
+/*** SIGN UP TWO COLORS ***/
+
+.two-colors .left-side {
+    background: #fafafa;
+    padding: 30px 15px; 
+}
+
+.two-colors .left-side p {
+    font-size: 13px;
+}
+
+.two-colors .left-side p:first-child {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.two-colors .left-side p:first-child span {
+    font-size: 27px;
+    color: #632678;
+}
+        
+.two-colors .right-side {
+    background: #f3f3f3;
+    padding: 30px 15px; 
+}                
+
+.two-colors .right-side .next-date {
+    font-size: 20px;
+    color: #632678;
+    margin-left: 12px;
+    margin-bottom: 30px;
+}                
+
+.two-colors .right-side .next-date .btn {
+    background-color: #632678;
+    font-weight: bold;
+}
+
+.two-colors .right-side .next-date .calendar {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+
+    .two-colors {
+        background: linear-gradient(
+            to right, 
+            #fafafa 0%, 
+            #fafafa 61%, 
+            #f3f3f3 61%, 
+            #f3f3f3 100%
+        );
+    }
+
+    .two-colors .right-side .next-date {
+        font-size: 20px;
+        color: #632678;
+        margin-left: 12px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }                
+
+}
+
+/*** SIGN UP TWO COLORS ***/
+/*** WINNER DATES ***/
+
+.winner-dates {
+    margin: 50px 0;
+}
+
+.winner-dates h2 {
+    font-size: 20px
+}
+
+.winner-dates .winners-list li {
+    margin: 30px auto;
+}
+
+.winner-dates .winner-date {
+    padding: 15px 0px 0px 10px;
+    float: left;
+    font-size: 12px;
+    color: #25488e;
+    margin-right: 20px;
+}
+
+.winner-dates .city {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+    padding-top: 5px;
+    color: #25488e;
+}
+
+.prize-draw-list {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.prize-draw-list .date {
+    padding: 10px 0px 0px 5px;
+    color: #25488e;
+    margin-top: 13px;
+}
+
+@media (min-width: 768px) {
+
+    .winner-dates .winners-list li {
+        margin: 15px auto;
+    }
+
+    .winner-dates .city {
+        padding-top: 0px;
+        margin-top: 5px;
+    }
+
+    .winner-dates .winner-date {
+        padding: 15px 0px 0px 10px;
+        margin-right: 20px;
+    }
+}
+
+/*** WINNER DATES ***/
+/*** FOOTER ***/
+
+footer {
+    font-size: 10px;
+}
+
+.footer {
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-top {
+    background: #632678;
+}
+
+.footer-top .left-side {
+    text-align: left;
+}
+
+.footer-top .right-side {
+    text-align: right;
+}
+
+.footer-bottom {
+    background: #825193;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .footer-top .right-side {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        text-align: left;
+    }
+}
+
+/*** FOOTER ***/
+
+/* .modal-transparent */
+
+.modal-transparent .modal-content {
+  background: transparent;
+}
+
+.modal-backdrop.modal-backdrop-transparent {
+  background: #ffffff;
+}
+
+.modal .close {
+    background: url(../images/fechar.png);
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+
+.modal-content {
+    border: none;
+    box-shadow: none;
+}
+
+
+.modal iframe { 
+    width: 100%;
+    height: 100%;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-body { 
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (min-width: 768px) {
+    .modal-body {
+        height: 315px;
+    }
+}
