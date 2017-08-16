@@ -1,9 +1,8 @@
 {
     "require": {
-        "silex/silex": "~2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "*"
+        "silex/silex": "*",
+        "jms/serializer": "*",
+        "dflydev/doctrine-orm-service-provider": "1.0.*@dev"
     },
     "autoload": {
         "psr-4": {
