@@ -1,0 +1,60 @@
+.btn-mini-menu {
+    background: url('../img/burguer.png');
+    background-repeat: no-repeat;
+    padding: 0px 13px 0px 9px;
+}
+
+.icon {
+    background: url('../img/sprite.png');
+    background-repeat: no-repeat;
+}
+
+.icon1 {
+    width: 70px;
+    height: 70px;
+    background-position: 0px 0px;
+    margin-top: 20px;
+}
+
+.icon2 {
+    width: 70px;
+    height: 72px;
+    background-position: 0px -71px;
+    margin-top: 20px;
+}
+
+.icon3 {
+    width: 70px;
+    height: 71px;
+    background-position: 0px -143px;
+    margin-top: 20px;
+}
+
+.icon4 {
+    width: 54px;
+    height: 42px;
+    background-position: 0px -325px;
+    padding: 11px 6px;
+    margin-right: 15px;
+}
+
+.icon5 {
+    width: 62px;
+    height: 42px;
+    background-position: 0px -283px;
+    padding: 12px 15px 12px 8px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.icon5.ative {
+    background-position: 0px -367px;
+    padding: 13px 15px 10px 8px;
+}
+
+.icon8 {
+    width: 338px;
+    height: 23px;
+    background-position: 0px -403px;
+    float: right;
+}

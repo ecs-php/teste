@@ -1,0 +1,140 @@
+#img_banner {
+    background-image: url("../img/banner-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+}
+
+#txt_banner {
+    position: absolute;
+    color: #fff;
+    top: 70px;
+    left: 200px;
+    text-align: center;
+}
+
+.open_account {
+    text-align: center;
+}
+
+.open_account h4 {
+    float: left;
+}
+
+.background-gray {
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+.winner_list > div {
+    float: left;
+    margin-top: 15px;
+}
+
+.winner_list .icon4-text {
+    float: left
+}
+
+.data_list {
+    margin-top: 15px;
+}
+
+.data_list > div {
+    width: 20%;
+    height: 50px;
+}
+
+.background-darkgray {
+    background: darkgrey;
+    height: 100%;
+    width: 1000%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.background-darkgray-sm {
+    background: darkgrey;
+    height: 100%;
+    width: 1000%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 0;
+}
+
+.txt-background-lightgray {
+    padding: 20px;
+}
+
+.txt-background-darkgray {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+}
+
+.background-violet {
+    background: #532065;
+    color: #fff;
+}
+
+.background-violet .row > div {
+    padding: 20px;
+}
+
+.background-lightviolet {
+    background: blueviolet;
+    color: #fff;
+    padding: 20px;
+}
+
+.txtViolet {
+    color: #532065 !important;
+}
+
+.btn-outline-success.txtViolet {
+    border-color: #532065;
+    border-radius: 0;
+}
+
+.btn-outline-success.txtViolet:hover {
+    cursor: pointer;
+    color: white !important;
+    background: #532065;
+    max-height: 38px;
+}
+
+.btn-success.txtViolet {
+    color: white !important;
+    cursor: pointer;
+    border-color: #532065;
+    border-radius: 0;
+    background: #532065;
+}
+
+.txtGold {
+    color: orange;
+}
+
+.txt28 {
+    font-size: 28px;
+}
+
+.txt30 {
+    font-size: 28px;
+}
+
+.txt40 {
+    font-size: 40px;
+}
+
+.height110 {
+    min-height: 110px;
+}
+
+.navbar-light .navbar-toggler {
+    border: 0;
+    padding-top: 10px;
+}

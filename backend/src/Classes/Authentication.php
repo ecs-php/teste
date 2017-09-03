@@ -45,6 +45,12 @@ class Authentication
         $last_connection = date_create_from_format("Y-m-d H:i:s",$last_connection);
         $date = new \DateTime('now');
 
+
+//        if($date->getTimestamp() - $last_connection->getTimestamp() > 1*60*60){
+//            $this->app->abort(401);
+//        }
+
+
         UserRepository::get()->updateLastConnetion( $user["id"]);
 
         $this->request->attributes->set("id_user",$user["id"]);
