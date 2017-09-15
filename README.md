@@ -1,34 +1,36 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+#README
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+-Necessario dar um composer install em todas dependencias
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+-Configurar banco de dados conforme seu ambiente. Utilieza o .sql que está na pasta BD.
 
-A API deverá atender às seguintes exigências:
+Modo de teste:
 
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
+-Feito apenas o back-end. Necessario usar o postman para testar. 
 
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
+-Usuario Natan já criado. Use o mesmo para testar. Vá na aba Body, utileze "raw" -> JSON(application/json)
+Cole o seguinte json no campo abaixo: (Que é um usuario já existente no bd).
 
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
+		{
 
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
+			"id" : 1,
 
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+			"name" : "Natan",
+
+			"username" : "souzanatan",
+
+			"password" : "natanpassword",
+
+			"address" : "Rua Schnaider"
+
+		}
+
+-Com ele, será obrigado gerar um token indo para:
+
+	METHOD POST -> http://localhost/teste/generate-token (necessario configurar conforme seu ambiente)
+
+-Ele verificará se existe o mesmo existe no banco de dados para gerar token. (Sistema de login).
+
+-Gerado o token, vá até a aba HEADERS, acrescendo uma nova key chamada "AuthorizationKey", e o value você coloca "Bearer TokenQueVocêGerouVemAqui". Deixe ele habilitado. (Como se você tivesse logado e entrasse no sistema).
+
+-Agora você está autenticado para utilizar os endpoints. 
