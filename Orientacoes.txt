@@ -1,0 +1,28 @@
+
+ - Para criar o banco de dados, utilizar o arquivo "database.sql". As configuraçoes de acesso estao em "connection.php".
+
+ - Os testes foram efetuados utilizando a extenção do navegador Chrome "Postman". Para acessar as rotas é obrigatório o envio via header do "apikey" que se encontra na tabela users.
+    Acessando as rotas por "Postman":
+        GET>"http://mphp55.simob_silex.com.br/tasks"
+            : Apenas configurado a aba Headers com o parâmetro autorização:
+                key: Authorization => value: Bearer <apikey>
+
+        GET>"http://mphp55.simob_silex.com.br/tasks/<id>"
+            : Apenas configurado a aba Headers com o parâmetro de autorização:
+                key: Authorization => value: Bearer <apikey>
+
+        POST>"http://mphp55.simob_silex.com.br/tasks"
+            : Configurado a aba Headers com o parâmetro autorização:
+                key: Authorization => value: Bearer <apikey>
+            : Configurado a aba Body com a opção "raw" selecionada com os parâmetros para inserção:
+                {"title":"Task insert","description":"Description insert","estimation_time":"00:30:00","priority":"hight"}
+
+        PUT>"http://mphp55.simob_silex.com.br/tasks/<id>"
+            : Configurado a aba Headers com o parâmetro autorização:
+                key: Authorization => value: Bearer <apikey>
+            : Configurado a aba Body com a opção "raw" selecionada com os parâmetros para atualização:
+                {"title":"Task updated","description":"Description updated","development_time":"00:35:00"}
+
+        DELETE>"http://mphp55.simob_silex.com.br/tasks/<id>"
+            : Apenas configurado a aba Headers com o parâmetro de autorização:
+                key: Authorization => value: Bearer <apikey>
