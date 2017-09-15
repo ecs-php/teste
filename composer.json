@@ -1,0 +1,22 @@
+{
+    "repositories": [
+    {
+         "type": "composer", 
+         "url": "https://packagist.org"
+    },
+    { "packagist": false }
+    ],    
+    "name": "cod4b/teste-esc",
+    "description": "Teste",
+    "require": {
+        "silex/silex": "^2.2",
+        "twig/twig": "^1.34",
+        "lcobucci/jwt": "^3.2"
+    },
+    "authors": [
+        {
+            "name": "Natan",
+            "email": "natanevandro@gmail.com"
+        }
+    ]
+}
