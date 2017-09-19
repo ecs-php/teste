@@ -1,0 +1,15 @@
+
+### Criar Base
+CREATE DATABASE `test` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+### criar tabela de clientes
+CREATE TABLE `tb_customers` (
+  `id_customer` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) NOT NULL,
+  `cpf` int(11) NOT NULL,
+  `birth_date` date NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `dt_register` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dt_change` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_customer`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
