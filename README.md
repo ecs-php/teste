@@ -1,3 +1,11 @@
+# html, css e js
+* npm i
+* 'gulp' ou 'gulp watch' para assistir modificações
+* gulp js gera js
+* gulp js:main gera o arquivo main.js com os vendors
+* gulp css gera css
+* gulp html gera os html
+
 # A tarefa
 Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
 
