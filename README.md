@@ -12,10 +12,16 @@ Simples gerenciador de tarefas, inser um titulo, descrição, data e tempo neces
 * npm i
 * gulp 
   - gera todos os arquivos
-* gulp js gera js
-* gulp js:main gera o arquivo main.js com os vendors
-* gulp css gera css
-* gulp html gera os html
+* gulp watch
+  - assiste modificações em css js e html
+* gulp js 
+  - gera js
+* gulp js:main 
+  - gera o arquivo main.js com os vendors
+* gulp css
+  - gera css
+* gulp html 
+  - gera os html
 
 # Considerações
 * Foi utilizado um sistem simples de autenticação, com a senha em md5. Somente para agilizar o teste
