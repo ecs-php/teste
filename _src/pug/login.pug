@@ -1,0 +1,23 @@
+extends layouts/base
+
+block content
+  .page-login
+    
+    #loginModal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+        form.modal-content(action='./login' method='POST')
+          .modal-header
+            h4.modal-title Login
+          .modal-body
+            .form-group
+              label Username
+              input.form-control(name='user')
+            .form-group
+              label Description
+              input.form-control(type='password' name='password')
+          .modal-footer
+            button.btn.btn-primary Login
+
+
+block scripts
+  script(src="./assets/js/login.js")

@@ -1,0 +1,64 @@
+extends layouts/base
+
+block content
+  .page-home
+    .container
+      .page-header
+        h1 {{title}}
+
+      .jumbotron
+        form#formAddTask(action="./api/Task" method="POST")
+          .form-group
+            label Title
+            input.form-control(name='title')
+          .form-group
+            label Description
+            textarea.form-control(name='description')
+          .form-group
+            label Till Date
+            input.form-control(name='date')
+          .form-group
+            label Available time
+            input.form-control(name='time')
+          
+          button.btn.btn-primary Add task
+
+      .jumbotron
+        .form-group
+          label Search tasks (by id or title)
+          input.form-control(id="taskSearch")
+
+      div
+        .panel.panel-default(v-for="task in tasks" :key='task.id') 
+          a(href="#" data-action="edit-task" v-bind:data-key="task.id")
+            .panel-heading {{task.title}} #[.pull-right {{task.date}} / {{task.time}} hour]
+
+    #taskEditModal.modal.fade.in(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+        form.modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4.modal-title Edit task
+          .modal-body
+            input(type='hidden' name='id' v-bind:value='selectedTask.id')
+            .form-group
+              label Title
+              input.form-control(name='title' v-bind:value='selectedTask.title')
+            .form-group
+              label Description
+              textarea.form-control(name='description') {{selectedTask.description}}
+            .form-group
+              label Till Date
+              input.form-control(name='date' v-bind:value='selectedTask.date')
+            .form-group
+              label Available time
+              input.form-control(name='time' v-bind:value='selectedTask.time')
+          .modal-footer
+            button.btn.btn-link.pull-left(type='button', v-bind:data-key='selectedTask.id' data-action="delete-task") Delete
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary Save changes
+
+
+block scripts
+  script(src="./assets/js/home.js")
