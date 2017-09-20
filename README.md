@@ -1,11 +1,12 @@
 # Gerenciador simples de tarefas
 Simples gerenciador de tarefas, inser um titulo, descrição, data e tempo necessário para a tarefa
 
-# Tecnologias
+# Tecnologias utilizadas para agilizar o desenvolvimento do teste
 * npm
 * gulp
 * vue.js
 * bootstrap
+* jquery
 
 # html, css e js
 * npm i
