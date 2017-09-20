@@ -2,6 +2,7 @@
 Simples gerenciador de tarefas, inser um titulo, descrição, data e tempo necessário para a tarefa
 
 # Tecnologias utilizadas para agilizar o desenvolvimento do teste
+* composer
 * npm
 * gulp
 * vue.js
