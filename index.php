@@ -2,6 +2,7 @@
 require_once __DIR__.'/vendor/autoload.php';
 require_once __DIR__.'/_controllers/Main.php';
 require_once __DIR__.'/_controllers/Task.php';
+require_once __DIR__.'/_controllers/Serasa.php';
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -45,6 +46,12 @@ $app->get('/', function () use ($app) {
     readfile('_views/home.html');
   }, 200, array('Content-Type' => 'text/html'));
 })->before($isAuth);
+
+$app->get('/serasa', function () use ($app) {
+  return $app->stream(function () {
+    readfile('_views/serasa.html');
+  }, 200, array('Content-Type' => 'text/html'));
+});
 
 // API routes
 $app->mount('/api', include __DIR__.'/_routes/api.php');

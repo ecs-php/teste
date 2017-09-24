@@ -1,8 +1,11 @@
+block vars
+
 doctype html
 html
   head
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
-    link(href='./assets/css/main.css' rel='stylesheet')
+    block head
+      link(href='./assets/css/main.css' rel='stylesheet')
   body
     block content
 

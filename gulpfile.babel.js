@@ -27,6 +27,9 @@ const srcFiles = {
   css: [
     './_src/stylus/main.styl'
   ],
+  serasaCss: [
+    './_src/stylus/serasa/main.styl'
+  ],
   cssWatch: [
     './_src/stylus/**/*.styl'
   ]
@@ -41,6 +44,7 @@ gulp.task('build', () => {
   return gulp.start(
     'html',
     'css',
+    'css:serasa',
     'js:main',
     'js',
   );
@@ -75,6 +79,7 @@ gulp.task('html', () => {
 
 gulp.task('css', () => {
   return gulp.src(srcFiles.css)
+    .pipe(plumber())
     .pipe(stylus({
       use: [bootstrap()],
       compress: true
@@ -82,9 +87,19 @@ gulp.task('css', () => {
     .pipe(gulp.dest('./assets/css'));
 });
 
+gulp.task('css:serasa', () => {
+  return gulp.src(srcFiles.serasaCss)
+    .pipe(plumber())
+    .pipe(stylus({
+      use: [bootstrap()],
+      compress: true
+    }))
+    .pipe(gulp.dest('./assets/css/serasa'));
+});
+
 gulp.task('watch', ['build'], () => {
   gulp.watch(srcFiles.htmlWatch, ['html']);
-  gulp.watch(srcFiles.cssWatch, ['css']);
+  gulp.watch(srcFiles.cssWatch, ['css', 'css:serasa']);
   gulp.watch(srcFiles.jsMain, ['js:app']);
   gulp.watch(srcFiles.js, ['js']);
 });

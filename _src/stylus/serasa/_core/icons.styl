@@ -1,0 +1,44 @@
+font-default-width = 70px
+font-default-height = 71px
+
+.icons
+  @extend .container
+  width font-default-width
+  height font-default-height
+  background-image url(../../images/sprite.png)
+  margin-bottom 15px
+
+  &-cadastro
+    @extend .container
+    @extend .icons
+    background-position 0 0
+    
+  &-cadastro-positivo
+    @extend .container
+    @extend .icons
+    background-position 0 -71px
+    
+  &-trevo
+    @extend .container
+    @extend .icons
+    background-position 0 -142px
+    
+  &-sorteio
+    @extend .container
+    @extend .icons
+    width 88px
+    background-position 0 -213px
+    
+  &-sorteio2
+    @extend .container
+    @extend .icons
+    width 55px
+    height 41px
+    background-position 0px -326px
+    
+  &-sorteio3
+    @extend .container
+    @extend .icons
+    width 45px
+    height 34px
+    background-position 0px -368px
