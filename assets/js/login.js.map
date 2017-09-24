@@ -1,0 +1,1 @@
+{"version":3,"sources":["login.js"],"names":["$","modal"],"mappings":"aAAAA,EAAE,eAAeC,MAAM","file":"login.js","sourcesContent":["$('#loginModal').modal('show');"]}

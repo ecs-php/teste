@@ -1,0 +1,65 @@
+extends layouts/base
+
+append head
+  link(href='./assets/css/serasa/main.css' rel='stylesheet')
+
+block content
+  .page-serasa
+    header.page-serasa-header
+
+    .container
+
+      .page-serasa-participe
+        .page-serasa-participe-container
+          .page-serasa-participe-container-text Quer saber como abrir seu Cadastro Prositivo e ainda concorrer a prêmios?
+        .page-serasa-participe-container
+          .page-serasa-participe-container-box
+            .icons-cadastro
+            p.text-small #[span.text-big 1.] Cadastre-se no
+            p.text-big SERASACONSUMIDOR
+
+          .page-serasa-participe-container-box
+            .icons-cadastro-positivo
+            p.text-small #[span.text-big 2.] Cadastre-se no
+            p.text-big SERASACONSUMIDOR
+
+          .page-serasa-participe-container-box
+            .icons-trevo
+            p.text-small #[span.text-big 3.] Cadastre-se no
+            p.text-big SERASACONSUMIDOR
+
+        .page-serasa-participe-container
+          .page-serasa-participe-container-button PARTICIPE JÁ, É GRÁTIS
+
+    .page-serasa-proximo_sorteio
+      .page-serasa-proximo_sorteio-container
+        .page-serasa-proximo_sorteio-container-box
+          p Abrindo seu Cadastro Positivo você pode ganhar até R$ 5.000!
+          p Cada CPF participa de apenas um sorteio. Assim que seu Cadastro Positivo for concluído, você vai receber 
+            | por e-email o seu número da sorte e a data do sorteio que você vai participar. Depois, é só torcer para
+            | ser o ganhador.
+        .page-serasa-proximo_sorteio-container-box
+          
+          p #[.icons-sorteio] Próximo sorteio
+
+    .page-serasa-ganhadores
+      .page-serasa-ganhadores-container
+        .page-serasa-ganhadores-items
+          h2 Ganhadores
+          .page-serasa-ganhadores-items-item(v-for="winner in winners" :key='winner.id')
+            .icons-sorteio2 
+              .page-serasa-ganhadores-items-item-date {{winner.date}}
+            .page-serasa-ganhadores-items-item-location {{winner.city}} - {{winner.state}}
+            .page-serasa-ganhadores-items-item-no Número sorteado: {{winner.no}}
+
+        .page-serasa-ganhadores-aside
+          h2 Datas dos sorteios
+          .page-serasa-ganhadores-aside-items-item(v-for="date in doorPrizes" :key='date.id')
+            .icons-sorteio3 
+              .page-serasa-ganhadores-aside-items-item-date {{date.date}}
+
+
+    header.page-serasa-footer
+
+block scripts
+  script(src="./assets/js/serasa.js")
