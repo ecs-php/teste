@@ -1,0 +1,144 @@
+@import bootstrap
+.page-serasa
+  @extend .container
+  width auto
+  max-width 2050px
+  
+  &-header
+    background-image url('../../images/banner-1.png')
+    background-size: auto 100%
+    background-position: center; 
+    height 418px
+
+  &-participe
+    @extend .jumbotron
+    background-color rgba(255, 255, 255, 1)
+    
+    &-container
+      @extend .row
+      text-align center
+      
+      &-button
+        @extend .btn
+        background-color #3F1B56
+        color #fff
+        padding 15px
+
+      &-text
+        font-size 25px
+        
+      &-box
+        @extend .col-md-4
+        @extend .col-sm-12
+        font-size 14px
+        margin-bottom 45px;
+        margin-top 45px;
+
+        &:before
+          
+        .text-small
+          margin 0
+          font-size 14px
+          
+        .text-big
+          margin 0
+          font-size 17px
+          font-weight bolder
+    
+  &-ganhadores
+    background-color #fff
+    
+    .icons-sorteio2
+      float left
+      font-size 14px
+      font-weight bolder
+      text-align center
+      line-height 41px
+      margin-right 15px
+      
+    .icons-sorteio3
+      font-size 14px
+      font-weight bolder
+      text-align center
+      line-height 41px
+    
+    &-items
+      @extend .row
+      @extend .col-md-8
+      @extend .col-xs-12
+      
+      &-item
+        @extend .col-md-6
+        @extend .col-xs-12
+        
+        &-date
+          width 33px
+          margin-left -5px
+          margin-top 2px
+          
+        &-location
+          font-weight bolder
+          color #fhfhfh
+      
+    &-aside
+      @extend .row
+      @extend .col-md-4
+      @extend .col-xs-12
+        
+      &-items
+        &-item
+          @extend .col-md-3
+          @extend .col-xs-3
+          &-date
+            width 33px
+            margin-left -10px
+            margin-top -1px
+    
+    &-container
+      @extend .row
+      background-color #fff
+      
+      &-box
+        @extend .col-md-8
+        @extend .col-sm-12
+        
+        &:last-child
+          background-color #666
+          @extend .col-md-4
+          @extend .col-sm-12
+
+
+  &-proximo_sorteio
+    @extend .jumbotron
+    background-color rgba(255, 255, 255, 1)
+    
+    &-container
+      @extend .row
+      text-align center
+      
+      &-button
+        @extend .btn
+        background-color #3F1B56
+        color #fff
+        padding 15px
+
+      &-text
+        font-size 25px
+        
+      &-box
+        @extend .col-md-4
+        @extend .col-sm-12
+        font-size 14px
+        margin-bottom 45px;
+        margin-top 45px;
+
+        &:before
+          
+        .text-small
+          margin 0
+          font-size 14px
+          
+        .text-big
+          margin 0
+          font-size 17px
+          font-weight bolder
