@@ -1,0 +1,73 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SerasaConsumidor</title>
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SerasaConsumidor</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">COMO PARTICIPAR</a></li>
+                <li><a href="#">PRÊMIOS E SORTEIOS</a></li>
+                <li><a href="#">PRÊMIOS E SORTEIOS</a></li>
+                <li><a href="#">GANHADORES</a></li>
+                <li><a href="#">REGULAMENTOS</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">PARTICIPE JÁ, É GRATIS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <div class="carousel-inner">
+        <div class="item slides active">
+            <div class="slide-1"></div>
+            <div class="hero container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h1>o SerasaConsumidor<br>ajuda a <span class="orange">pagar sua dívida!</span></h1>
+                        <h3>Abra seu Cadastro Positivo e concorra a</h3>
+                        <div class="orangeValue">R$ 5.000,00</div>
+                        <a href="#" class="btn btn-info btn-lg" role="button">PARTICIPE JÁ, É GRATIS</a>
+                        <p class="grey">Saiba o que é o <a href="#">Cadastro Positivo</a> </p>
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}

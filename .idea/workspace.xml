@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d195c56-caf6-42ac-a0dd-991e8644797a" name="Default" comment="Web com projeto angular">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/errors/404.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/errors/4xx.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/errors/500.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/errors/5xx.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/errors/default.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/controllersTest.php" afterPath="" />
+    <list default="true" id="9d195c56-caf6-42ac-a0dd-991e8644797a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/prova.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/teste.iml" afterPath="$PROJECT_DIR$/.idea/teste.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,12 +23,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/routes.php">
+      <file leaf-file-name="prova.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/prova.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="47" column="29" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="47" selection-end-column="29" />
+              <folding>
+                <marker date="1507513148784" expanded="true" signature="163:168" ph="..." />
+                <marker date="1507513148784" expanded="true" signature="261:266" ph="..." />
+                <marker date="1507513148784" expanded="true" signature="352:357" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,6 +74,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,6 +86,7 @@
       <find>;</find>
       <find>Entity\User</find>
       <find>ntity\Cadastro</find>
+      <find>ng-app=&quot;App&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -99,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/app.php" />
         <option value="$PROJECT_DIR$/src/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/config/prod.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/web/app/login/login.html" />
         <option value="$PROJECT_DIR$/web/app/login/login.js" />
         <option value="$PROJECT_DIR$/web/app/home/home.js" />
@@ -122,6 +143,9 @@
         <option value="$PROJECT_DIR$/web/app/app.js" />
         <option value="$PROJECT_DIR$/src/views/index.html.twig" />
         <option value="$PROJECT_DIR$/src/routes.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
+        <option value="$PROJECT_DIR$/src/views/prova.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -235,14 +259,15 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste\web\images" />
       <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste\web\app" />
       <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste\src\Controller" />
       <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste\src\Entity" />
       <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste" />
-      <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste\src\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\roger\Documents\public_html\link-talentos\teste\src" />
@@ -272,7 +297,7 @@
       <updated>1507340534163</updated>
       <workItem from="1507340537770" duration="258000" />
       <workItem from="1507340875359" duration="11572000" />
-      <workItem from="1507414268353" duration="46530000" />
+      <workItem from="1507414268353" duration="52722000" />
     </task>
     <task id="LOCAL-00001" summary="adaptação de configurações">
       <created>1507514260077</created>
@@ -302,16 +327,31 @@
       <option name="project" value="LOCAL" />
       <updated>1507514624715</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="organização do projeto e gitignore">
+      <created>1507514869073</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507514869073</updated>
+    </task>
+    <task id="LOCAL-00006" summary="configurações do bower, composer e unit">
+      <created>1507514919628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1507514919628</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58360000" />
+    <option name="totallyTimeSpent" value="64552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.213125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.213125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -342,22 +382,15 @@
     <MESSAGE value="controllers, entidades e views" />
     <MESSAGE value="Web com projeto angular" />
     <MESSAGE value="entidade User e Manager Registry" />
-    <option name="LAST_COMMIT_MESSAGE" value="entidade User e Manager Registry" />
+    <MESSAGE value="organização do projeto e gitignore" />
+    <MESSAGE value="configurações do bower, composer e unit" />
+    <option name="LAST_COMMIT_MESSAGE" value="configurações do bower, composer e unit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/db.php" />
-    <entry file="file://$PROJECT_DIR$/web/index_prod.php" />
-    <entry file="file://$PROJECT_DIR$/../../silex/silex-orm-skeleton/src/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers.php" />
     <entry file="file://$PROJECT_DIR$/src/App/Entity/User.php" />
     <entry file="file://$PROJECT_DIR$/src/App/Controller/ApiController.php" />
@@ -488,14 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/bck/src/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -548,14 +573,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,18 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <marker date="1507513148784" expanded="true" signature="163:168" ph="..." />
-            <marker date="1507513148784" expanded="true" signature="261:266" ph="..." />
-            <marker date="1507513148784" expanded="true" signature="352:357" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -704,7 +709,7 @@
         <state relative-caret-position="1683">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
-            <element signature="e#30#50#0#PHP" expanded="true" />
+            <element signature="e#30#50#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -717,18 +722,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="47" column="29" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <marker date="1507513148784" expanded="true" signature="163:168" ph="..." />
+            <marker date="1507513148784" expanded="true" signature="261:266" ph="..." />
+            <marker date="1507513148784" expanded="true" signature="352:357" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/prova.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
