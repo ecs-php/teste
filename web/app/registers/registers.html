@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h2>Registration</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>City/State</th>
+                <th>Created Date</th>
+                <th>Updates Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="register in vm.registers">
+                <td ng-bind="register.id"></td>
+                <td ng-bind="register.name"></td>
+                <td ng-bind="register.city + '/' + register.state"></td>
+                <td ng-bind="register.createdDate"></td>
+                <td ng-bind="register.updatedDate"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h2>Users Registration</h2>
+    </div>
+</div>
+<div class="row">
+    <p>
+      <a href="#!/users/add">Add</a>
+    </p>
+    <div class="col-sm-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>E-mail</th>
+                <th>Active</th>
+                <th>Tools</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in vm.users">
+                <td ng-bind="user.id"></td>
+                <td ng-bind="user.name"></td>
+                <td ng-bind="user.username"></td>
+                <td ng-bind="user.email"></td>
+                <td>
+                    <span ng-if="user.is_active">Yes</span>
+                    <span ng-if="!user.is_active">No</span>
+                </td>
+                <td>
+                    <a href="#!/users/edit/{{ user.id }}">Edit</a>
+                    <a href="javascript:;" ng-click="vm.delete(user.id)">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

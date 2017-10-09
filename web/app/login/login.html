@@ -1,0 +1,13 @@
+<div class="" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1 class="panel-title">Login to Your Panel</h1>
+            <div class="alert alert-danger" ng-bind="vm.errorMessage" ng-if="vm.errorMessage"></div>
+            <form method="post" ng-submit="vm.login()">
+                <input type="text" name="user" class="form-control" placeholder="Username" ng-model="vm.username" required>
+                <input type="password" name="pass"  class="form-control" placeholder="Password" ng-model="vm.password" required>
+                <input type="submit" name="login" class="btn btn-success" value="Login" ng-if="vm.username != null && vm.password != null">
+            </form>
+        </div>
+    </div>
+</div>

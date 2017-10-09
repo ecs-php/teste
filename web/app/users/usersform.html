@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h2>User Registration</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <form name="userForm" method="post" ng-submit="vm.save()">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" ng-model="vm.form.name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" ng-model="vm.form.username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" ng-model="vm.form.password" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" ng-model="vm.form.email" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+
+</div>
