@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d195c56-caf6-42ac-a0dd-991e8644797a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INSTALL.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +30,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -240,11 +239,6 @@
               <item name="teste" type="b2602c69:ProjectViewProjectNode" />
               <item name="teste" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="teste" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teste" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -298,7 +292,7 @@
       <updated>1507340534163</updated>
       <workItem from="1507340537770" duration="258000" />
       <workItem from="1507340875359" duration="11572000" />
-      <workItem from="1507414268353" duration="53072000" />
+      <workItem from="1507414268353" duration="53190000" />
     </task>
     <task id="LOCAL-00001" summary="adaptação de configurações">
       <created>1507514260077</created>
@@ -342,11 +336,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507514919628</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Install">
+      <created>1507521389823</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1507521389823</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64902000" />
+    <option name="totallyTimeSpent" value="65020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
@@ -384,7 +385,8 @@
     <MESSAGE value="entidade User e Manager Registry" />
     <MESSAGE value="organização do projeto e gitignore" />
     <MESSAGE value="configurações do bower, composer e unit" />
-    <option name="LAST_COMMIT_MESSAGE" value="configurações do bower, composer e unit" />
+    <MESSAGE value="Install" />
+    <option name="LAST_COMMIT_MESSAGE" value="Install" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -794,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
