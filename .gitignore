@@ -1,1 +1,5 @@
 /vendor/
+/.idea/
+/web/bower_components/
+/var/
+/composer.lock
