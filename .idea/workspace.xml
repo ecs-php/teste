@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d195c56-caf6-42ac-a0dd-991e8644797a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/prova.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INSTALL.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/views/prova.html.twig" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/INSTALL.md" />
       </list>
     </option>
   </component>
@@ -244,6 +240,11 @@
               <item name="teste" type="b2602c69:ProjectViewProjectNode" />
               <item name="teste" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="teste" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teste" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -297,7 +298,7 @@
       <updated>1507340534163</updated>
       <workItem from="1507340537770" duration="258000" />
       <workItem from="1507340875359" duration="11572000" />
-      <workItem from="1507414268353" duration="52722000" />
+      <workItem from="1507414268353" duration="53072000" />
     </task>
     <task id="LOCAL-00001" summary="adaptação de configurações">
       <created>1507514260077</created>
@@ -345,11 +346,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64552000" />
+    <option name="totallyTimeSpent" value="64902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.213125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -391,7 +391,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controllers.php" />
     <entry file="file://$PROJECT_DIR$/src/App/Entity/User.php" />
     <entry file="file://$PROJECT_DIR$/src/App/Controller/ApiController.php" />
     <entry file="file://$PROJECT_DIR$/config/database.php">
@@ -779,6 +778,17 @@
         <state relative-caret-position="357">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INSTALL.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
