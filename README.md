@@ -15,21 +15,21 @@ Apps requires
 
 **Dependency management NPM**
 
-###Installation api-mock
+### Installation api-mock
 
 ```
 cd api-mock
 npm i
 ```
 
-###Installation test-html
+### Installation test-html
 
 ```
 cd test-html
 npm i
 ```
 
-###Installation test-php
+### Installation test-php
 
 #### Edit Config app
 ```
