@@ -1,0 +1,25 @@
+{
+    "name": "falexandre/teste",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "SRS\\": "src/"
+        }
+    },
+    "require": {
+        "silex/silex": "~2.0",
+        "lcobucci/jwt": "^3.2",
+        "doctrine/orm": "2.5",
+        "symfony/yaml": "^3.3",
+        "symfony/var-dumper": "^3.3",
+        "dflydev/doctrine-orm-service-provider": "2.0.*@dev",
+        "symfony/validator": "^3.3"
+
+    },
+    "authors": [
+        {
+            "name": "Fábio Luis Alexandre",
+            "email": "fabiolalexandre@gmail.com"
+        }
+    ]
+}

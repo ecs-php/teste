@@ -1,0 +1,20 @@
+{
+  "name": "api-mock",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "Fábio Luis Alexandre",
+    "email": "fabiolalexandre@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1"
+  }
+}

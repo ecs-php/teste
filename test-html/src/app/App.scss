@@ -1,0 +1,401 @@
+// variables
+$core-color: #632678;
+$core-color-over: #872d9f;
+$core-secondary-color: #26478d;
+$core-orange-color: #e2a235;
+$core-grey-color: #5b5b5f;
+$core-grey-bold: #212121;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Condensed', sans-serif !important;
+  color: $core-color;
+}
+
+.col{
+  margin-top: 10px;
+}
+
+.text-core {
+  color: $core-color;
+}
+
+.text-core-secondary {
+  color: $core-secondary-color;
+}
+
+.text-core-grey {
+  color: $core-grey-color;
+}
+
+.text-core-bold {
+  color: $core-grey-bold;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.margin-1 {
+  margin-top: 10px;
+}
+
+.padding-1 {
+  padding: 10px;
+}
+
+.white {
+  min-height: 77px !important;
+  padding-top: 7px;
+}
+
+.white a {
+  color: $core-color !important;
+  text-transform: uppercase;
+  font-size: 12px !important;
+}
+
+.white a:hover {
+  color: #FFF !important;
+  background-color: $core-color !important;
+}
+
+.btn-take-part {
+  font-weight: bold !important;
+  border: 1px solid $core-color !important;
+  background-color: transparent !important;
+  color: $core-color !important;
+}
+
+.btn-core {
+  background-color: $core-color;
+}
+
+.btn-core:hover {
+  background-color: $core-color-over;
+}
+
+.logo-sprite {
+  height: 27px;
+  width: 240px;
+  background: url('sprite.png') no-repeat !important;
+  background-position: 0 -402px !important;
+  margin-top: 6.5% !important;
+}
+
+.burguer {
+  color: $core-secondary-color !important;
+}
+
+.banner {
+  width: 100%;
+  height: 418px;
+  background: url('banner-1.png') no-repeat;
+  background-position: center center !important;
+}
+
+.banner-collection {
+
+  margin-top: 95px;
+  border: 0px !important;
+  font-size: 22px;
+  font-variant: contextual;
+
+  .collection-item {
+    padding: 5px !important;
+    border: 0px !important;
+    background: transparent !important;
+
+    .btn-banner {
+      background-color: #3d87af !important;
+      font-size: 16px;
+    }
+
+    .banner-text-pay {
+      color: $core-orange-color;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .banner-text-price {
+      color: $core-orange-color;
+      font-size: 42px;
+
+      small {
+        font-size: 25px;
+      }
+
+    }
+  }
+
+  .banner-more {
+    font-size: 15px !important;
+    a {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.text-info-awards {
+  color: $core-grey-color;
+  font-size: 28px;
+  margin: 50px;
+}
+
+.step-by-step {
+
+  .ico-step-1 {
+    position: relative;
+    margin: 0 auto;
+    width: 72px;
+    height: 71px;
+    background: url('sprite.png') no-repeat;
+  }
+
+  .ico-step-2 {
+    position: relative;
+    margin: 0 auto;
+    width: 72px;
+    height: 71px;
+    background: url('sprite.png') no-repeat;
+    background-position: 0 -71px !important;
+  }
+
+  .ico-step-3 {
+    position: relative;
+    margin: 0 auto;
+    width: 72px;
+    height: 71px;
+    background: url('sprite.png') no-repeat;
+    background-position: 0 -142px !important;
+  }
+
+}
+
+.block-info-awards {
+
+  padding-top: 20px;
+
+  .left, .right {
+    padding: 10px !important;
+    min-height: 191px;
+  }
+
+  h5 {
+    line-height: 1;
+  }
+
+  .upper-price {
+    font-size: 40px !important;
+    color: $core-color;
+  }
+
+  .ico-calendar {
+    position: relative;
+    width: 88px;
+    height: 67px;
+    background: url('sprite.png') no-repeat;
+    background-position: 0 -214px !important;
+
+    .number-calendar {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+    }
+  }
+
+  .next-lottery {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  .btn-core {
+    width: 285px;
+  }
+
+}
+
+
+.ico-calendar-yellow {
+  position: relative;
+  width: 53px;
+  height: 42px;
+  background: url('sprite.png') no-repeat;
+  background-position: 0 -325px !important;
+
+  .number-calendar {
+    color: $core-color;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+}
+
+#winners{
+  font-size: 13px;
+}
+
+
+#list-calendar-lottery{
+  margin-top: 15px;
+  list-style:none;
+
+  li {
+    display: inline;
+    padding: 0 3% 0 0;
+    line-height: 1.5px;
+  }
+
+}
+
+.ico-calendar-lottery-disabled{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 35px;
+  background: url('sprite.png') no-repeat;
+  background-position: 0 -285px !important;
+
+  .number-calendar {
+    color: $core-color;
+    position: relative;
+    top: 50%;
+    left: -2px;
+    transform: translateY(-50%);
+    font-size: 14px;
+  }
+
+}
+
+.ico-calendar-lottery{
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 35px;
+  margin-right: 5px;
+  background: url('sprite.png') no-repeat;
+  background-position: 0 -368px !important;
+
+  .number-calendar {
+    color: $core-color;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+  }
+
+}
+
+
+footer{
+  margin-top: 40px;
+  min-height: 190px;
+  background-color: #825193;
+  color: #FFFFFF;
+  font-size: 75%;
+
+  #footer-header{
+    min-height: 100px;
+    width: 100%;
+    background-color: $core-color;
+  }
+
+
+}
+
+
+// responsiveness adjustments
+
+
+@media (min-width: 1200px) {
+  .container{
+    width: 85% !important;
+  }
+
+  .block-info-awards {
+    .btn-core {
+      margin-left: -10px;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+
+  .container{
+    width: 95% !important;
+  }
+
+  .btn-take-part{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .block-info-awards{
+    .l8{
+      width: 80% !important;
+    }
+
+    .l10{
+      width: 95% !important;
+    }
+
+  }
+
+  .nav-wrapper{
+    ul{
+      li {
+        a{
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .logo-sprite {
+    margin-left: 40px;
+  }
+
+  .step-by-step{
+    .col{
+      padding-bottom: 20px;
+    }
+  }
+
+  .btn-core{
+    width: 100% !important;
+  }
+
+  #list-calendar-lottery{
+    margin-left: 7%;
+  }
+
+  h5{
+    text-align: center;
+  }
+
+  footer,p{
+    text-align: center;
+  }
+
+  footer{
+    height: 320px;
+  };
+
+
+}
