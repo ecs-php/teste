@@ -48,7 +48,7 @@ vendor/bin/doctrine o:s:u --force
 ```
 
 
-## Start HTML teste
+## Start HTML test
 
 ```
 cd api-mock
@@ -101,6 +101,16 @@ POST /api/v1/person
 PUT /api/v1/person/{id}
 DELETE /api/v1/person/{id}
 
+```
+
+### Body
+```
+{
+	"name":"Fábio Luis Alexandre",
+	"email":"fabio@fabio.com",
+	"document" : "00837154901",
+	"phone" : "99991234"
+}
 ```
 
 ## Required token
