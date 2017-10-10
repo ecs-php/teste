@@ -68,7 +68,7 @@ _**required to start api-mock for test-html operation**_
 
 
 
-##WbService
+## WebService
 
 Starting webservice
 
@@ -78,14 +78,14 @@ php -S localhost:8000
 
 ```
 
-##Authentication route 
+## Authentication route 
 
 ```
 POST /api/v1/authentication
 
 ```
 
-###Body
+### Body
 ```
 {
 	"user":"admin",
@@ -93,7 +93,7 @@ POST /api/v1/authentication
 }
 ```
 
-##Person routes
+## Person routes
 ```
 GET /api/v1/person
 GET /api/v1/person/{id}
@@ -103,7 +103,7 @@ DELETE /api/v1/person/{id}
 
 ```
 
-Required token
+## Required token
 ```
 Authorization - Bearer {token}
 ```
