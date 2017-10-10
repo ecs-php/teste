@@ -1,34 +1,109 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+# Serasa Test App
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+## Installation
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
 
-A API deverá atender às seguintes exigências:
+Apps requires 
 
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
+**PHP >= 7.0**
 
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
+**NODE >= 7.6.0**
 
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
+**MYSQL >= 5.6.35**
 
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
+**Dependency management Composer**
 
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+**Dependency management NPM**
+
+###Installation api-mock
+
+```
+cd api-mock
+npm i
+```
+
+###Installation test-html
+
+```
+cd test-html
+npm i
+```
+
+###Installation test-php
+
+#### Edit Config app
+```
+/test-php/config/config.php
+```
+
+#### Install dependencies
+```
+cd test-php
+composer install
+```
+#### Update schema
+
+```
+vendor/bin/doctrine o:s:u --force 
+```
+
+
+## Start HTML teste
+
+```
+cd api-mock
+npm start
+```
+
+in a new terminal
+
+```
+cd test-html
+npm start
+```
+
+Then open http://localhost:3000/ to see your app.
+
+_**required to start api-mock for test-html operation**_
+
+
+
+##WbService
+
+Starting webservice
+
+```
+cd test-php/public
+php -S localhost:8000
+
+```
+
+##Authentication route 
+
+```
+POST /api/v1/authentication
+
+```
+
+###Body
+```
+{
+	"user":"admin",
+	"password":"admin"
+}
+```
+
+##Person routes
+```
+GET /api/v1/person
+GET /api/v1/person/{id}
+POST /api/v1/person
+PUT /api/v1/person/{id}
+DELETE /api/v1/person/{id}
+
+```
+
+Required token
+```
+Authorization - Bearer {token}
+```
