@@ -5,8 +5,8 @@ class Planet {
 	public static function getAll(){
 		global $app;
 
-		$result = $app['db']->fetchAssoc("SELECT * FROM planet LIMIT 50");
-
+		$result = $app['db']->fetchAll("SELECT * FROM planet LIMIT 50");
+		
 		return $result;
 	}
 
