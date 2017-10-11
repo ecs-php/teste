@@ -1,3 +1,7 @@
+# Resolução
+
+
+
 # A tarefa
 Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
 
