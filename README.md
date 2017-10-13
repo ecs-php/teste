@@ -1,3 +1,6 @@
+# Diego Galdino Jaldim
+Utilizar o Login admin e a senha admin para acessar o sistema
+
 # A tarefa
 Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
 
