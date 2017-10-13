@@ -1,0 +1,35 @@
+html, body{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#main-logo{
+	width:150px;
+	margin-top:-5px;
+}
+
+.section-title h1{
+	font-size:28px;
+}
+
+#table-clients{
+	margin-top:15px;
+}
+
+.btn-repeat-save,
+.btn-repeat-cancel,
+.input-repeat{
+	display:none;
+}
+
+#login-section{
+	background-color:#f1f1f1;
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#login-section .panel-login{
+	margin-top:25%;
+}
