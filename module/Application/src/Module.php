@@ -6,13 +6,27 @@
  */
 
 namespace Application;
+use Application\Service\Factory\ServiceDoctrineFactory;
+use Application\Service\Factory\ServiceJsonPostRequestFactory;
+use Application\Service\ServiceDoctrine;
+use Application\Service\ServiceJsonPostRequest;
 
-class Module
-{
+class Module {
     const VERSION = '3.0.3-dev';
 
-    public function getConfig()
-    {
+    public function getConfig() {
         return include __DIR__ . '/../config/module.config.php';
+    }
+
+    /**
+     * @return array
+     */
+    public function getServiceConfig() {
+        return [
+            'factories' => [
+                ServiceDoctrine::class => ServiceDoctrineFactory::class,
+                ServiceJsonPostRequest::class => ServiceJsonPostRequestFactory::class,
+            ],
+        ];
     }
 }

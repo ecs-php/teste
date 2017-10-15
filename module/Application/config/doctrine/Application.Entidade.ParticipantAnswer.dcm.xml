@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity
+    name="Application\Entidade\ParticipantAnswer"
+    table="participant_answer"
+    repository-class="Application\Repositorio\ParticipantAnswerRepository"
+        >
+    <indexes>
+      <index name="fk_participant_id_part" columns="participant_id"/>
+      <index name="fk_question_id_part" columns="question_id"/>
+      <index name="fk_question_option_part" columns="question_option_id"/>
+    </indexes>
+
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="answer" type="string" column="answer" length="255" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="isCorrect" type="integer" column="is_correct" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="participant" target-entity="Application\Entidade\Participant" fetch="LAZY">
+      <join-columns>
+        <join-column name="participant_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="question" target-entity="Application\Entidade\Question" fetch="LAZY">
+      <join-columns>
+        <join-column name="question_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="questionOption" target-entity="Application\Entidade\QuestionOption" fetch="LAZY">
+      <join-columns>
+        <join-column name="question_option_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
