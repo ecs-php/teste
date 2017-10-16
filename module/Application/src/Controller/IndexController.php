@@ -10,8 +10,10 @@ class IndexController extends AbstractController {
      * Tela inicial e publica do sistema
      */
     public function indexAction() {
+
+
         return new ViewModel();
     }
 
-    
+
 }

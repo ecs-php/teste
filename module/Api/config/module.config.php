@@ -1,37 +1,91 @@
 <?php
+/**
+ * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
+ * @copyright Copyright (c) 2005-2016 Zend Technologies USA Inc. (http://www.zend.com)
+ * @license   http://framework.zend.com/license/new-bsd New BSD License
+ */
+
 namespace Api;
 
+use Zend\Router\Http\Literal;
+use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
+    'router' => [
+        'routes' => [
+            'home-api' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route' => '/api',
+                    'defaults' => [
+                        'controller' => Controller\ApiController::class,
+                        'action' => 'index',
+                    ],
+                ],
+            ],
+
+        ],
+    ],
     'controllers' => [
         'factories' => [
             Controller\ApiController::class => InvokableFactory::class,
         ],
     ],
-    'router' => [
-        'routes' => [
-            'module-name-here' => [
-                'type'    => 'Literal',
-                'options' => [
-                    // Change this to something specific to your module
-                    'route'    => '/module-specific-root',
-                    'defaults' => [
-                        'controller'    => Controller\ApiController::class,
-                        'action'        => 'index',
-                    ],
-                ],
-                'may_terminate' => true,
-                'child_routes' => [
-                    // You can place additional routes that match under the
-                    // route defined above here.
+
+    'view_manager' => [
+        'strategies' => [
+            'ViewJsonStrategy',
+        ],
+
+        'display_not_found_reason' => true,
+        'display_exceptions' => true,
+        'doctype' => 'HTML5',
+        'not_found_template' => 'error/404',
+        'exception_template' => 'error/index',
+        'template_map' => [
+            'api/index/index' => __DIR__ . '/../view/Api/api/index.phtml'
+
+        ],
+        'template_path_stack' => [
+            __DIR__ . '/../view',
+        ],
+
+    ],
+    'doctrine' => [
+        'driver' => [
+
+             __NAMESPACE__ . '_driver' => [
+                'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__ . '/doctrine',
                 ],
             ],
+            'orm_default' => [
+                'drivers' => [
+                    __NAMESPACE__ . '\Entidade' => __NAMESPACE__ . '_driver',
+                ],
+            ],
+
+            /*__NAMESPACE__ . '_driver' => [
+                'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__ . '/doctrine',
+                ],
+            ],
+
+            'orm_default' => [
+                'drivers' => [
+                    __NAMESPACE__ . 'Application\Entidade' => __NAMESPACE__ . '_driver',
+                ],
+            ],*/
+
         ],
     ],
-    'view_manager' => [
-        'template_path_stack' => [
-            'Api' => __DIR__ . '/../view',
-        ],
-    ],
+
+
 ];
+
+

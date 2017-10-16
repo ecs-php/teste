@@ -10,7 +10,25 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
+use Doctrine\DBAL\Driver\PDOMySql\Driver as PDOMySqlDriver;
 
 return [
-    // ...
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'driverClass' => PDOMySqlDriver::class,
+                'params' => [
+                    'host'     => '127.0.0.1',
+                    'user'     => 'quiz',
+                    'password' => 'quiz',
+                    'dbname'   => 'quiz',
+                    'charset' => 'utf8',
+                    'driverOptions' => [
+                        \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"
+                    ]
+                ]
+            ],
+        ],
+    ],
+
 ];
