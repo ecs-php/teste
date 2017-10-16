@@ -1,65 +1,54 @@
 <?= $this->doctype() ?>
-
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <?= $this->headTitle('Quiz - Zend Framework')->setSeparator(' - ')->setAutoEscape(false) ?>
-
-        <?= $this->headMeta()
-            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
-        ?>
-
-        <!-- Le styles -->
-        <?= $this->headLink(
-            [
-                'rel' => 'shortcut icon',
-                'type' => 'image/vnd.microsoft.icon',
-                'href' => $this->basePath() . '/img/favicon.ico']
-            )
-            ->prependStylesheet($this->basePath('css/style.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
-        ?>
-
-        <!-- Scripts -->
-        <?= $this->headScript()
-            ->prependFile($this->basePath('js/bootstrap.min.js'))
-            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
-            ->prependFile('https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js')
-        ?>
-    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class=""><a href="<?= $this->url('application') ?>">List quiz</a></li>
-                        <li class=""><a href="/admin/index">Admin quiz</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <?= $this->content ?>
+<html lang="pt_br">
+<head>
 
 
-        </div>
+    <title>Serasa consumidor</title>
 
-        <footer>
-            <hr>
-            <div class="container">
-                <p>&copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. All rights reserved.</p>
-            </div>
-        </footer>
-        <?= $this->inlineScript() ?>
-    </body>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <link rel="stylesheet" href="/css/personal.css" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+ <?= $this->content ?>
+
+
+
+<div class="footer">
+        2015 Serasa Experian. Todos os direitos reservados.<br/>
+        SERASA S.A. com sede na alameda dos quinimuras, 187 Planalto Paulista. CEP 01068-900. São Paulo. SP.<br/>
+        Inscrita no CPNJ/MF nº 62.173.620/00001-80 - IE Isenta www.serasaexperian.com.br
+
+</div>
+<div class="footer2">
+           Certificado de autorização da Caixa 4-2936/2016. Promoção válida 08/11/16 à 27/03/17. Cada CPF concorrerá somente a um sorteio no valor de R$5.000,00 durante a promoção. Participação vinculada a abertura do cadastro positivo nos sites.<br/>
+           e agências Serasa. Sorteio via extração da loteria Federal. Consulte as datas de sorteio, as condições de participação e regulamento completos no site www.serasaconsumidor.com.br/sorteiocadastropositivo.
+</div>
+
+</body>
+
+<script src="/js/index.js"></script>
+ <?= $this->inlineScript() ?>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
