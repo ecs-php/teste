@@ -16,12 +16,13 @@
         "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0.1",
         "zfcampus/zf-development-mode": "^3.0",
-        "doctrine/orm": "^2.5",
-        "doctrine/doctrine-module": "^1.2",
-        "doctrine/doctrine-orm-module": "^1.1.1",
-        "doctrine/data-fixtures": "^1.2",
+        "doctrine/orm": "*",
+        "doctrine/doctrine-module": "*",
+        "doctrine/doctrine-orm-module": "*",
+        "doctrine/data-fixtures": "*",
         "symfony/var-dumper" : "^3.0",
-        "symfony/yaml": "^3.2"
+        "symfony/yaml": "^3.2",
+        "zendframework/zend-json": "^3.0"
     },
     "autoload": {
         "psr-4": {

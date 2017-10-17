@@ -1,24 +1,35 @@
 <?php
-/**
- * @link      http://github.com/zendframework/Api for the canonical source repository
- * @copyright Copyright (c) 2005-2016 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
- */
 
+/**
+ * Classe responsavél pela gestão da api
+ */
 namespace Api\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Application\Controller\AbstractController;
+use Zend\View\Model\JsonModel;
+use Zend\View\Model\ViewModel;
 
-class ApiController extends AbstractActionController
+class ApiController extends AbstractController
 {
-    private const DS_ERRO_CLIENTE_N_ENCONTRADO = "Cliente não encontrado";
-    private const DS_KEY_CLIENTE_N_ENCONTRADO = 'cliente-n-encontrato';
+
     private $token;
 
     public function indexAction()
     {
+        $objRepositorio = $this->getRepository(\Api\Entidade\Winner::class)->findAll();
+        
+        $arrRetorno = [];
+        foreach($objRepositorio as $objWinner){
+            $arrRetorno[] = $objWinner->toArray();
+        };
 
-        return [];
+
+        
+
+
+
+        return new JsonModel(['arrGanhadores'=>$arrRetorno]);
     }
 
 

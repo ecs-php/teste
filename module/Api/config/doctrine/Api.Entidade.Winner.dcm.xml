@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity
-        name="Application\Entidade\TypeQuestion"
-        table="type_question"
-        repository-class="Application\Repositorio\TypeQuestionRepository"
+        name="Api\Entidade\Winner"
+        table="winner"
+        repository-class="Api\Repositorio\WinnerRepository"
         >
     <id name="id" type="integer" column="id">
       <generator strategy="IDENTITY"/>
     </id>
-    <field name="name" type="string" column="name" length="255" nullable="false">
-      <options>
-        <option name="fixed"/>
-      </options>
-    </field>
+    <field name="nr_sorteio" type="integer" nullable="false"/>
+    <field name="dt_sorteio" type="date" nullable="false"/>
+    <field name="ds_cidade" type="string" nullable="false"/>
+    
   </entity>
 </doctrine-mapping>
