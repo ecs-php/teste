@@ -1,6 +1,7 @@
 
 .top{
 	min-height: 250px;
+    margin-top: 50px;
 }
 
 .banner_top{
@@ -18,8 +19,8 @@
 
 .icon-se {
 
-	background: url('../img/sprite.png') top left no-repeat; 
-	
+	background: url('../img/sprite.png') top left no-repeat;
+
 }
 
 .icon-se-click{
@@ -140,7 +141,7 @@
     background-color: #632574;
     padding: 10px;
     border-radius: 5px;
-		
+
 }
 
 .btn-action {
@@ -224,5 +225,6 @@
     padding-top: 20px;
     color:#FFFFFF;
     font-size: 10px;
-    text-align: center; 
+    text-align: center;
 }
+
