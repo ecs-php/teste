@@ -1,0 +1,161 @@
+ <div class="container-fluid" ng-app="Application" ng-controller="IndexController">
+
+
+
+
+
+            <div class="row top banner_top">
+                <div class="anuncio">
+                    <div class="info">
+                        O SerasaConsumidor<br/>
+                        ajuda a <span class="cl4">pagar suas dívidas!</span><br/>
+                        Abra seu cadastro positivo e concorra a <br/>
+                        <span class="cl5">R$ 5.000,00</span>
+                        <br/>
+                        <button class="btn btn-primary" data-toggle="modal" data-target='#video'>Participe já, é grátis</button>
+                        <br/>
+
+                        <small>Saiba o que é o <a href="">cadastro positivo</a></small>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 text-center">
+
+                    <p class="text-center">
+                        <div src="" class="icon-se icon-se-click" >
+                        </div>
+                    </p>
+                    <p>
+                        <span class="cl1">1.</span>
+                        Cadastre-se no <br/><span class="cl1"><strong>SERASACONSUMIDOR</strong></span>
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 text-center">
+                    <p class="text-center">
+                        <div src="" class="icon-se icon-se-plus" >
+                        </div>
+                    </p>
+                    <p>
+                        <span class="cl1">2.</span>
+                        Abra seu <br/><span class="cl1"><strong>CADASTRO POSITIVO</strong></span>
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 text-center">
+                    <p class="text-center">
+                        <div src="" class="icon-se icon-se-luck" >
+                        </div>
+                    </p>
+                    <p>
+                        <span class="cl1">3.</span>
+                        Receba seu <span class="cl1"><strong>numero e data do sorteio</strong></span> no seu email <br/>
+                        <small class="cl3">(Cada CPF participa apenas de um sorteio)</small>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row mar_top_50" id="participar">
+                <div class="text-center">
+                    <a class="btn btn-lg btn-action" data-toggle="modal" href='#video'>Participe já, é grátis</a>
+                </div>
+            </div>
+
+
+            <div class="row mar_top_50">
+                <div class="col-md-8 bg-gray-low pad_top_20">
+                    <h3>
+                        Abrindo seu cadastro positivo, você pode ganhar
+                        <br/>
+                        até <span class="cl1">R$ 5.000,00!</span>
+                    </h3>
+
+                    <p>Cada CPF participa apenas de um sorteio. Assim que seu <strong>cadastro positivo</strong> for concluído, você vai receber por email o seu número da sorte e a data do sorteio que você vai participar. Depois é só torcer para ser o ganhador.</p>
+                </div>
+                <div class="col-md-4 bg-gray pad_top_20" >
+
+
+                    <div class="row">
+                        <div class="icon-se icon-se-date" >
+                            {{current_lottery}}
+                        </div>
+                        <br/>
+                        <span class="cl6">Próximo sorteio</span>
+                    </div>
+
+                    <div class="row mar_top_30">
+                            <a href="" class="btn btn-lg btn-action">Participe já, é grátis!</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mar_top_30">
+                <div class="col-md-8" id="ganhadores">
+                    <h3>
+                        Ganhadores
+                    </h3>
+                    <div class="col-md-5" ng-repeat="(key, value) in winners" style="padding-bottom: 20px">
+                        <div class="media" >
+                            <div class="media-left" >
+                                <div class="icon-se icon-se-win">
+                                        {{value.dt_sorteio}}
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <span class="cl2" >{{value.ds_cidade}}</span><br/>
+                                Número sorteado: {{value.nr_sorteio}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row">
+                        <div class="col-md-4" ng-repeat="(key, value) in winners">
+                            <div class="icon-se icon-se-win">
+                                    {{value.dt_sorteio}}
+                            </div>
+                            <div>
+                            <span class="cl2" >{{value.ds_cidade}}</span>
+                            <br/>
+                            Número sorteado: {{value.nr_sorteio}}
+                            </div>
+                        </div>
+
+
+                    </div> -->
+
+                </div>
+                <div class="col-md-4" id="premios">
+                    <h3>
+                        Datas dos sorteios
+                    </h3>
+
+                    <div class="row">
+
+
+                        <div class="col-md-2" ng-repeat="(key, value) in lottery">
+                            <div 
+                                class="icon-se " 
+                                ng-class="value.sn_realizado?'icon-se-sort-ok':'icon-se-sort'" 
+                                style="float: left; ">
+                                {{value.dt_sorteio}}
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </div>

@@ -1,0 +1,36 @@
+{
+    "name": "teste serasa",
+    "description": "Projeto serasa",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "mvc",
+        "zf"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
+        "zendframework/zend-mvc": "^3.0.1",
+        "zfcampus/zf-development-mode": "^3.0",
+        "doctrine/orm": "*",
+        "doctrine/doctrine-module": "*",
+        "doctrine/doctrine-orm-module": "*",
+        "doctrine/data-fixtures": "*",
+        "symfony/var-dumper" : "^3.0",
+        "symfony/yaml": "^3.2",
+        "zendframework/zend-json": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/",
+            "Api\\": "module/Api/src/"
+        }
+    },
+    "require-dev": {
+        "zendframework/zend-developer-tools": "^1.1"
+    }
+}
