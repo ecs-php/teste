@@ -18,6 +18,5 @@ Para criar o database
 ./vendor/bin/doctrine-module orm:schema-tool:create
 
 
-
-[![Screenshot](https://uploaddeimagens.com.br/imagens/tempo_desenvolvimento-png)
+[![Tempo de desenvolvimento](https://uploaddeimagens.com.br/imagens/tempo_desenvolvimento-png)]
 
