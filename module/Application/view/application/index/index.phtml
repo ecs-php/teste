@@ -146,8 +146,11 @@
 
 
                         <div class="col-md-2" ng-repeat="(key, value) in lottery">
-                            <div class="icon-se icon-se-sort-ok" style="float: left; ">
-                                 23/11
+                            <div 
+                                class="icon-se " 
+                                ng-class="value.sn_realizado?'icon-se-sort-ok':'icon-se-sort'" 
+                                style="float: left; ">
+                                {{value.dt_sorteio}}
                             </div>
                         </div>
 

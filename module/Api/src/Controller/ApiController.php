@@ -21,14 +21,22 @@ class ApiController extends AbstractController {
         try {
 
             //Load winners
-            $objRepositorio = $this->getRepository(\Api\Entidade\Winner::class)->findAll();
+            $objRepositorio = $this->getRepository(\Api\Entidade\Winner::class)
+                ->findBy(
+                    array(), 
+                    array('dt_sorteio' => 'ASC')
+            );
             $arrWinners = [];
             foreach ($objRepositorio as $objWinner) {
                 $arrWinners[] = $objWinner->toArray();
             };
 
             //Load lottery
-            $objRepositorio = $this->getRepository(\Api\Entidade\Lottery::class)->findAll();
+            $objRepositorio = $this->getRepository(\Api\Entidade\Lottery::class)
+            ->findBy(
+                    array(), 
+                    array('dt_sorteio' => 'ASC')
+            );
             $arrLottery = [];
             foreach ($objRepositorio as $objLottery) {
                 $arrLottery[] = $objLottery->toArray();
