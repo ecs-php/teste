@@ -18,5 +18,5 @@ Gerar repositorios
 ./vendor/bin/doctrine-module  orm:generate:repositories /c/Servidor/www/serasa/modelo_test
 
 
-![alt text](https://uploaddeimagens.com.br/imagens/tempo_desenvolvimento-png)
+[![Screenshot](https://uploaddeimagens.com.br/imagens/tempo_desenvolvimento-png)
 
