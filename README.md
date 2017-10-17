@@ -1,34 +1,22 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+# A Instalação
+* Composer install <br>
+* Executar o script localizado em data/schema.sql para a criação do BD, Tabela e Dados iniciais no MySQL.<br>
+* Subir o servidor embutido do php, pois as configurações do silex foram codificadas para tal<br>
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+# Testes
+* Recomenda-se utilizar o programa POSTMAN para executar as requisições<br>
+* A API somente aceita somente JSON como estrutura de dados.
+* Todas as requisições devem conter o header(Content-Type:application/json).
+* Executar a autenticação através da url http://servidor:porta/books/api/auth com as seguintes keys(email:macedodosanjosmateus@gmail.com, password:123Mudar).
+* Copiar o token de autenticação para as futuras requisições.
+* Incluir nas requisições dos endpoints o header(Authorization:token-gerado-na-auth).
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+# OBS
+* Na implementação da autenticação não foram aprofundados questões como
+    * Consulta ao BD por usuario.
+    * Encriptação da senha do usuario.
+    * Validação da expiração do token.
+    
+<h3>Bons Testes</h3>
+<h5>By Mateus Macedo Dos Anjos <macedodosanjosmateus@gmail.com></h5>
 
-A API deverá atender às seguintes exigências:
-
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
-
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
-
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
-
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
-
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
