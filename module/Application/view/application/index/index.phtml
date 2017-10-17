@@ -82,7 +82,7 @@
 
                     <div class="row">
                         <div class="icon-se icon-se-date" >
-                            23/11
+                            {{current_lottery}}
                         </div>
                         <br/>
                         <span class="cl6">Próximo sorteio</span>
@@ -100,20 +100,34 @@
                     <h3>
                         Ganhadores
                     </h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="icon-se icon-se-win" style="float: left; ">
-                                    23/11
+                    <div class="col-md-4" ng-repeat="(key, value) in winners" style="padding-bottom: 20px">
+                        <div class="media" >
+                            <div class="media-left" >
+                                <div class="icon-se icon-se-win">
+                                        {{value.dt_sorteio}}
+                                </div>
                             </div>
-                            <div style="float: left;">
-                            <span class="cl2" >São Paulo - SP</span>
+                            <div class="media-body">
+                                <span class="cl2" >{{value.ds_cidade}}</span>
+                                Número sorteado: {{value.nr_sorteio}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row">
+                        <div class="col-md-4" ng-repeat="(key, value) in winners">
+                            <div class="icon-se icon-se-win">
+                                    {{value.dt_sorteio}}
+                            </div>
+                            <div>
+                            <span class="cl2" >{{value.ds_cidade}}</span>
                             <br/>
-                            Número sorteado: 053484058978-9
+                            Número sorteado: {{value.nr_sorteio}}
                             </div>
                         </div>
 
 
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="col-md-4">
@@ -124,19 +138,11 @@
                     <div class="row">
 
 
-                        <div class="col-md-2">
+                        <div class="col-md-2" ng-repeat="(key, value) in lottery">
                             <div class="icon-se icon-se-sort-ok" style="float: left; ">
                                  23/11
                             </div>
                         </div>
-
-                        <div class="col-md-2">
-                            <div class="icon-se icon-se-sort" style="float: left; ">
-                                 23/11
-                            </div>
-                        </div>
-
-
 
 
                     </div>

@@ -3,54 +3,25 @@
 namespace Api\Entidade;
 
 /**
- * Winner
+ * Lottery
  */
-class Winner
+class Lottery
 {
-    /**
-     * @var interger
-     */
-    private $nr_sorteio;
-
     /**
      * @var \DateTime
      */
     private $dt_sorteio;
 
     /**
-     * @var string
+     * @var integer
      */
-    private $ds_cidade;
+    private $sn_realizado;
 
     /**
      * @var integer
      */
     private $id;
 
-
-    /**
-     * Set nrSorteio
-     *
-     * @param \interger $nrSorteio
-     *
-     * @return Winner
-     */
-    public function setNrSorteio(\interger $nrSorteio)
-    {
-        $this->nr_sorteio = $nrSorteio;
-
-        return $this;
-    }
-
-    /**
-     * Get nrSorteio
-     *
-     * @return \interger
-     */
-    public function getNrSorteio()
-    {
-        return $this->nr_sorteio;
-    }
 
     /**
      * Set dtSorteio
@@ -91,27 +62,27 @@ class Winner
     }
 
     /**
-     * Set dsCidade
+     * Set snRealizado
      *
-     * @param string $dsCidade
+     * @param integer $snRealizado
      *
-     * @return Winner
+     * @return Lottery
      */
-    public function setDsCidade($dsCidade)
+    public function setSnRealizado($snRealizado)
     {
-        $this->ds_cidade = $dsCidade;
+        $this->sn_realizado = $snRealizado;
 
         return $this;
     }
 
     /**
-     * Get dsCidade
+     * Get snRealizado
      *
-     * @return string
+     * @return integer
      */
-    public function getDsCidade()
+    public function getSnRealizado()
     {
-        return $this->ds_cidade;
+        return $this->sn_realizado;
     }
 
     /**
@@ -132,9 +103,8 @@ class Winner
     {
         return array(
             'dt_sorteio' => $this->getDtSorteio(),
-            'ds_cidade' => $this->getDsCidade(),
-            'id' => $this->getId(),
-            'nr_sorteio' => $this->getNrSorteio()
+            'sn_realizado' => $this->getSnRealizado(),
+            'id' => $this->getId()
         );
     }
 }

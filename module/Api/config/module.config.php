@@ -14,7 +14,7 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
     'router' => [
         'routes' => [
-            'home-api' => [
+            'load-winners' => [
                 'type' => Literal::class,
                 'options' => [
                     'route' => '/api',
@@ -24,6 +24,9 @@ return [
                     ],
                 ],
             ],
+
+
+
 
         ],
     ],

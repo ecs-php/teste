@@ -15,137 +15,42 @@ class ApiController extends AbstractController
 
     private $token;
 
+
+    /**
+     * Metodo responsável por carregar os dados de sorteados, sorteios e data para o próximo sorteio.
+     * @return array com os vencedores dos sorteios anteriores, próximos sorteios e sorteio atual.
+     */
     public function indexAction()
     {
+        //Load winners
         $objRepositorio = $this->getRepository(\Api\Entidade\Winner::class)->findAll();
-        
-        $arrRetorno = [];
+        $arrWinners = [];
         foreach($objRepositorio as $objWinner){
-            $arrRetorno[] = $objWinner->toArray();
+            $arrWinners[] = $objWinner->toArray();
         };
 
 
-        
 
 
 
-        return new JsonModel(['arrGanhadores'=>$arrRetorno]);
+        //Load lottery
+        $objRepositorio = $this->getRepository(\Api\Entidade\Lottery::class)->findAll();
+        $arrLottery = [];
+        foreach($objRepositorio as $objLottery){
+            $arrLottery[] = $objLottery->toArray();
+        };
+
+
+        $arrRet['current_lottery'] = date('d/y');
+        $arrRet['arrWinners'] = $arrWinners;
+        $arrRet['arrLottery'] = $arrLottery;
+
+        return new JsonModel($arrRet);
     }
 
 
 
-    /**
-     * Metodo responsavel por verificar se o header esta correto
-     */
-    public function autenticarAction() {
-        //Verificar o cabeçalho
-        $ds_mensagem = 'ok';
-        $sn_status = true;
-        $ds_hash = null;
-        try {
 
-            $this->verificarCabecalho();
-
-            $arrDados = $this->getArrPost();
-
-            $ds_hash = $this->logar($arrDados);
-
-        } catch (\Exception $objException) {
-            $sn_status = false;
-            $ds_mensagem = $objException->getMessage();
-            $this->getResponse()->setStatusCode(401);
-
-        }
-
-
-
-        return new JsonModel(
-            array(
-                'sn_status' => $sn_status,
-                'ds_mensagem' => $ds_mensagem,
-                'ds_sessao' => $ds_hash,
-            )
-        );
-
-    }
-
-    /**
-     * Verificar o cliente logado
-     */
-    private function verificarCabecalho() {
-
-        try {
-
-            $headers = $this->getRequest()->getHeaders();
-            $objToken = $headers->get('token');
-
-            if (empty($objToken)) {
-                throw new \Exception("Token not null", 401);
-            }
-            $ds_token = $objToken->getFieldValue();
-
-            $this->setToken($ds_token);
-
-        } catch (\Exception $objException) {
-
-            throw new \Exception($objException->getMessage(), 401);
-        }
-
-    }
-
-    //Validar token do usuário
-    private function logar($arrPost) {
-        try {
-
-            $ds_token = $this->getToken();
-            // acessa como usuario do cliente
-            $this->AutenticarCliente();
-
-
-
-        } catch (\Exception $objException) {
-
-            throw new \Exception($objException->getMessage(), 401);
-
-        }
-        return $ds_hash;
-
-    }
-
-    /**
-     * Verificar se o token é valido.
-     */
-    private function AutenticarCliente() {
-        try {
-
-            $ds_token = $this->getToken();
-
-            //Buscar token no database
-
-            // o cliente não existe
-            if (empty($objSaasCliente)) {
-                throw new \Exception('Token do cliente inválido', 401);
-            }
-
-
-        } catch (\Exception $objException) {
-
-            throw new \Exception($objException->getMessage(), 401);
-        }
-
-        return $ds_token;
-    }
-
-
-    private function getToken() {
-        return $this->token;
-    }
-
-    private function setToken($ds_token) {
-        $this->token = $ds_token;
-
-        return $this;
-    }
 
 
 }

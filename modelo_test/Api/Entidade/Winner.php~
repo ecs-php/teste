@@ -79,15 +79,15 @@ class Winner
      */
     public function getDtSorteio()
     {
-
+        die('fim');
          if ($this->dt_sorteio instanceof \DateTime)
         {
-
-            return $this->dt_sorteio->format('m/y');
+            
+            return $this->dt_sorteio->format('d/m/Y');
         }
 
         return $this->dt_sorteio;
-
+     
     }
 
     /**
