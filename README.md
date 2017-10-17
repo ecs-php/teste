@@ -1,4 +1,13 @@
 
+### FELIPE DE OLIVEIRA DA SILVA ###
+
+Tecnologias utilizadas
+
+Zend 3
+AngularJS
+Boostrap
+Doctrine
+
 Criar o database
 ./vendor/bin/doctrine-module orm:schema-tool:create
 
