@@ -1,7 +1,16 @@
 
 .top{
 	min-height: 250px;
-    margin-top: 50px;
+
+}
+
+
+.navbar {
+    margin-bottom: 0px; */
+}
+
+.navbar-default{
+    background-color: #FFFFFF;
 }
 
 .banner_top{
@@ -32,6 +41,13 @@
     margin:auto;
 }
 
+
+.icon-se-logo{
+    background-position: 0px -403px;
+    width: 238px;
+    height: 22px;
+    margin-top: 10px;
+}
 .icon-se-plus{
 	background-position: 0px -70px;
     min-height: 72px;
@@ -228,3 +244,30 @@
     text-align: center;
 }
 
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #F8F8F8;
+    color: #622678;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #622678;
+}
+
+@media (min-width: 768px) {
+
+    .anuncio{
+        margin-top: 50px;
+        margin-left: 50px;
+        font-size: 20px;
+        color: #FFFFFF;
+        float: left;
+        line-height:unset;
+    }
+}
+
+
+.modal-content{
+        border-radius: 0px;
+}

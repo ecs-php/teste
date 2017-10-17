@@ -18,23 +18,39 @@
 <body>
 
 
-<nav class="navbar navbar-default navbar-fixed-top menu">
-  <div class="container-fluid">
 
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand icon-se icon-se-logo" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#">COMO PARTICIPAR</a></li>
+              <li><a href="#premios">PRÊMIOS E SORTEIOS</a></li>
+              <li><a href="#ganhadores">GANHADORES</a></li>
+              <li><a href="#regulamento">REGULAMENTO</a></li>
+              <li><a href="#participar">PARTICIPE JÁ É GRÁTIS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+
 
  <?= $this->content ?>
 
 
 
-<div class="footer">
+<div class="footer" id="regulamento">
         2015 Serasa Experian. Todos os direitos reservados.<br/>
         SERASA S.A. com sede na alameda dos quinimuras, 187 Planalto Paulista. CEP 01068-900. São Paulo. SP.<br/>
         Inscrita no CPNJ/MF nº 62.173.620/00001-80 - IE Isenta www.serasaexperian.com.br

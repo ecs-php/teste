@@ -1,4 +1,9 @@
  <div class="container-fluid" ng-app="Application" ng-controller="IndexController">
+
+
+
+
+
             <div class="row top banner_top">
                 <div class="anuncio">
                     <div class="info">
@@ -7,7 +12,7 @@
                         Abra seu cadastro positivo e concorra a <br/>
                         <span class="cl5">R$ 5.000,00</span>
                         <br/>
-                        <button class="btn btn-primary">Participe já, é grátis</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target='#video'>Participe já, é grátis</button>
                         <br/>
 
                         <small>Saiba o que é o <a href="">cadastro positivo</a></small>
@@ -60,9 +65,11 @@
 
             </div>
 
-            <div class="row mar_top_50">
+
+
+            <div class="row mar_top_50" id="participar">
                 <div class="text-center">
-                    <a href="" class="btn btn-lg btn-action">Participe já, é grátis</a>
+                    <a class="btn btn-lg btn-action" data-toggle="modal" href='#video'>Participe já, é grátis</a>
                 </div>
             </div>
 
@@ -96,7 +103,7 @@
 
 
             <div class="row mar_top_30">
-                <div class="col-md-8">
+                <div class="col-md-8" id="ganhadores">
                     <h3>
                         Ganhadores
                     </h3>
@@ -130,7 +137,7 @@
                     </div> -->
 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" id="premios">
                     <h3>
                         Datas dos sorteios
                     </h3>
