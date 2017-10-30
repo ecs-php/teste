@@ -1,34 +1,34 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+**Ambiente utilizado**
+* PHP 7.0.4
+* MySQL 5.7.11
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+1. Criar o bando de dados rodando o script _`database.sql`_
+2. Acessar a raiz do projeto pelo terminal e digitar o comando `composer install`
+3. Ainda no terminal digitar o comando `php -S localhost:80 -t application/`
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+**Autenticação** 
+```
+curl -X POST http://localhost:80/login -H 'content-type: application/json' -d '{"user":"admin", "password":"123"}'
+```
+**Observação:** Salvar o token retornado para as demais requisições
 
-A API deverá atender às seguintes exigências:
-
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
-
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
-
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
-
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
-
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+**Listar todos**
+```
+curl -X GET http://localhost:80/livros -H 'cache-control: no-cache' -H 'content-type: application/json' -H 'x-access-token: {token}'
+```
+**Listar um**
+```
+curl -X GET http://localhost:80/livro/{id} -H 'cache-control: no-cache' -H 'content-type: application/json' -H 'x-access-token: {token}'
+```
+**Inserir**
+```
+curl -X POST http://localhost:80/livro -H 'cache-control: no-cache' -H 'content-type: application/json' -H 'x-access-token: {token}' -d '{"title": "{valor}", "author": "{valor}", "publishing_company": "{valor}", "pages": {valor}}'
+```
+**Alterar**
+```
+curl -X PUT http://localhost:80/livro/{id} -H 'cache-control: no-cache' -H 'content-type: application/json' -H 'x-access-token: {token}' -d '{"title": "{valor}", "author": "{valor}", "publishing_company": "{valor}", "pages": {valor}}'
+```
+**Deletar**
+```
+curl -X DELETE http://localhost:80/livro/{id} -H 'cache-control: no-cache' -H 'content-type: application/json' -H 'x-access-token: {token}'
+```
