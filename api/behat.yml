@@ -1,0 +1,8 @@
+# behat.yml
+default:
+  autoload:
+    - %paths.base%/tests/features/context
+  suites:
+    all:
+      paths: [ %paths.base%/tests/features/winner.feature ]
+      contexts: [ Tests\Acceptance\FeatureContext ]

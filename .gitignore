@@ -1,0 +1,6 @@
+.idea/
+/api/vendor/
+/front/node_modules/
+/temp/
+/api/.idea/
+/front/.idea/

@@ -1,0 +1,137 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+$app-primary: mat-palette($mat-purple);
+$app-accent: mat-palette($mat-amber);
+$app-warn: mat-palette($mat-red);
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+@include angular-material-theme($app-theme);
+
+$roboto-font-path: '/assets/fonts' !default;
+@import "~roboto-fontface/css/roboto/sass/roboto-fontface.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body, html {
+  min-height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.root {
+  height: 100%;
+}
+
+$yellow: #e0a038;
+$purple: #622678;
+$purple-light: #805191;
+$blue: #26488c;
+$black: #5b5b5e;
+
+.text__align_right {
+  text-align: right;
+}
+
+.text__align_left {
+  text-align: left;
+}
+
+.background {
+  &_purple {
+    color: white;
+    background-color: $purple;
+  }
+  &_light_purple {
+    background-color: $purple-light;
+    color: white;
+  }
+  &_light_grey {
+    background-color: #fafafa;
+  }
+  &_grey {
+    background-color: #f3f3f3;
+  }
+}
+
+.text {
+  &__black {
+    color: $black;
+  }
+  &__purple {
+    color: $purple;
+  }
+  &__uppercase {
+    text-transform: uppercase;
+  }
+  &__align_center {
+    text-align: center;
+  }
+  &__display_1 {
+    font-size: 2.9rem;
+  }
+  &__display_2 {
+    font-size: 2.2rem;
+  }
+  &__display_3 {
+    font-size: 1.8rem;
+  }
+  &__display_4 {
+    font-size: 1.4rem;
+  }
+  &__tiny {
+    font-size: 1.0rem;
+    font-weight: 300;
+
+  }
+}
+.padding-1{
+  padding: 1rem;
+}
+.margin-1{
+  margin: 1rem;
+}
+.section_footer {
+  padding-top: 3rem;
+  .content {
+    margin: auto;
+    max-width: 92rem;
+  }
+}
+
+.sprite {
+  background-image: url("./assets/sprite.png");
+  background-repeat: no-repeat;
+  &_logo {
+    // 235 24
+    background-position: 0 -402px;
+  }
+}
+
+.toolbar {
+  background-color: white;
+  padding: 1rem 0;
+  .sprite {
+    width: 237px;
+    height: 24px;
+    margin: 6px;
+  }
+  .content {
+    margin: auto;
+    max-width: 98rem;
+  }
+  .mat-button {
+    font-weight: 300;
+    font-size: 1.2rem !important;
+    text-transform: uppercase;
+    color: $purple;
+    &_with_border {
+      border: 1px solid $purple;
+    }
+  }
+}

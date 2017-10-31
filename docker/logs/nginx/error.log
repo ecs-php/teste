@@ -1,0 +1,53 @@
+2017/10/28 11:50:58 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:00 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:02 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:04 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:05 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:09 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:13 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:21 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:51:35 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:52:02 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 11:52:55 [emerg] 1#1: unknown directive "erver" in /etc/nginx/sites-available/default.conf:1
+2017/10/28 13:25:23 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:25 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:27 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:29 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:36 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:39 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:43 [emerg] 1#1: directive "try_files" is not terminated by ";" in /etc/nginx/sites-available/default.conf:18
+2017/10/28 13:25:51 [emerg] 1#1: host not found in upstream "php-fpm:9000" in /etc/nginx/conf.d/upstream.conf:1
+2017/10/28 13:25:56 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:25:58 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:26:01 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:26:02 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:26:05 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:26:07 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:26:12 [emerg] 1#1: unknown "api" variable
+2017/10/28 13:26:19 [emerg] 1#1: unknown "api" variable
+2017/10/28 14:05:06 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:05:08 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:05:09 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:05:11 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:05:13 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:05:16 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:05:20 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:13
+2017/10/28 14:39:09 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 14:39:10 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 14:39:12 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 14:39:14 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:32 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:34 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:36 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:37 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:39 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:43 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:47 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:31:55 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:09 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:11 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:13 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:14 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:17 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:20 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15
+2017/10/28 19:32:26 [emerg] 1#1: invalid number of arguments in "alias" directive in /etc/nginx/sites-available/default.conf:15

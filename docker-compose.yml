@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+    nginx:
+        build:
+            context: ./docker/nginx
+            args:
+                - PHP_UPSTREAM_CONTAINER=${NGINX_PHP_UPSTREAM_CONTAINER}
+                - PHP_UPSTREAM_PORT=${NGINX_PHP_UPSTREAM_PORT}
+        ports:
+            - ${NGINX_HOST_HTTP_PORT}:80
+            - ${NGINX_HOST_HTTPS_PORT}:443
+        restart: always
+        volumes:
+            - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
+            - ${NGINX_SITES_PATH}:/etc/nginx/sites-available
+            - ${APPLICATION}:/var/www
+        depends_on:
+            - php-fpm
+
+    php-fpm:
+        build:
+            context: ./docker/php-fpm
+            args:
+                - INSTALL_XDEBUG=${PHP_FPM_INSTALL_XDEBUG}
+                - INSTALL_BLACKFIRE=${PHP_FPM_INSTALL_BLACKFIRE}
+                - INSTALL_SOAP=${PHP_FPM_INSTALL_SOAP}
+                - INSTALL_MONGO=${PHP_FPM_INSTALL_MONGO}
+                - INSTALL_MSSQL=${PHP_FPM_INSTALL_MSSQL}
+                - INSTALL_ZIP_ARCHIVE=${PHP_FPM_INSTALL_ZIP_ARCHIVE}
+                - INSTALL_BCMATH=${PHP_FPM_INSTALL_BCMATH}
+                - INSTALL_PHPREDIS=${PHP_FPM_INSTALL_PHPREDIS}
+                - INSTALL_MEMCACHED=${PHP_FPM_INSTALL_MEMCACHED}
+                - INSTALL_OPCACHE=${PHP_FPM_INSTALL_OPCACHE}
+                - INSTALL_EXIF=${PHP_FPM_INSTALL_EXIF}
+                - INSTALL_MYSQLI=${PHP_FPM_INSTALL_MYSQLI}
+                - INSTALL_TOKENIZER=${PHP_FPM_INSTALL_TOKENIZER}
+                - INSTALL_INTL=${PHP_FPM_INSTALL_INTL}
+                - INSTALL_GHOSTSCRIPT=${PHP_FPM_INSTALL_GHOSTSCRIPT}
+                - INSTALL_LDAP=${PHP_FPM_INSTALL_LDAP}
+                - INSTALL_SWOOLE=${PHP_FPM_INSTALL_SWOOLE}
+                - INSTALL_IMAGE_OPTIMIZERS=${PHP_FPM_INSTALL_IMAGE_OPTIMIZERS}
+        restart: always
+        volumes:
+            - ./docker/php-fpm/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ${APPLICATION}:/var/www
+        expose:
+            - 9000
+
+    mysql:
+        build:
+            context: ./docker/mysql
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - TZ=${TIMEZONE}
+        volumes:
+            - ${DATA_SAVE_PATH}/mysql:/var/lib/mysql
+            - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
+        ports:
+            - ${MYSQL_PORT}:3306

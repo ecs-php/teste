@@ -1,0 +1,101 @@
+<main fxLayout="column" fxLayoutAlign="none center">
+    <section fxLayout="row" fxLayoutAlign="none center" class="section section_banner">
+        <div class="section_banner_content">
+            <div fxFlex class="info">
+                <p class="margin-p">
+                    O SerasaConsumidor <br> ajuda a <span class="info__strong">pagar sua dívida!</span> <br>
+                    <span class="text__display_4">Abra seu Cadastro Positivo e concorra a</span> <br>
+                    <span class="info__currency">R$ <span class="info__currency__font_large">5.000</span>,00</span>
+                </p>
+                <div class="margin-p">
+                    <button mat-raised-button="primary" class="text__uppercase">Participe já, é grátis!</button>
+                </div>
+                <div class="margin-p info__link">
+                    <small>Saiba o que é o <a (click)="openDialog()">Cadastro Positivo</a></small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section_icons section__margin">
+        <p class="text__black text__align_center text__display_2">Quer saber como abrir se Cadastro Positivo e ainda
+            concorrer a prêmios?</p>
+        <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-between center" class="margin-2">
+            <div class="icon text__align_center">
+                <div class="sprite sprite_icon_1"></div>
+                <span class="text__purple">1.</span>
+                <small>Cadastre no</small>
+                <br>
+                <strong class="text__uppercase text__purple">SerasaConsumidor</strong>
+            </div>
+            <div class="icon text__align_center">
+                <div class="sprite sprite_icon_2"></div>
+                <span class="text__purple">2.</span>
+                <small>Abra seu</small>
+                <br>
+                <strong class="text__uppercase text__purple">Cadastro positivo</strong>
+            </div>
+            <div class="icon text__align_center">
+                <div class="sprite sprite_icon_3"></div>
+                <span class="text__purple">3.</span>
+                <small>Receba seu <strong class="text__purple">número e data <br> do sorteio</strong> no seu e-mail
+                </small>
+                <br>
+                <small class="text__tiny">(Cada CPF participa de um sorteio)</small>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" class="margin-2">
+            <button mat-raised-button class="text__uppercase">Participe já, é grátis!</button>
+        </div>
+    </section>
+    <div class="section section_next_draw section__margin">
+        <div fxLayout="column" fxLayout.gt-sm="row" class="content">
+            <section fxFlex="66" fxLayout="row" fxLayoutAlign="end none" class="background_light_grey padding-2">
+                <span class="left text__black text__display_2">
+                    <p class="margin-h">Abrindo seu <strong>Cadastro Positivo</strong> você pode ganhar<br>
+                        até <strong class="text__purple">R$ 5.000!</strong></p>
+                    <p class="text__tiny margin-h">Cada CPF participa de apenas um sorteio. Assim que seu <strong>Cadastro Positivo</strong> for
+                        concluído, você vai receber por e-mail o seu número da sorte e a data do sorteio que você vai
+                        participar. Depois, é só torcer para ser o ganhador</p>
+                </span>
+            </section>
+            <section fxFlex="34" class="background_grey padding-2">
+                <div fxLayout="row" fxLayoutAlign="none center">
+                    <div fxLayout="column" fxLayoutAlign="center center" class="sprite sprite_next_draw"><span
+                            class="text__purple text__display_2">14/09</span></div>
+                    <strong class="text__display_3 text__purple">Próximo sorteio</strong>
+                </div>
+                <div class="margin-2">
+                    <button mat-raised-button class="text__uppercase">Participa ja, é grátis!</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayout.gt-sm="row" class="section section_winners section__margin">
+        <section fxFlex="75">
+            <p class="text__display_2 text__black">Ganhadores</p>
+            <div fxLayout="row" fxLayoutWrap>
+                <div *ngFor="let winner of winners" fxFlex="50" fxLayout="row" class="padding-1">
+                    <div fxLayout="row" fxLayoutAlign="none center" class="padding-right">
+                        <div fxLayout="column" fxLayoutAlign="center center" class="sprite sprite_winner"><span
+                                class="text__purple text__display_4">{{winner.created_at | date:'dd-MM'}}</span></div>
+                    </div>
+                    <div fxLayout="column">
+                        <strong class="text__blue">{{winner.city}} - {{winner.state}}</strong>
+                        <small class="text__black">Número sorteado: {{winner.identity}} </small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section fxFlex="25">
+            <p class="text__display_2 text__black">Datas dos sorteios</p>
+            <div fxLayout="row" fxLayoutWrap>
+                <div *ngFor="let draw of draws" fxFlex="25" fxLayout="row">
+                    <div fxLayout="row" fxLayoutAlign="none center" class="padding-right">
+                        <div fxLayout="column" fxLayoutAlign="center center" [ngClass]="{'sprite_draw_ok': draw.winner_id, 'sprite_draw': !draw.winner_id}" class="sprite"><span
+                                class="text__purple text__display_4">{{draw.date | date:'dd-MM'}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
