@@ -1,0 +1,53 @@
+<div class="toolbar">
+    <div fxLayout="row" fxLayoutAlign="space-between" class="content">
+        <button fxHide.gt-sm mat-icon-button [matMenuTriggerFor]="menu"><img src="../assets/burguer.png"></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Como participar</button>
+            <button mat-menu-item>Prêmios e sorteios</button>
+            <button mat-menu-item>Ganhadores</button>
+            <button mat-menu-item>Regulamento</button>
+            <button mat-menu-item>Participe já, é grátis!</button>
+        </mat-menu>
+        <div class="sprite sprite_logo"></div>
+        <span fxHide.lt-sm>
+            <button mat-button>Como Participar</button>
+            <button mat-button>Prêmios e Sorteios</button>
+            <button mat-button>Ganhadores</button>
+            <button mat-button>Regulamento</button>
+            <button mat-button class="mat-button_with_border">Participe já, é grátis</button>
+        </span>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer fxLayout="column" class="section_footer text__tiny">
+    <div class="background_purple">
+        <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center" class="content">
+            <p fxFlex="50" class="margin-1" ngClass.gt-sm="text__align_left">
+                2015 Serasa Experian. Todos os direitos reservados.<br>
+                SERASA S.A. com sede na Alameda dos Quinimuras, 187, Planalto Paulista, CEP 04068-900, São Paulo, SP
+                Inscrita no CNPJ/MF 62.173.620/0001-80, IE isenta. www.serasaexperian.com.br
+            </p>
+            <p fxFlex="50" class="margin-1" ngClass.gt-sm="text__align_right">
+                O SerasaConsumidor s comunica diretamente com os ganhadores da promoção e nunca solicita nenhum
+                pagamento
+                para resgate de prêmios. Em caso de dúvida, entre em contato com nossa Central de Atendimento Cadastro
+                Positivo 0800 776 6606.
+            </p>
+        </div>
+    </div>
+    <div class="background_light_purple">
+        <div class="content">
+            <p class="text__align_center margin-1">
+                Certificado de autorização da Caixa 4-2936/2016. Promoção válida 08/11/16 à 27/03/17. Cada CPF
+                concorrerá
+                somente à um sorteio no valor de R% 5.000,00 durante a promoção. Participação vinculada a abertura do
+                Cadastro Positivo no sites e agências Serasa. Sorteios via extração da Loteria Federal. Consulte as
+                datas de
+                sorteio, as condições da participação e regulamento no site
+                www.serasaconsumidor.com.br/sorteiocadastropositivo
+            </p>
+        </div>
+    </div>
+</footer>

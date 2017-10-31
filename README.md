@@ -1,34 +1,59 @@
-# A tarefa
-Sua tarefa consiste em desenvolver uma API RESTful para manipular um determinado recurso. Deverá ser utilizado o framework Silex.
+## Executar o projeto
 
-# Requisitos
-A escolha do recurso deverá ser feita pelo desenvolvedor, atendendo apenas os requisitos mínimos abaixo:
+```
+clone este repositório <dir>
 
-* Deverá conter um ID
-* Deverá conter pelo menos quatro propriedades (exemplos: nome, email, etc.)
-* Deverá conter campos que armazenem as datas de criação e alteração do recurso
+cd <dir>
 
-A API deverá atender às seguintes exigências:
+cd api
 
-* Listagem de todos os recursos
-* Busca de um recurso pelo ID
-* Criação de um novo recurso
-* Alteração de um recurso existente
-* Exclusão de um recurso
-* Aceitar e retornar apenas JSON
-* Deverá possuir algum método de autenticação para utilização de seus endpoints
+composer install
 
-# Ferramentas
-* PHP
-* Banco de dados MySQL
-* Framework Silex
+docker-compose up -d
+```
 
-# Fluxo de desenvolvimento
-1. Faça um fork deste repositório
-2. Crie uma nova branch e nomeie-a com seu usuário do Github
-3. Quando o desenvolvimento estiver concluído, faça um pull request
+### Fron
+```
+http://localhost
+```
 
-# Padrões de nomenclatura
-1. Código fonte, nome do banco de dados, tabelas e campos devem estar em inglês
+### Api
 
-**Inclua no seu commit todos os arquivos necessários para que possamos testar o código.**
+```
+http://localhost/api
+
+/winners [post, get]
+post: {"first_name": "John", "last_name": "Doe", "identity":"408641940", "birthday": "1-01-01", "city": "São Paulo", "state": "SP"}
+/winners/id [put, delete]
+
+/draws [post, get]
+post: {"date": "2017-11-22", "winner_id": Inteiro ou Nulo}
+/draws/id [put, delete]
+
+```
+adicionar na header: Authorization e Contentt-Type 
+```
+Content-Type:application/json
+Authorization:1029371929182
+
+```
+
+Requerimentos
+
+PHP ^7.1.x
+Composer
+
+Docker ^17.02.2-ce
+Docker-compose
+
+### Obs
+
+se necessário alterar o ip do docker em <dir>/.env
+
+### Testes
+
+```
+cd <dir>
+
+vendor/bin/behat
+```
