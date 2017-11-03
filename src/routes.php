@@ -46,8 +46,6 @@ $app->get('/user', function ($request, $response, $args) {
 });
 
 
-
-// Retrieve todo with id
 $app->get('/user/[{id}]', function ($request, $response, $args) {
     if($request->getContentType() == 'application/json'){
         $id = $args['id'];
@@ -63,13 +61,15 @@ $app->get('/user/[{id}]', function ($request, $response, $args) {
 
 });
 
-// Add a new todo
+
 $app->post('/user', function ($request, $response) {
     if($request->getContentType() == 'application/json'){
         $input = $request->getParsedBody();
         $password = crypt($input['password']);
         $code = rand(000000000000, 999999999999)."-".rand(0, 9);
-        $sql = "INSERT INTO users (name, email, phone, city, code, password)  VALUES (:name, :email, :phone, :city, :code :password)";
+        $sql = "INSERT INTO users (name, email, phone, city, code, password)  VALUES (:name, :email, :phone, :city, :code, :password)";
+
+
         $sth = $this->db->prepare($sql);
         $sth->bindParam("name",         $input['name']);
         $sth->bindParam("email",        $input['email']);
@@ -79,6 +79,8 @@ $app->post('/user', function ($request, $response) {
         $sth->bindParam("password",     $password);
         $sth->execute();
         $input['id'] = $this->db->lastInsertId();
+
+
         return $this->response->withJson(['msg' => "Success when register user", 'data' => $input], 201)
             ->withHeader('Content-type', 'application/json');
     } else {
@@ -88,18 +90,19 @@ $app->post('/user', function ($request, $response) {
 });
 
 
-// Update todo with given id
+
 $app->put('/user/[{id}]', function ($request, $response, $args) {
     if($request->getContentType() == 'application/json'){
         $id = $args['id'];
         $input = $request->getParsedBody();
         $password = crypt($input['password']);
-        $sql = "UPDATE users SET name=:name, email=:email, phone=:phone, password=:password WHERE id=:id";
+        $sql = "UPDATE users SET name=:name, email=:email, phone=:phone, city=:city, password=:password WHERE id=:id";
         $sth = $this->db->prepare($sql);
         $sth->bindParam("id",           $id);
         $sth->bindParam("name",         $input['name']);
         $sth->bindParam("email",        $input['email']);
         $sth->bindParam("phone",        $input['phone']);
+        $sth->bindParam("city",         $input['city']);
         $sth->bindParam("password",     $password);
         $sth->execute();
         $input['id'] = $args['id'];
@@ -112,7 +115,7 @@ $app->put('/user/[{id}]', function ($request, $response, $args) {
 });
 
 
-// DELETE a todo with given id
+
 $app->delete('/user/[{id}]', function ($request, $response, $args) {
     if($request->getContentType() == 'application/json'){
         $id = $args['id'];
