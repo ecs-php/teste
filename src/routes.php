@@ -19,9 +19,8 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 $app->get('/auth', function (Request $request, Response $response) use ($app) {
     $key = $this->get("secretkey");
     $token = array(
-        "user" => "@fidelissauro",
-        "twitter" => "https://twitter.com/fidelissauro",
-        "github" => "https://github.com/msfidelis"
+        "id" => "54564445",
+        "user" => "root",
     );
     $jwt = JWT::encode($token, $key);
     return $response->withJson(["auth-jwt" => $jwt], 200)
