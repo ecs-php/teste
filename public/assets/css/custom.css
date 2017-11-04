@@ -428,6 +428,18 @@ background-color: #fcf9ff;}
 	z-index: 99;
 }
 
+.fade.in {
+    opacity: 1;
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.modal-backdrop.in {
+    opacity: 0.5;
+}
+
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-collapse {
 
@@ -442,7 +454,9 @@ background-color: #fcf9ff;}
         margin-left: 65px;
         margin-top:10px; }
 
-
+    .navbar-nav {
+        float: left;
+    }
     .participe1{background-color: #fafafa;
 
         padding: 50px 15px 0px 50px;
@@ -463,14 +477,3 @@ background-color: #fcf9ff;}
     }
 }
 
-.fade.in {
-    opacity: 1;
-}
-.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-}
-.modal-backdrop.in {
-    opacity: 0.5;
-}
