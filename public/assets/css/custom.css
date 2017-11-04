@@ -454,8 +454,21 @@ div#ganhadores {
 
 
 @media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1366px)  {
+    .navbar-brand {
+        padding-left: 26%;
+        background-repeat: repeat-y;
+        margin-top: 10px;
+    }
+    button.navbar-toggler {
+        margin-top: -30px;
+    }
+}
+
+@media only screen
 and (min-device-width : 768px)
-and (max-device-width : 1024px)  {
+and (max-device-width : 1023px)  {
     .navbar-brand {
         padding-left: 100%;
         margin-left: 10%;
