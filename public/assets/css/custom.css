@@ -336,6 +336,11 @@ background-color: #fcf9ff;}
     font-weight: 400;
 }
 
+.size-14 {
+    font-size: 14px;
+}
+
+
 .size-12 {
     font-size: 12px;
 }
@@ -413,19 +418,26 @@ background-color: #fcf9ff;}
 
 .bg-sorteios > div {
     background-color: #fafafa;
-    max-width: 1090px;
     margin: auto;
-    padding-top: 50px;
+}
+
+.ganhadores-box{
+    padding-left: 155px;
+}
+
+.sorteios-box {
+    padding-right: 112px;
 }
 
 .participe1{background-color: #fafafa;
-	padding: 50px 15px;
+	padding: 50px 50px 0px 155px;
 	z-index: 99;
 }
 
 .participe2{
-	padding: 50px 15px;
+	padding: 50px 50px;
 	z-index: 99;
+    background: #f3f3f3;
 }
 
 .fade.in {
@@ -465,10 +477,16 @@ background-color: #fcf9ff;}
     button.navbar-toggler {
         margin-top: -30px;
     }
-    .participe2{background-color: #f3f3f3;
-
+    .participe2{
+        background-color: #f3f3f3;
         padding: 50px 15px 0px 50px;
         z-index: 99;
+    }
+    .ganhadores-box {
+        padding: 50px 15px 0px 50px;
+    }
+    .sorteios-box {
+        padding: 50px 15px 0px 50px;
     }
     .header-banner {
 
@@ -477,3 +495,15 @@ background-color: #fcf9ff;}
     }
 }
 
+
+/*Small devices (landscape phones, 576px and up)*/
+/*@media (min-width: 576px) { ... }*/
+
+/*// Medium devices (tablets, 768px and up)*/
+/*@media (min-width: 768px) { ... }*/
+
+/*// Large devices (desktops, 992px and up)*/
+/*@media (min-width: 992px) { ... }*/
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+/*@media (min-width: 1200px) { ... }*/
