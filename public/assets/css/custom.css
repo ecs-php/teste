@@ -143,7 +143,7 @@ div#ganhadores {
     opacity: .9;
 }
 .btn-serasa:not([disabled]):not(.disabled).active, .btn-secondary:not([disabled]):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
-background-color: #632678;
+    background-color: #632678;
     border-color: #632678;
     box-shadow:none;
 }
@@ -180,7 +180,7 @@ background-color: #632678;
     margin-top: 5px;
 }
 .btn-outline-serasa:hover {
-background-color: #fcf9ff;}
+    background-color: #fcf9ff;}
 
 .btn-outline-serasa:hover {
     color: #632678;
@@ -201,7 +201,7 @@ background-color: #fcf9ff;}
 }
 
 .cadastroposititvo-icon{
-	height: 72px;
+    height: 72px;
     width: 72px;
     background: url(../img/sprite.png);
     margin: auto;
@@ -386,7 +386,7 @@ background-color: #fcf9ff;}
 
 }
 .menu-base{
-	background: #fff;
+    background: #fff;
 }
 .nav-bar{max-width: 1140px;}
 
@@ -398,11 +398,11 @@ background-color: #fcf9ff;}
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-	background-color: #fcf9ff;
+    background-color: #fcf9ff;
 }
 
 .navbar-light .navbar-nav .nav-link{
-	padding-top: 13px;
+    padding-top: 13px;
     padding-bottom: 15px;
 }
 
@@ -430,13 +430,13 @@ background-color: #fcf9ff;}
 }
 
 .participe1{background-color: #fafafa;
-	padding: 50px 50px 0px 155px;
-	z-index: 99;
+    padding: 50px 50px 0px 155px;
+    z-index: 99;
 }
 
 .participe2{
-	padding: 50px 50px;
-	z-index: 99;
+    padding: 50px 50px;
+    z-index: 99;
     background: #f3f3f3;
 }
 
@@ -452,31 +452,40 @@ background-color: #fcf9ff;}
     opacity: 0.5;
 }
 
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-collapse {
 
-        display: block!important;
-
-    }}
-
-
-@media (max-width: 767px){
-
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
     .navbar-brand {
-        margin-left: 65px;
-        margin-top:10px; }
-
-    .navbar-nav {
-        float: left;
-    }
-    .participe1{background-color: #fafafa;
-
-        padding: 50px 15px 0px 50px;
-        z-index: 99;
+        padding-left: 100%;
+        margin-left: 10%;
+        background-repeat: repeat-y;
+        margin-top:10px;
     }
     button.navbar-toggler {
         margin-top: -30px;
     }
+}
+@media (max-width: 767px){
+
+    .navbar-brand {
+        margin-left: 25%;
+        margin-top:10px;
+    }
+    button.navbar-toggler {
+        margin-top: -30px;
+    }
+
+
+    .navbar-nav {
+        float: left;
+    }
+    .participe1{
+        background-color: #fafafa;
+        padding: 50px 15px 0px 50px;
+        z-index: 99;
+    }
+
     .participe2{
         background-color: #f3f3f3;
         padding: 50px 15px 0px 50px;
@@ -495,15 +504,3 @@ background-color: #fcf9ff;}
     }
 }
 
-
-/*Small devices (landscape phones, 576px and up)*/
-/*@media (min-width: 576px) { ... }*/
-
-/*// Medium devices (tablets, 768px and up)*/
-/*@media (min-width: 768px) { ... }*/
-
-/*// Large devices (desktops, 992px and up)*/
-/*@media (min-width: 992px) { ... }*/
-
-/*// Extra large devices (large desktops, 1200px and up)*/
-/*@media (min-width: 1200px) { ... }*/
