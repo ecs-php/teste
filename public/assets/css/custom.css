@@ -11,6 +11,7 @@ body {
     padding-bottom: 0rem;
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 14px;
+    zoom: 1.10;
 }
 
 
@@ -455,7 +456,7 @@ div#ganhadores {
 
 @media only screen
 and (min-device-width : 1024px)
-and (max-device-width : 1366px)  {
+and (max-device-width : 1365px)  {
     .navbar-brand {
         padding-left: 26%;
         background-repeat: repeat-y;
@@ -517,3 +518,20 @@ and (max-device-width : 1023px)  {
     }
 }
 
+@media (min-width:1920px) {
+    .participe1 {
+        background-color: #fafafa;
+        padding: 50px 50px 0px 20%;
+        z-index: 99;
+    }
+    .bg-sorteios h4 {
+        zoom: 1.35;
+    }
+
+    .ganhadores-box {
+        padding-left: 20%;
+    }
+    .sorteios-box {
+        max-width: 25.333333%;
+    }
+}
