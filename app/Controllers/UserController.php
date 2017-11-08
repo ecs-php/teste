@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Silex\Application;
 use App\Models\User;
 
-class UserController implements ServiceProviderInterface
+class UserController
 {
     public function __construct()
     {
@@ -101,18 +101,5 @@ class UserController implements ServiceProviderInterface
             ], 204, ['Content-Type' => 'application/json']
         );
 
-    }
-
-    /**
-     * Registers services on the given container.
-     *
-     * This method should only be used to configure services and parameters.
-     * It should not get services.
-     *
-     * @param Container $pimple A container instance
-     */
-    public function register(Container $pimple)
-    {
-        // TODO: Implement register() method.
     }
 }
