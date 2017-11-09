@@ -1,0 +1,13 @@
+nbproject
+data
+web/vendor
+.buildpath
+.project
+.settings
+*.DS_Store
+*.idea
+ Vim
+*.swp
+*.swo
+web/phpunit.xml
+web/composer.lock
