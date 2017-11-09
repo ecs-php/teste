@@ -1,0 +1,14 @@
+{
+    "require": {
+        "silex/silex": "~2.0",
+        "illuminate/database": "~5.5",
+        "symfony/twig-bridge": "~2.3",
+        "firebase/php-jwt": "^5.0"
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
