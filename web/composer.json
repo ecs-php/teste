@@ -1,0 +1,24 @@
+{
+    "name": "RESTFulAPI",
+    "type": "project",
+    "license": "public",
+    "description": "RESTFul API utilizing silex, into a dockerized application",
+    "require": {
+        "php": ">=7.0",
+		"phing/phing": "2.*",
+        "silex/silex": "~2.0",
+        "illuminate/database": "~v5.5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6",
+        "squizlabs/php_codesniffer": "~1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hmarinjr\\RESTFulAPI\\": [
+                "src",
+                "test"
+            ]
+        }
+    }
+}

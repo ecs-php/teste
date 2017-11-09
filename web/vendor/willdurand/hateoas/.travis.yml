@@ -1,0 +1,42 @@
+language: php
+sudo: required
+dist: trusty
+group: edge
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+  - 7.1
+  - hhvm-3.9
+  - hhvm-3.12
+  - hhvm-3.15
+  - hhvm-3.18
+
+matrix:
+    fast_finish: true
+env:
+  - SYMFONY_VERSION=2.4.*
+  - SYMFONY_VERSION=2.5.*
+  - SYMFONY_VERSION=2.6.*
+  - SYMFONY_VERSION=2.7.*
+  - SYMFONY_VERSION=2.8.*
+  - SYMFONY_VERSION=3.0.*
+  - SYMFONY_VERSION=3.2.*
+
+before_install:
+  - composer self-update
+  - composer require --no-update symfony/expression-language "$SYMFONY_VERSION"
+  - composer require --no-update --dev symfony/yaml "$SYMFONY_VERSION"
+  - composer require --no-update --dev symfony/routing "$SYMFONY_VERSION"
+  - composer require --no-update --dev symfony/dependency-injection "$SYMFONY_VERSION"
+
+install:
+    - composer install --no-interaction --prefer-dist
+
+script:
+    - ./bin/phpunit --coverage-text
