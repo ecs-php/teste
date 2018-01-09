@@ -56,6 +56,8 @@
                 'login' => 'false',
                 'message' => 'Login Inválido',
         ]);
+
+        $teste = "oi";
     });
 
     //VERIFY AUTHENTICATION 
